@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HIDE NAVBAR & BOTTOM NAV WHEN POPUP IS OPEN ON MOBILE */
+@media (max-width: 1023px) {
+    body.popup-active #navbar,
+    body.popup-active #mobileBottomNav,
+    body:has(#thankYouPopup.show) #navbar,
+    body:has(#thankYouPopup.show) #mobileBottomNav {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+}
+
+/* DYNAMIC MOBILE NAV ACTIVE STATES FOR SHEETS */
+@media (max-width: 1023px) {
+    /* Dim the original active item when a sheet is open */
+    body.sheet-services-open #mobileBottomNav a:not(.force-active) .bg-primary\/15,
+    body.sheet-company-open #mobileBottomNav a:not(.force-active) .bg-primary\/15 {
+        background-color: hsla(0,0%,100%,.05) !important;
+        border-color: hsla(0,0%,100%,.1) !important;
+    }
+    /* Dim original active icon */
+    body.sheet-services-open #mobileBottomNav a:not(.force-active) span.text-primary.material-symbols-outlined,
+    body.sheet-company-open #mobileBottomNav a:not(.force-active) span.text-primary.material-symbols-outlined {
+        color: hsla(0,0%,100%,.5) !important;
+        font-variation-settings: 'FILL' 0 !important;
+    }
+    /* Dim original active text */
+    body.sheet-services-open #mobileBottomNav a:not(.force-active) span.text-primary:not(.material-symbols-outlined),
+    body.sheet-company-open #mobileBottomNav a:not(.force-active) span.text-primary:not(.material-symbols-outlined) {
+        color: hsla(0,0%,100%,.4) !important;
+        font-weight: 500 !important;
+    }
+
+    /* Force Services to be active */
+    body.sheet-services-open #mobileBottomNav a[onclick*="openServicesSheet"] > div,
+    body.sheet-company-open #mobileBottomNav a[onclick*="openCompanySheet"] > div {
+        background-color: rgba(99,102,241,.15) !important;
+        border-color: rgba(99,102,241,.3) !important;
+    }
+    /* Force active text/icon color */
+    body.sheet-services-open #mobileBottomNav a[onclick*="openServicesSheet"] span,
+    body.sheet-company-open #mobileBottomNav a[onclick*="openCompanySheet"] span {
+        color: rgb(99 102 241) !important;
+    }
+    /* Force active icon fill */
+    body.sheet-services-open #mobileBottomNav a[onclick*="openServicesSheet"] span.material-symbols-outlined,
+    body.sheet-company-open #mobileBottomNav a[onclick*="openCompanySheet"] span.material-symbols-outlined {
+        font-variation-settings: 'FILL' 1 !important;
+    }
+    /* Force active text bold */
+    body.sheet-services-open #mobileBottomNav a[onclick*="openServicesSheet"] span:not(.material-symbols-outlined),
+    body.sheet-company-open #mobileBottomNav a[onclick*="openCompanySheet"] span:not(.material-symbols-outlined) {
+        font-weight: 600 !important;
+    }
+}
+
+
+/* ==========================================================================
+   GLOBAL MARQUEE & SLIDER SYSTEM (Fixes vertical stacking on all pages)
+   ========================================================================== */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.slider-track {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    width: max-content !important;
+    will-change: transform;
+}
+.marquee-content {
+    display: flex !important;
+    flex-shrink: 0 !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    gap: 4rem;
+    padding-right: 4rem;
+    min-width: max-content;
+}
+@keyframes marquee-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+.animate-marquee-left {
+    display: flex !important;
+    width: max-content !important;
+    animation: marquee-left 32s linear infinite;
+}
+.animate-marquee-right {
+    display: flex !important;
+    width: max-content !important;
+    animation: marquee-right 32s linear infinite;
+}
+.slider-container:hover .animate-marquee-left,
+.slider-container:hover .animate-marquee-right {
+    animation-play-state: paused;
+}
+.slider-edge-fade {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* Arsenal Cards & Glass Buttons */
+.arsenal-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem 2.25rem;
+    background: rgba(19, 29, 39, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    min-width: 280px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.arsenal-card:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.2);
+    transform: translateY(-2px);
+}
+.glass-btn {
+    background: rgba(31, 148, 249, 0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(31, 148, 249, 0.15), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-btn:hover {
+    background: rgba(31, 148, 249, 0.25);
+    border-color: rgba(31, 148, 249, 0.4);
+    box-shadow: 0 0 20px rgba(31, 148, 249, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+
+/* ==========================================================================
+   PROCESS FRAMEWORK (Our Process Stepper - Fixed for all pages)
+   ========================================================================== */
+.process-card {
+    position: relative !important;
+    padding-top: 45px !important;
+    z-index: 5;
+}
+.process-number-circle {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.85rem !important;
+    font-weight: 900 !important;
+    font-family: 'Outfit', sans-serif !important;
+    z-index: 20 !important;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.6), 0 0 50px rgba(168, 85, 247, 0.3) !important;
+    border: 3px solid rgba(255, 255, 255, 0.2) !important;
+}
+.process-body-glass {
+    background: rgba(19, 29, 39, 0.65) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px !important;
+    padding: 60px 24px 32px !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+.process-body-glass:hover {
+    border-color: rgba(99, 102, 241, 0.5) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 40px rgba(99, 102, 241, 0.15) !important;
+}
+.process-connector-svg {
+    position: absolute !important;
+    top: 40px !important;
+    height: 60px !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+    overflow: visible !important;
+}
+.curved-line {
+    fill: none !important;
+    stroke-width: 2.5 !important;
+    stroke: rgba(99, 102, 241, 0.45) !important;
+    stroke-dasharray: 6 4 !important;
+}
+.connector-arrow {
+    fill: #6366f1 !important;
+}
+
+/* ==========================================================================
+   BLOG & PORTFOLIO HORIZONTAL CAROUSEL (Manual Scroll - Fixed for all pages)
+   ========================================================================== */
+.manual-scroll-container {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    gap: 1.5rem !important;
+    padding-bottom: 2rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+@media (min-width: 1280px) {
+    .manual-scroll-container {
+        padding-left: calc((100vw - 1280px) / 2 + 1.5rem) !important;
+        padding-right: calc((100vw - 1280px) / 2 + 1.5rem) !important;
+    }
+}
+.manual-scroll-container::-webkit-scrollbar {
+    display: none !important;
+}
+.manual-scroll-item {
+    scroll-snap-align: start !important;
+    flex-shrink: 0 !important;
+    width: 320px !important;
+    transition: all 0.3s ease !important;
+}
+@media (min-width: 768px) {
+    .manual-scroll-item {
+        width: 380px !important;
+    }
+}
+.manual-scroll-item:hover {
+    transform: translateY(-6px) !important;
+    border-color: rgba(99, 102, 241, 0.4) !important;
+    box-shadow: 0 12px 40px rgba(99, 102, 241, 0.15) !important;
+}

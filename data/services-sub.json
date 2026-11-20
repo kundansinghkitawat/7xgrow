@@ -1,0 +1,187 @@
+{
+  "technical-seo": {
+    "filename": "technical-seo.html",
+    "meta": {
+      "title": "Strategy &amp; Planning Services | 7xGrow"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Advanced Technical SEO",
+      "provider": {
+        "@type": "Organization",
+        "name": "7xGrow",
+        "url": "https://7xgrow.in"
+      },
+      "description": "Advanced data-driven SEO services using the CLARITY framework for predictable growth."
+    },
+    "hero": {
+      "badge": "Technical SEO Hub",
+      "title": "Data-Driven Technical SEO for",
+      "gradientTitle": "Predictable Growth",
+      "desc": "Stop guessing. We use advanced search engineering and the CLARITY framework to dominate search engines and drive high-intent revenue.",
+      "cta1Text": "Claim Your Free Audit",
+      "cta1Link": "#roadmapForm",
+      "cta2Text": "Case Studies",
+      "cta2Link": "#case-studies",
+      "formTitle": "Get a Custom Technical SEO Roadmap",
+      "formBtn": "Analyze My Website",
+      "formNote": "Privacy Guaranteed. 100% Free Technical SEO Consultation."
+    },
+    "statsSection": {
+      "badge": "WHY 7XGROW",
+      "title": "Your Strategic Partner for",
+      "gradientTitle": "Strategy &amp; Planning Dominance in India",
+      "desc": "In a market of 1.4 billion people, digital visibility isn't just an option—it's your survival. 7xGrow bridges the gap between technical search complexity and business ROI.",
+      "bullets": [
+        "Hindi & Vernacular Search Optimization",
+        "Mobile-First Indexing Specialists",
+        "E-E-A-T Focused Content Engineering"
+      ],
+      "stats": [
+        { "num": "350%", "label": "Avg Traffic Growth" },
+        { "num": "850k+", "label": "Keywords Ranked" },
+        { "num": "12+", "label": "Industries Served" },
+        { "num": "$10M+", "label": "Revenue Generated" }
+      ]
+    },
+    "subServices": {
+      "heading": "10+ Years of Driving Significant Growth through",
+      "gradientHeading": "Data-Backed Technical SEO",
+      "items": [
+        {
+          "title": "Crawlability",
+          "desc": "We implement comprehensive, robust processes for Crawlability to ensure your technical seo framework delivers industry-leading stability and maximum value.",
+          "link": "technical-seo.html"
+        },
+        {
+          "title": "Indexability",
+          "desc": "We implement comprehensive, robust processes for Indexability to ensure your technical seo framework delivers industry-leading stability and maximum value.",
+          "link": "technical-seo.html"
+        },
+        {
+          "title": "Renderability",
+          "desc": "We implement comprehensive, robust processes for Renderability to ensure your technical seo framework delivers industry-leading stability and maximum value.",
+          "link": "technical-seo.html"
+        },
+        {
+          "title": "Crawl Budget",
+          "desc": "We implement comprehensive, robust processes for Crawl Budget to ensure your technical seo framework delivers industry-leading stability and maximum value.",
+          "link": "technical-seo.html"
+        },
+        {
+          "title": "Robots.txt",
+          "desc": "We implement comprehensive, robust processes for Robots.txt to ensure your technical seo framework delivers industry-leading stability and maximum value.",
+          "link": "technical-seo.html"
+        },
+        {
+          "title": "Meta Robots Tag",
+          "desc": "We implement comprehensive, robust processes for Meta Robots Tag to ensure your technical seo framework delivers industry-leading stability and maximum value.",
+          "link": "technical-seo.html"
+        },
+        {
+          "title": "XML Sitemap",
+          "desc": "We implement comprehensive, robust processes for XML Sitemap to ensure your technical seo framework delivers industry-leading stability and maximum value.",
+          "link": "technical-seo.html"
+        },
+        {
+          "title": "HTML Sitemap",
+          "desc": "We implement comprehensive, robust processes for HTML Sitemap to ensure your technical seo framework delivers industry-leading stability and maximum value.",
+          "link": "technical-seo.html"
+        }
+      ]
+    },
+    "tools": {
+      "badge": "Tools & Tech",
+      "title": "Our Technology Arsenal",
+      "desc": "Enterprise-grade tools for competitive advantage."
+    },
+    "process": {
+      "badge": "Our Process",
+      "title": "Growth Command Center",
+      "desc": "The central processing unit of your organic expansion.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Discovery Phase",
+          "objective": "Complete visibility of your current technical seo footprint, historical performance, and competitive gaps.",
+          "activities": "360-degree audit, technical crawling, competitor benchmarking, and conversion friction mapping.",
+          "outcome": "Diagnostic Blueprint"
+        },
+        {
+          "num": "02",
+          "title": "Blueprint Phase",
+          "objective": "Designing an unassailable strategic roadmap aligned with high-margin revenue goals.",
+          "activities": "CLARITY Framework configuration, keyword & intent mapping, funnel architecture, and tech-stack review.",
+          "outcome": "Execution Roadmap"
+        },
+        {
+          "num": "03",
+          "title": "Activation Phase",
+          "objective": "Flawless deployment of optimized technical seo assets and campaigns.",
+          "activities": "Core engineering, content cluster deployment, high-impact creative rollout, and telemetry testing.",
+          "outcome": "Market Infiltration"
+        },
+        {
+          "num": "04",
+          "title": "Optimization Phase",
+          "objective": "Aggressive scaling, algorithmic defense, and conversion rate maximization.",
+          "activities": "Continuous multivariate testing, bid & budget algorithm management, cohort analysis, and executive reporting.",
+          "outcome": "Predictable Scale"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What makes your Crawlability strategy unique?",
+        "a": "We are engineers at heart. We don't just \"do SEO\"—we build growth systems using the CLARITY framework, focusing on hard revenue data rather than vanity traffic metrics."
+      },
+      {
+        "q": "How soon can we expect results from Indexability?",
+        "a": "Typically, initial improvements are seen in 3-4 months, with significant authority building taking 6-12 months. However, technical fixes often yield immediate crawling benefits."
+      },
+      {
+        "q": "Do you provide custom packages for Renderability?",
+        "a": "Yes. We believe in earning your business every single month. We don't lock clients into long-term legal traps; we keep them through performance."
+      },
+      {
+        "q": "What is AEO and why is it important now?",
+        "a": "Answer Engine Optimization prepares your site for voice search and AI search assistants like ChatGPT and Gemini, ensuring your brand is the \"source of truth\"."
+      },
+      {
+        "q": "How much does a premium SEO campaign cost?",
+        "a": "Investment varies based on industry competition and scale. Our packages are performance-mapped to ensure your expected ROI outweighs the service cost significantly."
+      },
+      {
+        "q": "What exactly is the CLARITY framework?",
+        "a": "CLARITY stands for Crawl, Leverage, Authority, Relevance, Intent, Traffic, and Yield. It’s our proprietary 7-step engineering process for organic domination."
+      },
+      {
+        "q": "Do you handle content creation as well?",
+        "a": "Absolutely. Our content engineers specialize in E-E-A-T driven articles and landing pages that satisfy both users and Google's complex ranking algorithms."
+      },
+      {
+        "q": "How do you report on progress and success?",
+        "a": "We provide real-time dashboard access focusing on high-level KPIs: keyword movement, qualified lead growth, and organic revenue contribution."
+      },
+      {
+        "q": "Can you help with a site migration or redesign?",
+        "a": "Technical migrations are our specialty. We ensure your existing SEO value is preserved and enhanced during any platform or structural changes."
+      },
+      {
+        "q": "What industries do you specialize in?",
+        "a": "While we have broad experience, we excel in high-stakes sectors like Fintech, E-commerce, B2B SaaS, and Luxury Real Estate where authority is paramount."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Own Your Search Results?",
+      "gradientTitle": "Dominate Your Market",
+      "desc": "Stop losing high-intent customers to competitors with better SEO engineering. Get your custom Technical SEO blueprint today.",
+      "btn1": "Claim Your Free Audit",
+      "btn1Link": "#roadmapForm",
+      "btn2": "Schedule Strategy Call",
+      "btn2Link": "#"
+    }
+  }
+}
+

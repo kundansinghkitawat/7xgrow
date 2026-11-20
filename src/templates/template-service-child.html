@@ -1,0 +1,601 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{{PAGE_TITLE}}</title>
+
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#6366f1",
+                        "background-dark": "#020617",
+                        "accent-purple": "#a855f7",
+                        "text-dim": "#94a3b8",
+                        "border-dark": "#1e293b",
+                        "card-dark": "#131d27",
+                    },
+                    fontFamily: {
+                        display: ["Outfit", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Outfit:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Fix for Footer Consistency */
+        .text-text-dim {
+            color: #94a3b8;
+        }
+
+        .border-border-dark {
+            border-color: #1e293b;
+        }
+
+        .bg-card-dark {
+            background-color: #131d27;
+        }
+
+        .bg-\[\#040608\] {
+            background-color: #040608;
+        }
+
+        .glass-btn {
+            background: rgba(31, 148, 249, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(31, 148, 249, 0.15), inset 0 0 10px rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .glass-btn:hover {
+            background: rgba(31, 148, 249, 0.25);
+            border-color: rgba(31, 148, 249, 0.4);
+            box-shadow: 0 0 20px rgba(31, 148, 249, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Navbar - Base Styles */
+        .glass-nav {
+            transition: all 0.4s ease;
+            background: rgba(2, 6, 23, 0.6);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* State: At Top (Transparent) */
+        .glass-nav.at-top {
+            background: transparent !important;
+            backdrop-filter: none !important;
+            border-bottom-color: transparent !important;
+        }
+
+        /* Scrolled State */
+        .glass-nav:not(.at-top) {
+            background: rgba(13, 22, 29, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        /* ===== MOBILE MENU ===== */
+        #mobile-menu {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #mobile-menu.open {
+            display: flex !important;
+            opacity: 1 !important;
+        }
+
+        #mobile-services-dropdown {
+            display: none !important;
+        }
+
+        #mobile-services-dropdown.open {
+            display: flex !important;
+        }
+
+        #services-chevron {
+            transition: transform 0.3s ease;
+        }
+
+        #services-chevron.open {
+            transform: rotate(180deg);
+        }
+
+        .no-scroll {
+            overflow: hidden !important;
+            height: 100vh !important;
+        }
+
+        .purple-glow-bg {
+            background: radial-gradient(ellipse at bottom, rgba(168, 85, 247, 0.15) 0%, rgba(2, 6, 23, 1) 100%);
+        }
+    </style>
+<style type="text/tailwindcss">
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --background: #020617;
+            --background-dark: #020617;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --border-dark: #1e293b;
+            --card-dark: #131d27;
+            --accent-purple: #a855f7;
+        }
+        body {
+            background-color: var(--background);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+        }
+        .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+        .bg-primary { background-color: var(--primary); }
+        .text-primary { color: var(--primary); }
+        .border-primary { border-color: var(--primary); }
+        .bg-card-dark { background-color: var(--card-dark); }
+        
+        /* Glass Button - Theme Matched */
+        .glass-btn {
+            background: rgba(99, 102, 241, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.15), inset 0 0 10px rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .glass-btn:hover {
+            background: rgba(99, 102, 241, 0.25);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Navbar Scrolled Logic handled via separate style block for reliability */
+
+        
+        /* Bottom Nav Styling */
+        .mobile-tab-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            color: #94a3b8;
+            transition: all 0.2s ease;
+        }
+        .mobile-tab-btn.active {
+            color: #6366f1;
+        }
+        .mobile-tab-btn .material-symbols-outlined {
+            font-size: 24px;
+        }
+        .mobile-tab-btn span {
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        @keyframes marquee-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes marquee-right {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        .animate-marquee-left {
+            animation: marquee-left 30s linear infinite;
+        }
+        .animate-marquee-right {
+            animation: marquee-right 30s linear infinite;
+        }
+        .slider-row:hover .animate-marquee-left,
+        .slider-row:hover .animate-marquee-right {
+            animation-play-state: paused;
+        }
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider-track {
+            display: flex;
+            width: max-content;
+        }
+        .slider-edge-fade {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .stat-glow {
+            text-shadow: 0 0 15px rgba(99, 102, 241, 0.5); /* Updated glow color */
+        }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        .manual-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            gap: 1.25rem;
+            padding-bottom: 2rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        @media (min-width: 1280px) {
+            .manual-scroll-container {
+                padding-left: calc((100vw - 1280px) / 2 + 1.5rem);
+                padding-right: calc((100vw - 1280px) / 2 + 1.5rem);
+            }
+        }
+        .manual-scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        .manual-scroll-item {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+        .marquee-content {
+            display: flex;
+            gap: 4rem;
+            padding-right: 4rem;
+        }
+        .grid-bg {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .service-accordion details[open] summary .expand-icon {
+            transform: rotate(180deg);
+        }
+        .vibrant-learn-more {
+            background: linear-gradient(90deg, #7c3aed, #6366f1);
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+        }
+        .process-card {
+            position: relative;
+            padding-top: 60px;
+            z-index: 5;
+        }
+        .process-number-circle {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.75rem;
+            font-weight: 900;
+            z-index: 20;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-purple) 100%);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.5), 0 0 60px rgba(124, 58, 237, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        .process-body-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 90px 24px 40px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+        .process-body-glass:hover {
+            border-color: rgba(31, 148, 249, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .process-connector-svg {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 120px;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .curved-line {
+            fill: none;
+            stroke-width: 3;
+            stroke: rgba(31, 148, 249, 0.4);
+            stroke-dasharray: 8 4;
+        }
+        .connector-arrow {
+            fill: var(--primary);
+        }
+        .arsenal-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            background-color: #1a1c1e;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 2.5rem;
+            width: 280px;
+            height: 160px;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            transition: transform 0.3s;
+        }
+        .arsenal-card:hover {
+            transform: scale(1.05);
+            border-color: rgba(255,255,255,0.2);
+        }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Strategy &amp; Planning Services | 7xGrow</title>
+<meta content="Stop guessing. 7xGrow uses advanced search engineering and the CLARITY framework to dominate search engines and drive high-intent revenue." name="description"/>
+<meta content="Advanced Technical SEO, Data-driven SEO, Technical SEO Audit, Growth Marketing, 7xGrow" name="keywords"/>
+<meta content="7xGrow" name="author"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://7xgrow.in/advanced-seo.html" rel="canonical"/>
+<!-- Open Graph / Facebook -->
+<meta content="service" property="og:type"/>
+<meta content="https://7xgrow.in/advanced-seo.html" property="og:url"/>
+<meta content="Technical SEO Services | 7xGrow" property="og:title"/>
+<meta content="Data-driven SEO for predictable growth. Get a free audit today." property="og:description"/>
+<meta content="https://7xgrow.in/assets/advanced-seo-og.jpg" property="og:image"/>
+<meta content="7xGrow" property="og:site_name"/>
+<!-- Twitter -->
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="Technical SEO Services | 7xGrow" property="twitter:title"/>
+<meta content="Stop guessing. We use advanced search engineering to dominate search engines." property="twitter:description"/>
+<meta content="https://7xgrow.in/assets/advanced-seo-og.jpg" property="twitter:image"/>
+<!-- Favicon -->
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+{{PAGE_SCHEMA}}
+<style>
+        html,
+        body {
+            overflow-x: clip !important;
+            max-width: 100vw;
+        }
+    </style>
+<style>
+        /* Floating Buttons & Popups */
+        #popupOverlay.show,
+        #thankYouPopup.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #popupOverlay.show #popupForm,
+        #thankYouPopup.show>div {
+            transform: scale(1);
+        }
+
+        #floatingButton,
+        #floatingSocial {
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        #floatingButton.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        #floatingSocial.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        @media (max-width: 1023px) {
+
+            #floatingSocial,
+            #floatingSocial.show {
+                display: none !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+            }
+        }
+    </style>
+<style>
+        /* ===== PILL NAVBAR ON SCROLL ===== */
+        #navbar {
+            transition: padding 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                        background 0.5s ease,
+                        backdrop-filter 0.5s ease;
+            padding: 0;
+        }
+        #navbar header {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 0;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+        /* Scrolled: Pill shape via inner header */
+        #navbar.scrolled {
+            padding: 10px 20px;
+            background: transparent !important;
+            backdrop-filter: none !important;
+            border-bottom: none !important;
+            box-shadow: none !important;
+        }
+        #navbar.scrolled header {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            padding-left: 20px !important;
+            padding-right: 24px !important;
+            border-radius: 9999px !important;
+            background: rgba(8, 12, 20, 0.92) !important;
+            backdrop-filter: blur(24px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+            border: 1px solid rgba(255,255,255,0.12) !important;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(99,102,241,0.1) !important;
+            max-width: 1100px !important;
+            margin: 0 auto !important;
+        }
+        /* Logo shrink */
+        #navbar.scrolled .nav-logo-icon {
+            width: 28px !important;
+            height: 28px !important;
+        }
+        #navbar.scrolled .nav-logo-text {
+            font-size: 0.95rem !important;
+        }
+        #navbar .nav-logo-icon,
+        #navbar .nav-logo-text {
+            transition: all 0.5s ease;
+        }
+</style>    <link rel="stylesheet" href="style.css">
+</head>
+<body class="max-w-full overflow-x-clip relative text-white bg-[#020617]">
+<div class="fixed top-0 left-0 right-0 z-[160] glass-nav at-top" id="navbar">
+
+{{> navbar.html}}
+
+<section class="relative min-h-[85vh] flex items-center pt-32 lg:pt-44 pb-20 px-6 overflow-hidden">
+<!-- Home Page Styled Glows -->
+<div class="absolute -top-20 left-1/2 -translate-x-1/2 w-full max-w-[900px] h-[500px] bg-primary/20 blur-[130px] rounded-full pointer-events-none -z-10">
+</div>
+<div class="absolute -top-20 left-1/2 -translate-x-1/2 w-full max-w-[400px] h-[300px] bg-accent-purple/10 blur-[100px] rounded-full pointer-events-none -z-10">
+</div>
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-border-dark/30 border border-white/10 text-primary text-xs font-bold uppercase tracking-wider mb-6">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Technical SEO Hub
+                </div>
+<h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-6 font-display">
+                    {{HERO_TITLE}} <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-purple">{{HERO_GRADIENT_TITLE}}</span>
+</h1>
+<p class="text-text-dim text-lg md:text-xl font-normal leading-relaxed max-w-xl mb-8">
+                    Stop guessing. We use advanced search engineering and the CLARITY framework to dominate search
+                    engines and drive high-intent revenue.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-8 py-4 glass-btn text-white font-bold rounded-xl text-lg">Claim Your Free
+                        Audit</button>
+<button class="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl text-lg hover:bg-white/10 transition-all">Case
+                        Studies</button>
+</div>
+</div>
+<div class="relative z-10">
+<div class="glass-panel p-8 md:p-10 rounded-3xl border border-white/10 relative">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
+<h3 class="text-2xl font-bold text-white mb-6">Get a Custom Technical SEO Roadmap</h3>
+<form class="space-y-4">
+<input class="w-full bg-[#131d27] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary transition-all" placeholder="Full Name" type="text"/>
+<input class="w-full bg-[#131d27] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary transition-all" placeholder="Work Email" type="email"/>
+<input class="w-full bg-[#131d27] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary transition-all" placeholder="Website URL" type="url"/>
+<button class="w-full py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary-dark transition-all shadow-[0_10px_30px_rgba(99,102,241,0.3)]" type="submit">{{HERO_FORM_BTN}}</button>
+</form>
+<p class="text-text-dim text-xs mt-6 text-center">Privacy Guaranteed. 100% Free Technical SEO Consultation.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+
+{{> trusted-logos.html}}
+
+<section class="py-24 px-6 bg-[#060a0f]">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-6">
+{{STATS_BADGE}}
+</div>
+<h2 class="text-4xl md:text-5xl font-black text-white leading-tight mb-6 font-display">
+{{STATS_TITLE}} <span class="gradient-text">{{STATS_GRADIENT_TITLE}}</span>
+</h2>
+<p class="text-text-dim text-lg leading-relaxed mb-8">
+{{STATS_DESC}}
+</p>
+<div class="space-y-4">
+{{STATS_BULLETS_HTML}}
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+{{STATS_GRID_HTML}}
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-24 px-6 relative grid-bg" id="services" style="background-color: #080808;">
+<div class="glow-orb" style="top: 0; left: 50%; transform: translateX(-50%); width: 700px; height: 350px; background: radial-gradient(ellipse at center, rgba(168,85,247,0.18) 0%, rgba(99,102,241,0.08) 50%, transparent 70%);"></div>
+<div class="glow-orb" style="top: 15%; right: 5%; width: 400px; height: 300px; background: radial-gradient(ellipse at center, rgba(139,92,246,0.12) 0%, transparent 65%);"></div>
+<div class="max-w-5xl mx-auto relative z-10">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-black text-white mb-4 font-display">
+{{SUBSERVICES_HEADING}} <span class="gradient-text">{{SUBSERVICES_GRADIENT_HEADING}}</span>
+</h2>
+</div>
+<div class="divide-y divide-white/10" id="servicesAccordion">
+{{SUBSERVICES_ACCORDION_HTML}}
+</div>
+</div>
+</section>
+
+{{> case-studies-teaser.html}}
+
+{{> tools-marquee.html}}
+
+<section class="py-32 bg-gradient-to-b from-[#0d161d] via-[#0f2642] to-[#0d161d] relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="text-center mb-20">
+<span class="text-primary font-mono text-sm tracking-widest uppercase mb-3 block">{{PROCESS_BADGE}}</span>
+<h2 class="text-4xl md:text-5xl font-black text-white font-display mb-4">{{PROCESS_TITLE}}</h2>
+<p class="text-text-dim max-w-2xl mx-auto text-lg">{{PROCESS_DESC}}</p>
+</div>
+<div class="relative">
+{{PROCESS_STEPS_HTML}}
+</div>
+</div>
+</section>
+
+<section class="py-24" id="faq">
+<div class="max-w-4xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-black text-white mb-4 font-display">Frequently Asked Questions</h2>
+<p class="text-text-dim text-lg">Clear answers to your technical SEO questions</p>
+</div>
+<div class="space-y-4">
+{{FAQS_HTML}}
+</div>
+</div>
+</section>
+
+{{> final-cta.html}}
+
+{{> blog-carousel.html}}
+
+{{> footer.html}}
+
+{{> lead-popup.html}}
+
+{{> thank-you-popup.html}}
+
+{{> floating-actions.html}}
+
+{{> mobile-bottom-nav.html}}
+
+{{> page-scripts.html}}
+
+</body>
+</html>

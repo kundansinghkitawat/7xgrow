@@ -1,0 +1,254 @@
+<script>
+                // Bottom Sheet Logic
+                function openServicesSheet(e) {
+                    if (e) e.preventDefault();
+                    // Force-close Company sheet via DOM (guaranteed on all pages)
+                    const cmpOverlay = document.getElementById('companyBottomSheetOverlay');
+                    const cmpSheet = document.getElementById('companyBottomSheet');
+                    if (cmpOverlay) cmpOverlay.classList.add('opacity-0', 'invisible');
+                    if (cmpSheet) cmpSheet.classList.add('translate-y-full');
+                    document.body.classList.remove('sheet-company-open');
+                    // Open Services sheet
+                    document.getElementById('servicesBottomSheetOverlay').classList.remove('opacity-0', 'invisible');
+                    document.getElementById('servicesBottomSheet').classList.remove('translate-y-full');
+                    document.body.classList.add('no-scroll', 'sheet-services-open');
+                }
+                
+                function closeServicesSheet() {
+                    document.getElementById('servicesBottomSheetOverlay').classList.add('opacity-0', 'invisible');
+                    document.getElementById('servicesBottomSheet').classList.add('translate-y-full');
+                    document.body.classList.remove('no-scroll', 'sheet-services-open');
+                }
+                // Navbar scroll
+                const nav = document.getElementById('navbar');
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) nav.classList.remove('at-top');
+                    else nav.classList.add('at-top');
+                });
+
+                // Mobile menu
+                // Mobile menu
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileBottomNav = document.getElementById('mobileBottomNav');
+
+                if (mobileMenuBtn && mobileMenu) {
+                    mobileMenuBtn.addEventListener('click', () => {
+                        const isOpen = mobileMenu.classList.toggle('open');
+                        const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+                        
+                        // Add rotation effect for icon
+                        icon.style.transform = isOpen ? 'rotate(90deg)' : 'rotate(0deg)';
+
+                        setTimeout(() => {
+                            icon.textContent = isOpen ? 'close' : 'menu';
+                            if (isOpen) icon.style.transform = 'rotate(0deg)';
+                        }, 150);
+
+                        // Prevent scrolling on body & html
+                        if (isOpen) {
+                            document.body.classList.add('no-scroll');
+                            document.documentElement.classList.add('no-scroll');
+                            if (mobileBottomNav) mobileBottomNav.style.transform = 'translateY(100%)';
+                        } else {
+                            document.body.classList.remove('no-scroll');
+                            document.documentElement.classList.remove('no-scroll');
+                            if (mobileBottomNav) mobileBottomNav.style.transform = 'translateY(0)';
+                        }
+                    });
+                }
+
+
+                // Mobile Services Accordion
+                const mobileServicesBtn = document.getElementById('mobileServicesBtn');
+                const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
+                const servicesChevron = document.getElementById('services-chevron');
+
+                if (mobileServicesBtn) {
+                    mobileServicesBtn.addEventListener('click', () => {
+                        mobileServicesDropdown.classList.toggle('open');
+                        servicesChevron.classList.toggle('open');
+                    });
+                }
+
+                // Case study filter
+                document.querySelectorAll('.cs-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('.cs-btn').forEach(b => { b.classList.remove('bg-primary', 'text-white'); b.classList.add('text-text-dim'); });
+                        btn.classList.add('bg-primary', 'text-white'); btn.classList.remove('text-text-dim');
+                        const f = btn.dataset.f;
+                        document.querySelectorAll('.cs-card').forEach(c => {
+                            if (f === 'all' || c.dataset.cat === f) { c.classList.remove('hidden'); c.style.opacity = '0'; c.style.transform = 'translateY(20px)'; setTimeout(() => { c.style.transition = 'all 0.4s ease'; c.style.opacity = '1'; c.style.transform = 'translateY(0)'; }, 50); }
+                            else c.classList.add('hidden');
+                        });
+                    });
+                });
+
+                // Floating buttons
+                const floatBtn = document.getElementById('floatingButton');
+                const floatSoc = document.getElementById('floatingSocial');
+                let shown = false;
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > window.innerHeight * 0.7 && !shown) { floatBtn.classList.add('show'); floatSoc.classList.add('show'); shown = true; }
+                    else if (window.scrollY <= window.innerHeight * 0.7 && shown) { floatBtn.classList.remove('show'); floatSoc.classList.remove('show'); shown = false; }
+                });
+
+                
+                // Toggle No Scroll for Popups (v2 Robust)
+                function toggleNoScroll(show) {
+                    const navEl = document.getElementById('navbar');
+                    const bottomNavEl = document.getElementById('mobileBottomNav');
+                    if (show) {
+                        document.body.classList.add('no-scroll');
+                        document.documentElement.classList.add('no-scroll');
+                        if (window.innerWidth <= 1023) {
+                            if (navEl) { navEl.style.opacity = '0'; navEl.style.visibility = 'hidden'; navEl.style.pointerEvents = 'none'; }
+                            if (bottomNavEl) { bottomNavEl.style.opacity = '0'; bottomNavEl.style.visibility = 'hidden'; bottomNavEl.style.pointerEvents = 'none'; }
+                        }
+                    } else {
+                        document.body.classList.remove('no-scroll', 'sheet-services-open', 'sheet-company-open');
+                        document.documentElement.classList.remove('no-scroll', 'sheet-services-open', 'sheet-company-open');
+                        if (navEl) { navEl.style.opacity = ''; navEl.style.visibility = ''; navEl.style.pointerEvents = ''; }
+                        if (bottomNavEl) { bottomNavEl.style.opacity = ''; bottomNavEl.style.visibility = ''; bottomNavEl.style.pointerEvents = ''; }
+                    }
+                }
+                
+
+                // Popup Observer to handle scroll lock reliably regardless of how it's opened
+                const popupEl = document.getElementById('popupOverlay');
+                const tyPopup = document.getElementById('thankYouPopup');
+                
+                if (popupEl) {
+                    // Prevent touchmove on the background overlay itself to stop scroll chaining on iOS
+                    popupEl.addEventListener('touchmove', function(e) {
+                        if (e.target === popupEl) {
+                            e.preventDefault();
+                        }
+                    }, { passive: false });
+                    
+                    // Observe class changes so we lock scroll even if opened via inline onclicks
+                    const observer = new MutationObserver((mutations) => {
+                        mutations.forEach((mutation) => {
+                            if (mutation.attributeName === 'class') {
+                                const isShown = popupEl.classList.contains('show');
+                                toggleNoScroll(isShown);
+                            }
+                        });
+                    });
+                    observer.observe(popupEl, { attributes: true });
+                }
+                floatBtn.addEventListener('click', () => { popupEl.classList.add('show'); toggleNoScroll(true); });
+                document.getElementById('closePopup').addEventListener('click', () => { popupEl.classList.remove('show'); toggleNoScroll(false); });
+                document.getElementById('closeThankYou').addEventListener('click', () => { tyPopup.classList.remove('show'); toggleNoScroll(false); });
+                popupEl.addEventListener('click', e => { if (e.target === popupEl) { popupEl.classList.remove('show'); toggleNoScroll(false); } });
+                document.getElementById('contactForm').addEventListener('submit', e => {
+                    e.preventDefault(); popupEl.classList.remove('show'); toggleNoScroll(false);
+                    setTimeout(() => tyPopup.classList.add('show'), 300);
+                    e.target.reset();
+                    setTimeout(() => tyPopup.classList.remove('show'), 4000);
+                });
+                document.addEventListener('keydown', e => {
+                    if (e.key === 'Escape') { popupEl.classList.remove('show'); tyPopup.classList.remove('show'); toggleNoScroll(false); }
+                });
+            </script>
+
+    <!-- Global AJAX FormSubmit Hook (Secured) -->
+    <script>
+        document.querySelectorAll('form').forEach(f => {
+            // 1. Inject Honeypot Field (Bot Trap)
+            if (!f.querySelector('input[name="_honey"]')) {
+                const honey = document.createElement('input');
+                honey.type = 'text';
+                honey.name = '_honey';
+                honey.style.display = 'none';
+                f.appendChild(honey);
+            }
+
+            f.addEventListener('submit', function(e) {
+                // 2. Spam protection: 15-minute cooldown per form type
+                const formId = f.id || 'generalForm';
+                const lastSubmit = localStorage.getItem('lastSubmit_' + formId);
+                const now = Date.now();
+                
+                if (lastSubmit && (now - lastSubmit < 15 * 60 * 1000)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    alert("Aapne haal hi mein form submit kiya hai. Kripya spamming se bachein aur 15 minutes baad dobara try karein.");
+                    return;
+                }
+
+                // Ignore if it's already submitting
+                if (f.dataset.submitting === "true") return;
+                f.dataset.submitting = "true";
+                
+                const btn = e.target.querySelector('button[type="submit"]') || e.target.querySelector('button');
+                const origText = btn ? btn.innerHTML : '';
+                if(btn) {
+                    btn.innerHTML = '<span>Sending...</span>';
+                    btn.style.opacity = '0.7';
+                }
+                
+                // Collect form data before any other scripts call e.target.reset()
+                const formData = new FormData(e.target);
+                const data = Object.fromEntries(formData.entries());
+                
+                // Collect untagged checkboxes
+                const checkboxes = e.target.querySelectorAll('input[type="checkbox"]:checked');
+                if(checkboxes.length > 0) {
+                    const services = Array.from(checkboxes).map(cb => {
+                        return (cb.value && cb.value !== "on") ? cb.value : (cb.nextElementSibling ? cb.nextElementSibling.textContent.trim() : 'Service');
+                    });
+                    data.services_selected = services.join(', ');
+                }
+                
+                data._captcha = "false"; // Kept false because AJAX FormSubmit requires it. Honeypot protects us.
+                data._subject = "New Lead Submission | 7xGrow";
+                if (data.email) data._replyto = data.email;
+                if (!data.name && data.full_name) data.name = data.full_name;
+                
+                // 3. Tokenized Email to prevent scraping and spam
+                const targetUrl = "https://formsubmit.co/ajax/aa5c679a1f13aa196a3ac0305b91d366";
+                
+                fetch(targetUrl, {
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(data)
+                })
+                .then(res => res.json())
+                .then(resData => {
+                    delete f.dataset.submitting;
+                    if(btn) btn.innerHTML = origText;
+                    if(btn) btn.style.opacity = '1';
+                    
+                    // Set cooldown on success
+                    localStorage.setItem('lastSubmit_' + formId, Date.now());
+                    
+                    console.log("Successfully sent via FormSubmit:", resData);
+                })
+                .catch(err => {
+                    delete f.dataset.submitting;
+                    if(btn) btn.innerHTML = origText;
+                    console.error("FormSubmit Error:", err);
+                });
+            }, true); // useCapture flag ensures this runs first!
+        });
+    </script>
+
+<script>
+        // Pill Navbar on Scroll
+        (function() {
+            var navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            function handleNavbarScroll() {
+                if (window.scrollY > 60) {
+                    navbar.classList.add('scrolled');
+                    navbar.classList.remove('at-top');
+                } else {
+                    navbar.classList.remove('scrolled');
+                    navbar.classList.add('at-top');
+                }
+            }
+            window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+            handleNavbarScroll();
+        })();
+</script>

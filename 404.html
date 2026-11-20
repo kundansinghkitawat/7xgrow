@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>404 — Page Not Found | 7xGrow</title>
+<script defer src="https://cdn.tailwindcss.com?plugins=forms,container-queries">
+                // Toggle No Scroll for Popups
+                function toggleNoScroll(show) {
+                    if (show) {
+                        document.body.classList.add('no-scroll');
+                        document.documentElement.classList.add('no-scroll');
+                    } else {
+                        document.body.classList.remove('no-scroll');
+                        document.documentElement.classList.remove('no-scroll');
+                    }
+                }
+            </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+        font-family: 'Inter', sans-serif;
+        background: #020617;
+        color: #f8fafc;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* ===== BG GRID ===== */
+    body {
+        background-color: #020617;
+        background-image:
+            linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
+        background-size: 48px 48px;
+    }
+
+    /* ===== GLITCH 404 ===== */
+    .glitch {
+        position: relative;
+        font-family: 'Outfit', sans-serif;
+        font-size: clamp(120px, 20vw, 240px);
+        font-weight: 900;
+        line-height: 1;
+        color: #fff;
+        letter-spacing: -0.04em;
+        animation: glitch-main 4s infinite;
+    }
+    .glitch::before, .glitch::after {
+        content: '404';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+    }
+    .glitch::before {
+        color: #6366f1;
+        animation: glitch-before 4s infinite;
+        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    }
+    .glitch::after {
+        color: #a855f7;
+        animation: glitch-after 4s infinite;
+        clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    }
+    @keyframes glitch-main {
+        0%, 90%, 100% { transform: translate(0); }
+        92% { transform: translate(-2px, 1px); }
+        94% { transform: translate(2px, -1px); }
+        96% { transform: translate(-1px, 2px); }
+        98% { transform: translate(1px, -2px); }
+    }
+    @keyframes glitch-before {
+        0%, 90%, 100% { transform: translate(0); opacity: 0; }
+        91% { opacity: 1; transform: translate(-4px, 0); }
+        93% { transform: translate(4px, 0); }
+        95% { transform: translate(-2px, 0); opacity: 0; }
+    }
+    @keyframes glitch-after {
+        0%, 90%, 100% { transform: translate(0); opacity: 0; }
+        92% { opacity: 1; transform: translate(4px, 0); }
+        94% { transform: translate(-4px, 0); }
+        96% { transform: translate(2px, 0); opacity: 0; }
+    }
+
+    /* ===== TERMINAL ===== */
+    .terminal {
+        background: #0d1117;
+        border: 1px solid rgba(99, 102, 241, 0.3);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 0 40px rgba(99, 102, 241, 0.15), 0 25px 50px rgba(0,0,0,0.5);
+        max-width: 560px;
+        width: 100%;
+    }
+    .terminal-bar {
+        background: #161b22;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .terminal-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .terminal-body {
+        padding: 20px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 13px;
+        line-height: 1.8;
+        min-height: 200px;
+    }
+    .term-line { display: flex; gap: 8px; align-items: flex-start; }
+    .term-prompt { color: #6366f1; flex-shrink: 0; }
+    .term-text { color: #94a3b8; }
+    .term-success { color: #10b981; }
+    .term-error { color: #ef4444; }
+    .term-warn { color: #f59e0b; }
+    .cursor {
+        display: inline-block;
+        width: 8px; height: 15px;
+        background: #6366f1;
+        animation: blink 1s step-end infinite;
+        vertical-align: text-bottom;
+        margin-left: 2px;
+        border-radius: 1px;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    /* ===== FLOATING TOOLS ===== */
+    .floating-icon {
+        position: absolute;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.1);
+        animation: float-up 6s ease-in-out infinite;
+    }
+    @keyframes float-up {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        33% { transform: translateY(-16px) rotate(5deg); }
+        66% { transform: translateY(-8px) rotate(-3deg); }
+    }
+
+    /* ===== PROGRESS BAR ===== */
+    .fix-progress-bar {
+        height: 4px;
+        background: linear-gradient(90deg, #6366f1, #a855f7);
+        border-radius: 4px;
+        animation: progress-fill 8s ease-in-out infinite;
+    }
+    @keyframes progress-fill {
+        0% { width: 0%; }
+        40% { width: 60%; }
+        70% { width: 85%; }
+        85% { width: 88%; }
+        100% { width: 88%; }
+    }
+
+    /* ===== BUTTONS ===== */
+    .glow-btn {
+        background: linear-gradient(135deg, #6366f1, #a855f7);
+        box-shadow: 0 0 30px rgba(99,102,241,0.4);
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 32px;
+        border-radius: 14px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .glow-btn:hover {
+        box-shadow: 0 0 50px rgba(99,102,241,0.7);
+        transform: translateY(-3px) scale(1.02);
+    }
+    .secondary-btn {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        border-radius: 14px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .secondary-btn:hover {
+        background: rgba(255,255,255,0.1);
+        border-color: rgba(99,102,241,0.4);
+        transform: translateY(-2px);
+    }
+
+    /* ===== LAYOUT ===== */
+    main {
+        position: relative;
+        z-index: 10;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 24px;
+    }
+    .content-wrap {
+        max-width: 1100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+    }
+    .two-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        width: 100%;
+    }
+    .left-col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+    }
+    .btn-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        margin-top: 8px;
+    }
+    @media (min-width: 900px) {
+        .two-col { flex-direction: row; align-items: flex-start; }
+        .left-col { align-items: flex-start; text-align: left; }
+        .btn-row { justify-content: flex-start; }
+    }
+
+        .no-scroll {
+            overflow: hidden !important;
+            height: 100vh !important;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Background Glows -->
+<div style="position:fixed;top:-100px;left:50%;transform:translateX(-50%);width:800px;height:500px;background:radial-gradient(ellipse,rgba(99,102,241,0.15) 0%,transparent 70%);pointer-events:none;z-index:0;"></div>
+<div style="position:fixed;bottom:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(ellipse,rgba(168,85,247,0.08) 0%,transparent 70%);pointer-events:none;z-index:0;"></div>
+
+<!-- Floating Tool Icons -->
+<div class="floating-icon" style="position:fixed;width:56px;height:56px;top:15%;left:8%;background:rgba(99,102,241,0.15);animation-delay:0s;">
+    <span class="material-symbols-outlined" style="color:#6366f1;font-size:28px;">build</span>
+</div>
+<div class="floating-icon" style="position:fixed;width:48px;height:48px;top:25%;right:10%;background:rgba(168,85,247,0.15);animation-delay:1.5s;">
+    <span class="material-symbols-outlined" style="color:#a855f7;font-size:24px;">settings</span>
+</div>
+<div class="floating-icon" style="position:fixed;width:44px;height:44px;top:65%;left:5%;background:rgba(16,185,129,0.12);animation-delay:0.8s;">
+    <span class="material-symbols-outlined" style="color:#10b981;font-size:22px;">code</span>
+</div>
+<div class="floating-icon" style="position:fixed;width:52px;height:52px;top:70%;right:7%;background:rgba(245,158,11,0.12);animation-delay:2s;">
+    <span class="material-symbols-outlined" style="color:#f59e0b;font-size:26px;">construction</span>
+</div>
+<div class="floating-icon" style="position:fixed;width:40px;height:40px;top:40%;left:3%;background:rgba(239,68,68,0.1);animation-delay:3s;">
+    <span class="material-symbols-outlined" style="color:#ef4444;font-size:20px;">bug_report</span>
+</div>
+
+<!-- Navbar -->
+<div style="position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
+        <a href="https://7xgrow.crazywheel.in/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+            <div style="width:36px;height:36px;background:#6366f1;border-radius:10px;display:flex;align-items:center;justify-content:center;">
+                <span class="material-symbols-outlined" style="color:#fff;font-size:20px;">rocket_launch</span>
+            </div>
+            <span style="font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:800;color:#fff;">7xGrow</span>
+        </a>
+        <div style="display:flex;align-items:center;gap:12px;">
+            <a href="https://7xgrow.crazywheel.in/" class="glow-btn" style="padding:10px 22px;font-size:13px;">
+                <span class="material-symbols-outlined" style="font-size:17px;">home</span>
+                Home
+            </a>
+            <button id="mobileMenuBtn" style="background:none;border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:170;" class="lg:hidden">
+                <span class="material-symbols-outlined" style="font-size:32px;">menu</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" style="position:fixed;inset:0;background:rgba(2,6,23,0.98);z-index:150;display:none;flex-direction:column;padding:100px 24px;overflow-y:auto;">
+    <nav style="display:flex;flex-direction:column;gap:24px;text-align:center;">
+        <a href="https://7xgrow.crazywheel.in/" style="color:#fff;text-decoration:none;font-size:24px;font-weight:700;">Home</a>
+        <a href="https://7xgrow.crazywheel.in/main service page.html" style="color:#fff;text-decoration:none;font-size:24px;font-weight:700;">Services</a>
+        <a href="https://7xgrow.crazywheel.in/about us.html" style="color:#fff;text-decoration:none;font-size:24px;font-weight:700;">About</a>
+        <a href="https://7xgrow.crazywheel.in/case studey.html" style="color:#fff;text-decoration:none;font-size:24px;font-weight:700;">Case Studies</a>
+        <a href="https://7xgrow.crazywheel.in/blog/" style="color:#fff;text-decoration:none;font-size:24px;font-weight:700;">Blog</a>
+        <a href="https://7xgrow.crazywheel.in/contact us.html" style="color:#fff;text-decoration:none;font-size:24px;font-weight:700;">Contact</a>
+    </nav>
+</div>
+
+<main>
+<div class="content-wrap">
+
+    <!-- Top Badge -->
+    <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:9999px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:#ef4444;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;">
+        <span style="width:8px;height:8px;border-radius:50%;background:#ef4444;animation:blink 1s step-end infinite;display:inline-block;"></span>
+        Page Not Found
+    </div>
+
+    <div class="two-col">
+        <!-- Left -->
+        <div class="left-col">
+            <div class="glitch">404</div>
+
+            <div style="display:flex;flex-direction:column;gap:12px;max-width:480px;">
+                <h1 style="font-family:'Outfit',sans-serif;font-size:clamp(24px,4vw,40px);font-weight:900;color:#fff;line-height:1.2;">
+                    We're <span style="background:linear-gradient(135deg,#6366f1,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Fixing Things</span> Right Now
+                </h1>
+                <p style="color:#94a3b8;font-size:16px;line-height:1.7;">
+                    Oops! The page you're looking for has been moved, deleted, or doesn't exist. Our engineers are on it — but feel free to head back home!
+                </p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div style="width:100%;max-width:400px;background:rgba(255,255,255,0.05);border-radius:9999px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);">
+                <div class="fix-progress-bar"></div>
+            </div>
+            <p style="color:#64748b;font-size:12px;font-family:'JetBrains Mono',monospace;">Running diagnostics... 88% complete</p>
+
+            <!-- Buttons -->
+            <div class="btn-row">
+                <a href="https://7xgrow.crazywheel.in/" class="glow-btn">
+                    <span class="material-symbols-outlined" style="font-size:20px;">home</span>
+                    Go Back Home
+                </a>
+                <a href="https://7xgrow.crazywheel.in/blog/" class="secondary-btn">
+                    <span class="material-symbols-outlined" style="font-size:20px;">menu_book</span>
+                    Visit Blog
+                </a>
+            </div>
+        </div>
+
+        <!-- Right — Terminal -->
+        <div style="flex:1;display:flex;justify-content:center;width:100%;">
+            <div class="terminal">
+                <div class="terminal-bar">
+                    <div class="terminal-dot" style="background:#ef4444;"></div>
+                    <div class="terminal-dot" style="background:#f59e0b;"></div>
+                    <div class="terminal-dot" style="background:#10b981;"></div>
+                    <span style="margin-left:8px;color:#64748b;font-family:'JetBrains Mono',monospace;font-size:12px;">7xgrow-debug ~ bash</span>
+                </div>
+                <div class="terminal-body" id="terminal-output">
+                    <div class="term-line">
+                        <span class="term-prompt">$</span>
+                        <span class="term-text">scan --url 404 --verbose</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Error Code -->
+    <div style="display:flex;align-items:center;gap:12px;padding:12px 24px;border-radius:12px;background:rgba(239,68,68,0.05);border:1px solid rgba(239,68,68,0.15);">
+        <span class="material-symbols-outlined" style="color:#ef4444;font-size:20px;">error</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94a3b8;">
+            HTTP <span style="color:#ef4444;">404</span> — Resource not found at requested URI
+        </span>
+    </div>
+
+</div>
+</main>
+
+<script>
+    // Mobile menu logic for 404
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.style.display === 'flex';
+            mobileMenu.style.display = isOpen ? 'none' : 'flex';
+            const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+            icon.textContent = isOpen ? 'menu' : 'close';
+            
+            if (!isOpen) {
+                document.body.classList.add('no-scroll');
+                document.documentElement.classList.add('no-scroll');
+            } else {
+                document.body.classList.remove('no-scroll');
+                document.documentElement.classList.remove('no-scroll');
+            }
+        });
+    }
+</script>
+const lines = [
+    { type: 'text',    text: 'Scanning files...' },
+    { type: 'warn',    text: '[WARN] Page route not found in sitemap' },
+    { type: 'text',    text: 'Checking redirects database...' },
+    { type: 'error',   text: '[ERROR] No redirect rule matched: 404' },
+    { type: 'text',    text: 'Running cache flush...' },
+    { type: 'success', text: '[OK] Cache cleared successfully' },
+    { type: 'text',    text: 'Attempting route rebuild...' },
+    { type: 'warn',    text: '[WARN] Content index incomplete' },
+    { type: 'text',    text: 'Queuing for manual fix...' },
+    { type: 'success', text: '[OK] Ticket #7XG-404 created' },
+    { type: 'text',    text: 'ETA: Soon™  |  Status: Being fixed 🔧' },
+];
+const output = document.getElementById('terminal-output');
+let lineIndex = 0;
+function addLine(line, callback) {
+    const div = document.createElement('div');
+    div.className = 'term-line';
+    const prompt = document.createElement('span');
+    prompt.className = 'term-prompt';
+    prompt.textContent = '>';
+    const text = document.createElement('span');
+    const classMap = { text:'term-text', success:'term-success', error:'term-error', warn:'term-warn' };
+    text.className = classMap[line.type] || 'term-text';
+    div.appendChild(prompt);
+    div.appendChild(text);
+    output.appendChild(div);
+    output.scrollTop = output.scrollHeight;
+    let i = 0;
+    const interval = setInterval(() => {
+        text.textContent += line.text[i];
+        i++;
+        if (i >= line.text.length) {
+            clearInterval(interval);
+            setTimeout(callback, 400);
+        }
+    }, 28);
+}
+function runTerminal() {
+    if (lineIndex >= lines.length) {
+        const cursor = document.createElement('span');
+        cursor.className = 'cursor';
+        output.appendChild(cursor);
+        return;
+    }
+    addLine(lines[lineIndex], () => { lineIndex++; runTerminal(); });
+}
+setTimeout(runTerminal, 1000);
+</script>
+</body>
+</html>
