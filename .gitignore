@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Logs and temporary files
+*.log
+.staging/
+.cache/
+tmp/
+temp/
+
+# Entire WordPress installation — keep separate from this repository
+/blog/
+
+# Database and backup files
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.bak
+*.bk
+*.backup
+
+# Private configuration
+.private/
+
+# Build artifacts
+dist/
+coverage/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/

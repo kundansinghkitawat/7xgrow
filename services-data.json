@@ -1,0 +1,1081 @@
+{
+  "seo": {
+    "filename": "seo.html",
+    "meta": {
+      "title": "Search Engine Optimization Services | 7xGrow",
+      "description": "Stop guessing. 7xGrow uses advanced search engineering and the CLARITY framework to dominate search engines and drive high-intent revenue.",
+      "keywords": "SEO Udaipur, Advanced SEO, Data-driven SEO, SEO Audit, Growth Marketing, 7xGrow"
+    },
+    "hero": {
+      "badge": "Advanced SEO Hub",
+      "title": "Data-Driven SEO for",
+      "gradientTitle": "Predictable Growth",
+      "desc": "Stop guessing. We use advanced search engineering and the CLARITY framework to dominate search engines and drive high-intent revenue.",
+      "cta1Text": "Claim Your Free Audit",
+      "cta1Link": "#roadmapForm",
+      "cta2Text": "Case Studies",
+      "cta2Link": "#case-studies",
+      "formTitle": "Get a Custom SEO Roadmap",
+      "formBtn": "Analyze My Website",
+      "formNote": "Privacy Guaranteed. 100% Free SEO Consultation."
+    },
+    "statsSection": {
+      "badge": "WHY 7XGROW",
+      "title": "Your Strategic Partner for",
+      "gradientTitle": "SEO Dominance in India",
+      "desc": "In a market of 1.4 billion people, digital visibility isn't just an option—it's your survival. 7xGrow bridges the gap between technical search complexity and business ROI.",
+      "bullets": [
+        "Hindi & Vernacular Search Optimization",
+        "Mobile-First Indexing Specialists",
+        "E-E-A-T Focused Content Engineering"
+      ],
+      "stats": [
+        { "num": "350%", "label": "Avg Traffic Growth" },
+        { "num": "850k+", "label": "Keywords Ranked" },
+        { "num": "12+", "label": "Industries Served" },
+        { "num": "$10M+", "label": "Revenue Generated" }
+      ]
+    },
+    "subServices": {
+      "heading": "10+ Years of Driving Significant Growth through",
+      "gradientHeading": "Data-Backed SEO",
+      "items": [
+        {
+          "title": "Technical SEO",
+          "desc": "Fixing technical issues is paramount to optimize your website in 2024. Slow website, canonical errors, hreflang misconfigurations, mixed content, and indexing blockers make your website malfunction. Our SEO engineering helps businesses improve their page speed that eventually reduces their bounce rate to get more leads and conversions.",
+          "link": "technical-seo.html"
+        },
+        {
+          "title": "On-Page SEO",
+          "desc": "Content optimization, meta structures, and internal linking for maximum relevance. We align your content with user intent and search engine requirements.",
+          "link": "on-page-seo.html"
+        },
+        {
+          "title": "Off-Page SEO",
+          "desc": "Ethical link building and digital PR to skyrocket your domain authority. We build a high-quality backlink profile that earns trust from search engines.",
+          "link": "off-page-seo.html"
+        },
+        {
+          "title": "Local SEO",
+          "desc": "Dominating local map packs and high-intent geo-queries for foot traffic and calls. Optimized GMB profiles, local citations, and geo-targeted landing pages.",
+          "link": "local-seo.html"
+        },
+        {
+          "title": "International SEO",
+          "desc": "Scale your organic footprint across global markets with hreflang architecture, geo-targeted CDNs, and multi-currency organic landing pages.",
+          "link": "international-seo.html"
+        },
+        {
+          "title": "E-commerce SEO",
+          "desc": "Product schema injection, faceted navigation crawl optimization, and category page domination for Shopify, WooCommerce, and Magento stores.",
+          "link": "e-commerce-seo.html"
+        },
+        {
+          "title": "AEO (Answer Engine Optimization)",
+          "desc": "Engineered for ChatGPT, Google SGE, Perplexity, and voice queries. We structure your digital entity to be the primary referenced answer.",
+          "link": "aeo.html"
+        },
+        {
+          "title": "GEO (Generative Engine Optimization)",
+          "desc": "Dominating generative AI search snapshots by optimizing brand citations, high-authority mentions, and semantic knowledge graphs.",
+          "link": "geo.html"
+        }
+      ]
+    },
+    "tools": {
+      "badge": "Tools & Tech",
+      "title": "Our SEO Arsenal",
+      "desc": "We use the world's most advanced data tools to gain your unfair advantage.",
+      "row1": [
+        { "name": "Google Search Console", "icon": "search", "bg": "bg-blue-500/20", "color": "text-blue-400" },
+        { "name": "Ahrefs", "icon": "troubleshoot", "bg": "bg-orange-500/20", "color": "text-orange-400" },
+        { "name": "SEMrush", "icon": "trending_up", "bg": "bg-rose-500/20", "color": "text-rose-400" },
+        { "name": "Screaming Frog", "icon": "bug_report", "bg": "bg-green-600/20", "color": "text-green-500" },
+        { "name": "Google Analytics 4", "icon": "analytics", "bg": "bg-yellow-500/20", "color": "text-yellow-400" },
+        { "name": "Moz Pro", "icon": "radar", "bg": "bg-cyan-500/20", "color": "text-cyan-400" }
+      ],
+      "row2": [
+        { "name": "Surfer SEO", "icon": "waves", "bg": "bg-purple-500/20", "color": "text-purple-400" },
+        { "name": "Sitebulb", "icon": "lightbulb", "bg": "bg-amber-500/20", "color": "text-amber-400" },
+        { "name": "PageSpeed Insights", "icon": "speed", "bg": "bg-emerald-500/20", "color": "text-emerald-400" },
+        { "name": "BrightLocal", "icon": "location_on", "bg": "bg-indigo-500/20", "color": "text-indigo-400" },
+        { "name": "Schema App", "icon": "code", "bg": "bg-pink-500/20", "color": "text-pink-400" },
+        { "name": "Hotjar", "icon": "local_fire_department", "bg": "bg-red-500/20", "color": "text-red-400" }
+      ]
+    },
+    "process": {
+      "badge": "Our Process",
+      "title": "Growth Command Center",
+      "desc": "The central processing unit of your organic expansion, powered by high-fidelity data and architectural precision.",
+      "steps": [
+        {
+          "num": "01",
+          "name": "Exploration Phase",
+          "objective": "Map current performance architecture and technical health metrics.",
+          "activities": "Technical crawl, backlink profiling, UX health assessment.",
+          "outcome": "Baseline Visibility Report"
+        },
+        {
+          "num": "02",
+          "name": "Strategy Phase",
+          "objective": "Uncover high-intent market inefficiencies and competitor gaps.",
+          "activities": "Reverse engineering, semantic mapping, intent modeling.",
+          "outcome": "Keyword Authority Matrix"
+        },
+        {
+          "num": "03",
+          "name": "Implementation",
+          "objective": "Surgical execution of core optimizations and engineering.",
+          "activities": "Schema injection, content rollout, technical patching.",
+          "outcome": "Visibility Acceleration"
+        },
+        {
+          "num": "04",
+          "name": "Measurable Results",
+          "objective": "Vertical and horizontal expansion of search market share.",
+          "activities": "International scaling, GEO/AEO optimization, PR outreach.",
+          "outcome": "Market Leadership ROI"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What makes 7xGrow different from other SEO agencies?",
+        "a": "We are engineers at heart. We don't just 'do SEO'—we build growth systems using the CLARITY framework, focusing on hard revenue data rather than vanity traffic metrics."
+      },
+      {
+        "q": "How long does it take to see organic results?",
+        "a": "While initial technical improvements yield indexation bumps in 30-45 days, significant compounding revenue growth typically scales between months 3 to 6."
+      },
+      {
+        "q": "Do you offer month-to-month contracts?",
+        "a": "We believe in earning your business every single month. We offer flexible retainer models alongside dedicated enterprise growth sprints."
+      },
+      {
+        "q": "What is AEO and why is it important now?",
+        "a": "Answer Engine Optimization (AEO) optimizes your brand to be chosen by AI answer engines (ChatGPT, Google Gemini, Perplexity) as the authoritative source for user queries."
+      },
+      {
+        "q": "How much does a premium SEO campaign cost?",
+        "a": "Our campaigns are tailored to your industry competition and growth goals, ranging from local market dominance packages to multi-region enterprise programs."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Own Your",
+      "gradientTitle": "Search Results?",
+      "desc": "Get a technical audit and a custom 12-month growth roadmap today.",
+      "btn1": "Request Free Audit",
+      "btn2": "Contact SEO Expert"
+    }
+  },
+  "google-ads": {
+    "filename": "google-ads.html",
+    "meta": {
+      "title": "Google Ads & PPC Management Services | 7xGrow",
+      "description": "Maximize conversions and stop wasting ad budget. Data-driven Google Ads, Shopping, and Retargeting campaigns that drive 4x+ ROAS.",
+      "keywords": "Google Ads Udaipur, PPC Management, Paid Search, ROAS, Performance Marketing, 7xGrow"
+    },
+    "hero": {
+      "badge": "PPC Performance Hub",
+      "title": "High-Converting PPC for",
+      "gradientTitle": "Maximum ROAS",
+      "desc": "Stop burning ad budget on low-intent clicks. We engineer hyper-targeted Google Ads campaigns that capture ready-to-buy customers and scale revenue predictably.",
+      "cta1Text": "Get Free PPC Audit",
+      "cta1Link": "#roadmapForm",
+      "cta2Text": "Case Studies",
+      "cta2Link": "#case-studies",
+      "formTitle": "Get a Custom PPC Roadmap",
+      "formBtn": "Analyze My Ad Account",
+      "formNote": "Privacy Guaranteed. 100% Free PPC Consultation."
+    },
+    "statsSection": {
+      "badge": "WHY 7XGROW",
+      "title": "Engineered for Extreme",
+      "gradientTitle": "Ad Profitability",
+      "desc": "Clicks mean nothing if they don't convert into revenue. We treat your ad spend like our own capital—relentlessly testing, pruning waste, and compounding winners.",
+      "bullets": [
+        "First-Party Conversion Tracking & Server-Side Tagging",
+        "Smart Bidding + Custom Value Rules Engineering",
+        "High-Converting Landing Page Optimization Included"
+      ],
+      "stats": [
+        { "num": "4.8x", "label": "Average Campaign ROAS" },
+        { "num": "-42%", "label": "Cost Per Acquisition" },
+        { "num": "₹15Cr+", "label": "Ad Spend Managed" },
+        { "num": "98%", "label": "Client Retention Rate" }
+      ]
+    },
+    "subServices": {
+      "heading": "Full-Funnel Paid Search That Delivers",
+      "gradientHeading": "Pure Revenue",
+      "items": [
+        {
+          "title": "Google Search Ads",
+          "desc": "Capture buyers at the exact moment of high intent with tightly grouped keyword themes, single-theme ad groups, and aggressive negative keyword filtering.",
+          "link": "google-ads.html"
+        },
+        {
+          "title": "Google Shopping & Performance Max",
+          "desc": "Feed optimization, asset group structuring, and custom margin bidding to ensure high-margin inventory gets maximum visibility and profitable order volume.",
+          "link": "shopping-ads.html"
+        },
+        {
+          "title": "Remarketing & Audience Retargeting",
+          "desc": "Bring back high-intent window shoppers across YouTube, Display, and Gmail with compelling dynamic retargeting flows that overcome purchase objections.",
+          "link": "retargeting.html"
+        },
+        {
+          "title": "International PPC",
+          "desc": "Cross-border ad campaign architecture with localized currency bidding, native language copy, and regional audience targeting for global expansion.",
+          "link": "international-ppc.html"
+        },
+        {
+          "title": "Bidding Optimization & AI Models",
+          "desc": "Leveraging target CPA, tROAS, and custom scripts to eliminate budget bleed during off-peak hours while aggressively bidding during conversion surges.",
+          "link": "bidding-optimization.html"
+        },
+        {
+          "title": "Conversion Tracking & Attribution",
+          "desc": "Advanced server-side tracking via Google Tag Manager and offline conversion imports (OCI) so Google AI bids on qualified revenue, not spam leads.",
+          "link": "conversion-tracking.html"
+        }
+      ]
+    },
+    "tools": {
+      "badge": "Tools & Tech",
+      "title": "Our PPC Tech Stack",
+      "desc": "We utilize enterprise-grade bidding, tracking, and competitive intelligence suites.",
+      "row1": [
+        { "name": "Google Ads", "icon": "ads_click", "bg": "bg-blue-500/20", "color": "text-blue-400" },
+        { "name": "Google Tag Manager", "icon": "tag", "bg": "bg-indigo-500/20", "color": "text-indigo-400" },
+        { "name": "Google Merchant Center", "icon": "shopping_cart", "bg": "bg-green-500/20", "color": "text-green-400" },
+        { "name": "SpyFu", "icon": "visibility", "bg": "bg-purple-500/20", "color": "text-purple-400" },
+        { "name": "SEMrush PPC", "icon": "trending_up", "bg": "bg-rose-500/20", "color": "text-rose-400" },
+        { "name": "Looker Studio", "icon": "query_stats", "bg": "bg-cyan-500/20", "color": "text-cyan-400" }
+      ],
+      "row2": [
+        { "name": "Optmyzr", "icon": "tune", "bg": "bg-amber-500/20", "color": "text-amber-400" },
+        { "name": "ClickCease", "icon": "shield", "bg": "bg-red-500/20", "color": "text-red-400" },
+        { "name": "Unbounce", "icon": "web", "bg": "bg-blue-600/20", "color": "text-blue-300" },
+        { "name": "Supermetrics", "icon": "dataset", "bg": "bg-emerald-500/20", "color": "text-emerald-400" },
+        { "name": "Microsoft Ads", "icon": "public", "bg": "bg-sky-500/20", "color": "text-sky-400" },
+        { "name": "Zapier", "icon": "bolt", "bg": "bg-orange-500/20", "color": "text-orange-400" }
+      ]
+    },
+    "process": {
+      "badge": "Our Process",
+      "title": "PPC Profit Engineering",
+      "desc": "A continuous feedback loop designed to cut wasted ad spend and scale your winning campaigns rapidly.",
+      "steps": [
+        {
+          "num": "01",
+          "name": "Audit & Tracking Setup",
+          "objective": "Identify wasted spend and verify 100% accurate conversion attribution.",
+          "activities": "Negative keyword audit, tag verification, historical CPA analysis.",
+          "outcome": "Ad Leakage Diagnostic"
+        },
+        {
+          "num": "02",
+          "name": "Restructure & Creative",
+          "objective": "Rebuild campaigns into high-relevance themes with compelling RSA copy.",
+          "activities": "Competitor conquesting, ad extensions, landing page alignment.",
+          "outcome": "Optimized Account Architecture"
+        },
+        {
+          "num": "03",
+          "name": "Bidding & Scaling",
+          "objective": "Feed Google AI clean conversion data to lower CPA and accelerate volume.",
+          "activities": "Value-based bidding, auction insights monitoring, Dayparting tweaks.",
+          "outcome": "ROAS Maximization"
+        },
+        {
+          "num": "04",
+          "name": "Full-Funnel Expansion",
+          "objective": "Expand winning models to Shopping, Performance Max, and YouTube.",
+          "activities": "Cross-channel remarketing, international campaigns, budget scaling.",
+          "outcome": "Predictable Revenue Engine"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How quickly can we see results from Google Ads?",
+        "a": "Paid search drives targeted traffic immediately upon launch. We typically optimize conversion rates and hit target CPA within the first 14 to 30 days."
+      },
+      {
+        "q": "What is the recommended monthly ad spend?",
+        "a": "We recommend an ad budget of at least ₹50,000 to ₹1,00,000/month to allow Google's machine learning algorithms enough conversion data to optimize effectively."
+      },
+      {
+        "q": "Do you charge a percentage of ad spend or flat fee?",
+        "a": "We offer transparent flat management tiers for mid-market businesses, and performance-based hybrid models for high-scale enterprise spenders."
+      },
+      {
+        "q": "Who owns the Google Ads account?",
+        "a": "You own 100% of your ad accounts, billing, data, and tracking pixels. We manage it via Google MCC partner access with full client ownership."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Stop Wasting",
+      "gradientTitle": "Ad Budget?",
+      "desc": "Get a complimentary Google Ads audit and see exactly where your money is leaking.",
+      "btn1": "Claim PPC Audit",
+      "btn2": "Speak With Specialist"
+    }
+  },
+  "social-media-marketing": {
+    "filename": "social-media-marketing.html",
+    "meta": {
+      "title": "Social Media Marketing Agency Udaipur | 7xGrow",
+      "description": "Transform casual followers into loyal buyers. Expert Meta Ads, Instagram growth, TikTok campaigns & social commerce strategies.",
+      "keywords": "Social Media Marketing Udaipur, Meta Ads, Instagram Marketing, Social Commerce, 7xGrow"
+    },
+    "hero": {
+      "badge": "Social Growth Hub",
+      "title": "Turn Social Attention into",
+      "gradientTitle": "Consistent Revenue",
+      "desc": "Likes don't pay bills. We create viral organic content and profitable Meta Ads campaigns that build brand authority and generate consistent customer acquisition.",
+      "cta1Text": "Get Social Audit",
+      "cta1Link": "#roadmapForm",
+      "cta2Text": "Case Studies",
+      "cta2Link": "#case-studies",
+      "formTitle": "Get a Custom Social Strategy",
+      "formBtn": "Unlock Social Growth",
+      "formNote": "Privacy Guaranteed. 100% Free Consultation."
+    },
+    "statsSection": {
+      "badge": "WHY 7XGROW",
+      "title": "Creative Excellence Meets",
+      "gradientTitle": "Algorithmic Precision",
+      "desc": "We combine thumb-stopping visual storytelling with deep performance data to build loyal brand communities that drive repeat transactions.",
+      "bullets": [
+        "Creator-Led UGC & Short-Form Video Production",
+        "Meta Advantage+ Shopping & Custom Audience Retargeting",
+        "Community Management with Real-Time Customer Support"
+      ],
+      "stats": [
+        { "num": "50M+", "label": "Organic Views Generated" },
+        { "num": "5.2x", "label": "Average Social ROAS" },
+        { "num": "450k+", "label": "Followers Grown" },
+        { "num": "28%", "label": "Higher Repeat Purchases" }
+      ]
+    },
+    "subServices": {
+      "heading": "Comprehensive Social Marketing for",
+      "gradientHeading": "Hyper-Growth Brands",
+      "items": [
+        {
+          "title": "Meta Ads (Facebook & Instagram)",
+          "desc": "High-converting paid social campaigns utilizing creative testing sandboxes, lookalike models, and Advantage+ shopping campaigns.",
+          "link": "social-media-marketing.html"
+        },
+        {
+          "title": "Short-Form Video & Reels",
+          "desc": "Hook-optimized Instagram Reels and YouTube Shorts designed to trigger algorithmic distribution and organic viral velocity.",
+          "link": "video-podcasting.html"
+        },
+        {
+          "title": "Influencer Outreach & Management",
+          "desc": "Partnering your brand with authentic micro and macro creators who possess real audience trust and driving measurable referral sales.",
+          "link": "influencer-management.html"
+        },
+        {
+          "title": "Social Commerce & Shop Setup",
+          "desc": "Direct social selling on Instagram Shop and Facebook catalog integrations for frictionless in-app checkout experiences.",
+          "link": "social-commerce.html"
+        },
+        {
+          "title": "Community Management",
+          "desc": "Active DM automation, prompt comment engagement, and brand reputation protection that transforms comments into customer conversions.",
+          "link": "community-management.html"
+        },
+        {
+          "title": "Viral Campaign Engineering",
+          "desc": "Trend-jacking, interactive polls, contest flows, and community-driven initiatives that ignite organic word-of-mouth momentum.",
+          "link": "viral-marketing.html"
+        }
+      ]
+    },
+    "tools": {
+      "badge": "Tools & Tech",
+      "title": "Social Creative & Analytics Suite",
+      "desc": "The industry's leading tools for social listening, scheduling, and conversion tracking.",
+      "row1": [
+        { "name": "Meta Ads Manager", "icon": "campaign", "bg": "bg-blue-500/20", "color": "text-blue-400" },
+        { "name": "Instagram Business", "icon": "photo_camera", "bg": "bg-pink-500/20", "color": "text-pink-400" },
+        { "name": "Sprout Social", "icon": "forum", "bg": "bg-green-500/20", "color": "text-green-400" },
+        { "name": "CapCut Pro", "icon": "movie", "bg": "bg-purple-500/20", "color": "text-purple-400" },
+        { "name": "Canva Enterprise", "icon": "palette", "bg": "bg-cyan-500/20", "color": "text-cyan-400" },
+        { "name": "ManyChat", "icon": "chat", "bg": "bg-amber-500/20", "color": "text-amber-400" }
+      ],
+      "row2": [
+        { "name": "Hootsuite", "icon": "schedule", "bg": "bg-orange-500/20", "color": "text-orange-400" },
+        { "name": "Triple Whale", "icon": "insights", "bg": "bg-emerald-500/20", "color": "text-emerald-400" },
+        { "name": "Brand24", "icon": "hearing", "bg": "bg-indigo-500/20", "color": "text-indigo-400" },
+        { "name": "TikTok Ads", "icon": "music_note", "bg": "bg-rose-500/20", "color": "text-rose-400" },
+        { "name": "Figma", "icon": "draw", "bg": "bg-violet-500/20", "color": "text-violet-400" },
+        { "name": "Buffer", "icon": "layers", "bg": "bg-sky-500/20", "color": "text-sky-400" }
+      ]
+    },
+    "process": {
+      "badge": "Our Process",
+      "title": "Social Revenue Engine",
+      "desc": "From audience research to viral hooks and scaling ad spend, here is how we grow your social footprint.",
+      "steps": [
+        {
+          "num": "01",
+          "name": "Audience & Aesthetic Audit",
+          "objective": "Define your brand voice, color palette, and ideal buyer personas.",
+          "activities": "Competitor content teardown, aesthetic moodboard, hook library.",
+          "outcome": "Social Brand Playbook"
+        },
+        {
+          "num": "02",
+          "name": "Content Batching & Testing",
+          "objective": "Create high-converting video and carousel assets for organic and paid tests.",
+          "activities": "Video scripting, UGC coordination, creative asset sprint.",
+          "outcome": "30-Day Content Pipeline"
+        },
+        {
+          "num": "03",
+          "name": "Paid Amplification",
+          "objective": "Put ad spend behind proven organic winners to scale sales rapidly.",
+          "activities": "Advantage+ catalog ads, lookalike scaling, retargeting setup.",
+          "outcome": "High ROAS Customer Flow"
+        },
+        {
+          "num": "04",
+          "name": "Community & Retention",
+          "objective": "Build lifelong brand advocates and maximize customer lifetime value.",
+          "activities": "DM automation, VIP customer groups, loyalty campaigns.",
+          "outcome": "Organic Brand Equity"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Which social platforms should my business focus on?",
+        "a": "We analyze where your ideal customers spend their active time. E-commerce thrives on Instagram and Meta, B2B on LinkedIn and YouTube, and local services on Facebook and Google."
+      },
+      {
+        "q": "Do you provide video shooting and content creation?",
+        "a": "Yes! Our creative team handles scriptwriting, video editing, graphics design, and UGC creator coordination from end to end."
+      },
+      {
+        "q": "How do you measure social media ROI?",
+        "a": "We track hard metrics: website conversions, lead generation cost, direct sales via Meta Pixel/CAPI, and blended customer acquisition cost (CAC)."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Ignite Your",
+      "gradientTitle": "Social Presence?",
+      "desc": "Get a custom social audit and 30-day viral content blueprint today.",
+      "btn1": "Claim Social Audit",
+      "btn2": "Speak With Strategist"
+    }
+  },
+  "website-design": {
+    "filename": "website-design.html",
+    "meta": {
+      "title": "Website Design & Development Services Udaipur | 7xGrow",
+      "description": "High-performance, modern websites engineered to convert visitors into paying clients. Blazing fast, SEO-optimized, and mobile-first.",
+      "keywords": "Website Design Udaipur, Web Development, WordPress, Shopify, Custom UI/UX, 7xGrow"
+    },
+    "hero": {
+      "badge": "Web Engineering Hub",
+      "title": "High-Performance Websites Engineered for",
+      "gradientTitle": "Peak Conversions",
+      "desc": "Your website is your best salesperson. We design and build ultra-fast, visually stunning, mobile-first websites that turn visitors into loyal customers.",
+      "cta1Text": "Get Free Web Audit",
+      "cta1Link": "#roadmapForm",
+      "cta2Text": "Case Studies",
+      "cta2Link": "#case-studies",
+      "formTitle": "Plan Your New Website",
+      "formBtn": "Request Proposal",
+      "formNote": "Fast delivery. 100% Mobile & SEO Optimized."
+    },
+    "statsSection": {
+      "badge": "WHY 7XGROW",
+      "title": "Websites Built for Speed,",
+      "gradientTitle": "Rankings & Revenue",
+      "desc": "A slow or ugly website kills your marketing ROI. We engineer state-of-the-art web experiences that load in milliseconds and convert traffic at industry-leading rates.",
+      "bullets": [
+        "Sub-Second Load Times & 95+ Google PageSpeed Scores",
+        "Mobile-First Responsive Layouts & Dark Mode Support",
+        "Technical SEO & Conversion Architecture Baked In"
+      ],
+      "stats": [
+        { "num": "99.8%", "label": "Client Satisfaction" },
+        { "num": "< 1.2s", "label": "Avg Page Load Speed" },
+        { "num": "+65%", "label": "Avg Conversion Lift" },
+        { "num": "120+", "label": "Websites Delivered" }
+      ]
+    },
+    "subServices": {
+      "heading": "Modern Web Solutions Designed for",
+      "gradientHeading": "Digital Dominance",
+      "items": [
+        {
+          "title": "Custom UI/UX Design",
+          "desc": "Wireframing, interactive prototyping, and premium design systems built in Figma to reflect your brand's unique authority.",
+          "link": "uiux-design.html"
+        },
+        {
+          "title": "Modern Frontend Development",
+          "desc": "Responsive, pixel-perfect frontend coding with smooth micro-animations, glassmorphism, and responsive layouts.",
+          "link": "frontend-dev.html"
+        },
+        {
+          "title": "E-Commerce Development",
+          "desc": "High-converting Shopify and WooCommerce stores with one-click checkout, inventory sync, and custom app integrations.",
+          "link": "shopify-woocommerce.html"
+        },
+        {
+          "title": "Interactive Web Applications",
+          "desc": "Modern React, Next.js, and Node web apps with dynamic client portals, custom calculators, and CRM integrations.",
+          "link": "interactive-web-apps.html"
+        },
+        {
+          "title": "Website Speed & Core Web Vitals Tuning",
+          "desc": "Code minification, CDN setup, asset compression, and database caching to achieve perfect 90+ Google PageSpeed scores.",
+          "link": "performance-tuning.html"
+        },
+        {
+          "title": "Accessibility (WCAG 2.1)",
+          "desc": "Accessible, semantic web design ensuring full legal compliance and effortless usability across all device types.",
+          "link": "accessibility-wcag.html"
+        }
+      ]
+    },
+    "tools": {
+      "badge": "Tools & Tech",
+      "title": "Our Web Engineering Stack",
+      "desc": "We use modern, battle-tested technologies that ensure speed, security, and scalability.",
+      "row1": [
+        { "name": "HTML5 / CSS3", "icon": "code", "bg": "bg-orange-500/20", "color": "text-orange-400" },
+        { "name": "Tailwind CSS", "icon": "style", "bg": "bg-cyan-500/20", "color": "text-cyan-400" },
+        { "name": "JavaScript / Node", "icon": "javascript", "bg": "bg-yellow-500/20", "color": "text-yellow-400" },
+        { "name": "WordPress", "icon": "web", "bg": "bg-blue-500/20", "color": "text-blue-400" },
+        { "name": "Shopify", "icon": "storefront", "bg": "bg-green-500/20", "color": "text-green-400" },
+        { "name": "Figma", "icon": "draw", "bg": "bg-purple-500/20", "color": "text-purple-400" }
+      ],
+      "row2": [
+        { "name": "Cloudflare CDN", "icon": "cloud", "bg": "bg-amber-500/20", "color": "text-amber-400" },
+        { "name": "Next.js", "icon": "terminal", "bg": "bg-emerald-500/20", "color": "text-emerald-400" },
+        { "name": "React", "icon": "data_object", "bg": "bg-sky-500/20", "color": "text-sky-400" },
+        { "name": "GitHub", "icon": "commit", "bg": "bg-slate-500/20", "color": "text-slate-300" },
+        { "name": "Google Lighthouse", "icon": "speed", "bg": "bg-rose-500/20", "color": "text-rose-400" },
+        { "name": "Vercel", "icon": "rocket", "bg": "bg-indigo-500/20", "color": "text-indigo-400" }
+      ]
+    },
+    "process": {
+      "badge": "Our Process",
+      "title": "From Concept to Launch",
+      "desc": "Our structured agile development roadmap guarantees on-time delivery and uncompromising quality.",
+      "steps": [
+        {
+          "num": "01",
+          "name": "Discovery & Wireframing",
+          "objective": "Map customer journeys, page hierarchy, and conversion goals.",
+          "activities": "User flow mapping, low-fi wireframing, architecture blueprint.",
+          "outcome": "Approved Wireframe Prototype"
+        },
+        {
+          "num": "02",
+          "name": "High-Fidelity UI Design",
+          "objective": "Craft modern, state-of-the-art visual design with bespoke typography.",
+          "activities": "Design system creation, interactive Figma prototype, mobile previews.",
+          "outcome": "Pixel-Perfect UI Mockups"
+        },
+        {
+          "num": "03",
+          "name": "Clean Code & CMS Build",
+          "objective": "Develop ultra-fast, semantic code with clean CMS integration.",
+          "activities": "Responsive markup, interactive animations, SEO schema integration.",
+          "outcome": "Staging Environment Review"
+        },
+        {
+          "num": "04",
+          "name": "Speed Testing & Launch",
+          "objective": "Security audits, cross-browser QA, and live production deployment.",
+          "activities": "PageSpeed optimization, SSL setup, 301 redirect mapping.",
+          "outcome": "Live High-Converting Website"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How long does it take to design and launch a website?",
+        "a": "A custom high-performance website typically takes between 2 to 4 weeks depending on scope, custom features, and content readiness."
+      },
+      {
+        "q": "Will my website be mobile-friendly and fast?",
+        "a": "100% yes. Every website we build is mobile-first, responsive on all screen sizes, and optimized for sub-2-second load times."
+      },
+      {
+        "q": "Can I easily update content myself after launch?",
+        "a": "Yes! We build client-friendly editing workflows and provide full video training so you can edit text, photos, and blog posts effortlessly."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Build Your Dream",
+      "gradientTitle": "Website Today?",
+      "desc": "Tell us about your project and receive a custom design preview and roadmap.",
+      "btn1": "Start Web Project",
+      "btn2": "Schedule Strategy Call"
+    }
+  },
+  "content-marketing": {
+    "filename": "content-marketing.html",
+    "meta": {
+      "title": "Content Marketing Services Udaipur | 7xGrow",
+      "description": "Drive organic traffic and establish market authority with research-backed, human-written content engineering.",
+      "keywords": "Content Marketing Udaipur, SEO Copywriting, Blog Writing, Thought Leadership, 7xGrow"
+    },
+    "hero": {
+      "badge": "Content Engineering Hub",
+      "title": "Research-Backed Content for",
+      "gradientTitle": "Topical Authority",
+      "desc": "Stop publishing generic filler that nobody reads. We engineer high-intent content assets, case studies, and thought leadership articles that rank and convert.",
+      "cta1Text": "Get Content Strategy",
+      "cta1Link": "#roadmapForm",
+      "cta2Text": "Case Studies",
+      "cta2Link": "#case-studies",
+      "formTitle": "Get a Custom Content Plan",
+      "formBtn": "Generate Content Audit",
+      "formNote": "100% Original, Research-Backed Content."
+    },
+    "statsSection": {
+      "badge": "WHY 7XGROW",
+      "title": "Content That Drives",
+      "gradientTitle": "Compounding Value",
+      "desc": "Great content isn't an expense—it's an asset that produces organic leads for years without recurring ad spend.",
+      "bullets": [
+        "Topical Clusters Aligned with Google Helpful Content Guidelines",
+        "Subject-Matter Expert Writing with Original Data & Quotes",
+        "Repurposing for LinkedIn, Newsletters & Social Channels"
+      ],
+      "stats": [
+        { "num": "1,500+", "label": "Articles Published" },
+        { "num": "4.2x", "label": "Organic Traffic Growth" },
+        { "num": "65k+", "label": "Social Shares Generated" },
+        { "num": "88%", "label": "First-Page Keyword Rate" }
+      ]
+    },
+    "subServices": {
+      "heading": "End-to-End Content Strategy for",
+      "gradientHeading": "Industry Leaders",
+      "items": [
+        {
+          "title": "Content Strategy & Editorial Planning",
+          "desc": "Keyword gap analysis, search intent mapping, and monthly content calendars aligned with commercial priorities.",
+          "link": "content-strategy.html"
+        },
+        {
+          "title": "SEO Copywriting & Blog Engineering",
+          "desc": "In-depth, comprehensive guides and articles structured for featured snippets, answer engines, and organic rankings.",
+          "link": "copywriting.html"
+        },
+        {
+          "title": "Thought Leadership & Ghostwriting",
+          "desc": "Executive articles, LinkedIn thought leadership pieces, and industry perspectives that position your founders as category authorities.",
+          "link": "thought-leadership.html"
+        },
+        {
+          "title": "Multi-Channel Content Distribution",
+          "desc": "Amplifying articles across syndication networks, newsletters, industry communities, and social media channels.",
+          "link": "content-distribution.html"
+        },
+        {
+          "title": "Product Descriptions & Landing Page Copy",
+          "desc": "Persuasive, conversion-driven copy for product pages, SaaS feature landing pages, and service presentations.",
+          "link": "product-descriptions.html"
+        },
+        {
+          "title": "Newsletter & Lead Magnet Creation",
+          "desc": "High-value downloadable whitepapers, ebooks, and weekly newsletter sequences that grow your owned subscriber list.",
+          "link": "newsletters.html"
+        }
+      ]
+    },
+    "tools": {
+      "badge": "Tools & Tech",
+      "title": "Our Content Toolkit",
+      "desc": "We combine editorial excellence with state-of-the-art semantic tools.",
+      "row1": [
+        { "name": "Surfer SEO", "icon": "waves", "bg": "bg-purple-500/20", "color": "text-purple-400" },
+        { "name": "Ahrefs Content Explorer", "icon": "troubleshoot", "bg": "bg-orange-500/20", "color": "text-orange-400" },
+        { "name": "Grammarly Business", "icon": "spellcheck", "bg": "bg-green-500/20", "color": "text-green-400" },
+        { "name": "Google Docs", "icon": "description", "bg": "bg-blue-500/20", "color": "text-blue-400" },
+        { "name": "Clearscope", "icon": "find_in_page", "bg": "bg-indigo-500/20", "color": "text-indigo-400" },
+        { "name": "BuzzSumo", "icon": "trending_up", "bg": "bg-yellow-500/20", "color": "text-yellow-400" }
+      ],
+      "row2": [
+        { "name": "Notion", "icon": "edit_note", "bg": "bg-slate-500/20", "color": "text-slate-300" },
+        { "name": "Canva", "icon": "palette", "bg": "bg-cyan-500/20", "color": "text-cyan-400" },
+        { "name": "Hemingway App", "icon": "text_fields", "bg": "bg-rose-500/20", "color": "text-rose-400" },
+        { "name": "MarketMuse", "icon": "psychology", "bg": "bg-amber-500/20", "color": "text-amber-400" },
+        { "name": "SEMrush Topic", "icon": "category", "bg": "bg-red-500/20", "color": "text-red-400" },
+        { "name": "Substack", "icon": "mail", "bg": "bg-emerald-500/20", "color": "text-emerald-400" }
+      ]
+    },
+    "process": {
+      "badge": "Our Process",
+      "title": "Content Velocity System",
+      "desc": "How we research, produce, and distribute authoritative content that captures qualified organic traffic.",
+      "steps": [
+        {
+          "num": "01",
+          "name": "Topic Cluster Mapping",
+          "objective": "Identify high-volume keywords and commercial gaps in your industry.",
+          "activities": "SERP intent teardown, pillar/cluster mapping, audience pain-point survey.",
+          "outcome": "Topical Authority Blueprint"
+        },
+        {
+          "num": "02",
+          "name": "Research & Brief Creation",
+          "objective": "Build comprehensive content briefs with required entities and references.",
+          "activities": "Subject matter interviews, primary data gathering, outline approval.",
+          "outcome": "Production-Ready Content Briefs"
+        },
+        {
+          "num": "03",
+          "name": "Expert Writing & SEO Tuning",
+          "objective": "Draft compelling, human-first copy optimized for search algorithms.",
+          "activities": "First-pass drafting, editorial review, semantic score optimization.",
+          "outcome": "Polished, Ready-to-Rank Copy"
+        },
+        {
+          "num": "04",
+          "name": "Publishing & Amplification",
+          "objective": "Distribute content across multi-channel touchpoints for maximum reach.",
+          "activities": "CMS publishing, schema tagging, social snippet repurposing.",
+          "outcome": "Rankings & Organic Lead Flow"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Do you use AI or human writers?",
+        "a": "All our client content is crafted and edited by experienced human writers and industry specialists, using AI solely for research speed and entity verification."
+      },
+      {
+        "q": "Who owns the copyright to the content created?",
+        "a": "You own 100% of all content, graphics, and intellectual property produced during the engagement."
+      },
+      {
+        "q": "How do you ensure the content ranks on Google?",
+        "a": "We build comprehensive topical clusters, optimize for NLP entities using Surfer/Clearscope, and align every heading with exact search intent."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Dominate Your",
+      "gradientTitle": "Industry in Search?",
+      "desc": "Get a complimentary content audit and 90-day topical cluster blueprint.",
+      "btn1": "Claim Content Strategy",
+      "btn2": "Speak With Strategist"
+    }
+  },
+  "branding": {
+    "filename": "branding.html",
+    "meta": {
+      "title": "Branding & Visual Identity Agency Udaipur | 7xGrow",
+      "description": "Build an iconic brand identity that commands attention, builds deep consumer trust, and drives premium pricing power.",
+      "keywords": "Branding Agency Udaipur, Logo Design, Brand Guidelines, Visual Identity, 7xGrow"
+    },
+    "hero": {
+      "badge": "Brand Identity Hub",
+      "title": "Build an Iconic Brand That",
+      "gradientTitle": "Commands Authority",
+      "desc": "In a crowded market, generic businesses compete on price while strong brands command loyalty. We craft memorable visual identities and messaging frameworks that set you apart.",
+      "cta1Text": "Get Brand Consultation",
+      "cta1Link": "#roadmapForm",
+      "cta2Text": "Case Studies",
+      "cta2Link": "#case-studies",
+      "formTitle": "Start Your Brand Transformation",
+      "formBtn": "Request Brand Deck",
+      "formNote": "Bespoke identity. 100% Original Creative."
+    },
+    "statsSection": {
+      "badge": "WHY 7XGROW",
+      "title": "Strategy-First Creative for",
+      "gradientTitle": "Premium Positioning",
+      "desc": "We don't just design pretty logos—we architect deep brand positioning that connects emotionally with buyers and commands premium pricing in the marketplace.",
+      "bullets": [
+        "Distinctive Brand Archetypes & Positioning Strategy",
+        "Comprehensive Design Systems & Visual Standards",
+        "Packaging, Merchandise & Digital Collateral Engineering"
+      ],
+      "stats": [
+        { "num": "85+", "label": "Brands Built & Scaled" },
+        { "num": "3.5x", "label": "Average Brand Recall Lift" },
+        { "num": "100%", "label": "Custom Vector Art" },
+        { "num": "15+", "label": "Design Awards Won" }
+      ]
+    },
+    "subServices": {
+      "heading": "Comprehensive Brand Architecture for",
+      "gradientHeading": "Category Champions",
+      "items": [
+        {
+          "title": "Brand Strategy & Positioning",
+          "desc": "Define your unfair advantage, target market, competitive moat, and core brand promise with clarity.",
+          "link": "brand-strategy.html"
+        },
+        {
+          "title": "Visual Identity & Logo Systems",
+          "desc": "Primary logos, secondary marks, custom color psychology, typography stacks, and iconography designed to scale.",
+          "link": "visual-identity.html"
+        },
+        {
+          "title": "Brand Guidelines & Design Systems",
+          "desc": "Extensive brand manuals ensuring consistent presentation across internal teams, marketing agencies, and partners.",
+          "link": "brand-guidelines.html"
+        },
+        {
+          "title": "Brand Voice & Tone Guidelines",
+          "desc": "Establish your distinctive verbal identity, editorial guidelines, and customer communication principles.",
+          "link": "voice-tone-guidelines.html"
+        },
+        {
+          "title": "Packaging & Retail Identity",
+          "desc": "Shelf-ready, eco-friendly product packaging, unboxing experiences, and physical retail merchandising collateral.",
+          "link": "packaging-retail-identity.html"
+        },
+        {
+          "title": "Global Market Positioning",
+          "desc": "Adapting brand perception, messaging, and visual elements to appeal across diverse cultural regions and demographics.",
+          "link": "global-market-positioning.html"
+        }
+      ]
+    },
+    "tools": {
+      "badge": "Tools & Tech",
+      "title": "Our Creative Arsenal",
+      "desc": "The gold-standard tools we use to sculpt world-class brand identities.",
+      "row1": [
+        { "name": "Adobe Illustrator", "icon": "draw", "bg": "bg-orange-500/20", "color": "text-orange-400" },
+        { "name": "Figma", "icon": "brush", "bg": "bg-purple-500/20", "color": "text-purple-400" },
+        { "name": "Adobe Photoshop", "icon": "image", "bg": "bg-blue-500/20", "color": "text-blue-400" },
+        { "name": "Adobe InDesign", "icon": "menu_book", "bg": "bg-pink-500/20", "color": "text-pink-400" },
+        { "name": "After Effects", "icon": "motion_photos_on", "bg": "bg-indigo-500/20", "color": "text-indigo-400" },
+        { "name": "Blender 3D", "icon": "view_in_ar", "bg": "bg-amber-500/20", "color": "text-amber-400" }
+      ],
+      "row2": [
+        { "name": "Cinema 4D", "icon": "deployed_code", "bg": "bg-cyan-500/20", "color": "text-cyan-400" },
+        { "name": "Pantone Connect", "icon": "palette", "bg": "bg-rose-500/20", "color": "text-rose-400" },
+        { "name": "FontBase", "icon": "font_download", "bg": "bg-yellow-500/20", "color": "text-yellow-400" },
+        { "name": "Midjourney", "icon": "auto_awesome", "bg": "bg-emerald-500/20", "color": "text-emerald-400" },
+        { "name": "Keynote / Pitch", "icon": "slideshow", "bg": "bg-sky-500/20", "color": "text-sky-400" },
+        { "name": "Miro", "icon": "dashboard", "bg": "bg-yellow-600/20", "color": "text-yellow-300" }
+      ]
+    },
+    "process": {
+      "badge": "Our Process",
+      "title": "Brand Sculpting Methodology",
+      "desc": "How we turn abstract ideas into an iconic brand identity with timeless appeal.",
+      "steps": [
+        {
+          "num": "01",
+          "name": "Immersion & Competitive Audit",
+          "objective": "Uncover your brand origin, customer psychology, and category tropes.",
+          "activities": "Founder interviews, market analysis, visual landscape benchmarking.",
+          "outcome": "Strategic Brand Compass"
+        },
+        {
+          "num": "02",
+          "name": "Creative Concepts & Visual Sprints",
+          "objective": "Develop distinct visual identity routes with logo marks and moodboards.",
+          "activities": "Vector explorations, typography pairings, color palette theory.",
+          "outcome": "3 Polished Creative Directions"
+        },
+        {
+          "num": "03",
+          "name": "Refinement & Touchpoints",
+          "objective": "Expand the selected concept across real-world collateral and digital touchpoints.",
+          "activities": "Stationery, pitch decks, social media templates, website mockups.",
+          "outcome": "Holistic Collateral Suite"
+        },
+        {
+          "num": "04",
+          "name": "Design System & Asset Delivery",
+          "objective": "Deliver full vector file packages and master brand book guidelines.",
+          "activities": "Exporting in all formats (SVG, EPS, PNG, PDF), team brand guide handover.",
+          "outcome": "Complete Brand Identity Kit"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What assets do we receive upon brand completion?",
+        "a": "You receive a comprehensive brand manual, full vector master files (AI, EPS, SVG, PNG, PDF), typography licenses, and ready-to-use digital templates."
+      },
+      {
+        "q": "Can you rebrand an existing established company?",
+        "a": "Yes! We specialize in modernizing legacy brands while preserving the core brand equity and recognition built over decades."
+      },
+      {
+        "q": "Do you design physical packaging and retail collateral?",
+        "a": "Yes, we design physical retail packaging, hang tags, unboxing boxes, business cards, and print collateral with precise die-lines."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Transform Your",
+      "gradientTitle": "Brand Presence?",
+      "desc": "Book a creative consultation and let's build an iconic brand identity together.",
+      "btn1": "Start Rebrand",
+      "btn2": "Speak With Creative Lead"
+    }
+  },
+  "email-marketing": {
+    "filename": "email-marketing.html",
+    "meta": {
+      "title": "Email Marketing & Automation Agency Udaipur | 7xGrow",
+      "description": "Turn your email list into a recurring revenue machine. Klaviyo flows, abandoned cart automation, and high-converting newsletters.",
+      "keywords": "Email Marketing Udaipur, Klaviyo Specialist, Email Automation, Retention Marketing, 7xGrow"
+    },
+    "hero": {
+      "badge": "Retention Marketing Hub",
+      "title": "Turn Email Subscribers into",
+      "gradientTitle": "Repeat Buyers",
+      "desc": "Stop leaving 30% of your revenue on the table. We build automated retention flows, cart abandonment sequences, and engaging campaigns that drive predictable revenue on autopilot.",
+      "cta1Text": "Get Free Email Audit",
+      "cta1Link": "#roadmapForm",
+      "cta2Text": "Case Studies",
+      "cta2Link": "#case-studies",
+      "formTitle": "Unlock Email Revenue",
+      "formBtn": "Analyze My Flows",
+      "formNote": "Drive 30%+ of your store revenue from email."
+    },
+    "statsSection": {
+      "badge": "WHY 7XGROW",
+      "title": "Zero Ad Spend,",
+      "gradientTitle": "Pure Owned Revenue",
+      "desc": "Algorithm changes can't take away your email list. We build automated retention systems that compound customer lifetime value and drive repeatable sales on demand.",
+      "bullets": [
+        "Advanced Behavioral Segmentations & RFM Customer Modeling",
+        "Deliverability Optimization & Custom Dedicated IP Warming",
+        "High-Converting Responsive Templates with Dark Mode Testing"
+      ],
+      "stats": [
+        { "num": "34%", "label": "Avg Store Revenue from Email" },
+        { "num": "42%", "label": "Average Open Rate" },
+        { "num": "₹8Cr+", "label": "Email Revenue Generated" },
+        { "num": "99.4%", "label": "Inbox Placement Rate" }
+      ]
+    },
+    "subServices": {
+      "heading": "Automated Lifecycle Flows That Drive",
+      "gradientHeading": "Consistent Sales",
+      "items": [
+        {
+          "title": "Automated Email Flows & Triggers",
+          "desc": "Welcome series, browse abandonment, post-purchase thank-you, and win-back flows that convert 24/7 on complete autopilot.",
+          "link": "email-automation.html"
+        },
+        {
+          "title": "Cart Abandonment Recovery",
+          "desc": "Multi-stage recovery sequences with dynamic product blocks and urgency incentives that rescue up to 25% of lost checkouts.",
+          "link": "cart-abandonment-flows.html"
+        },
+        {
+          "title": "Inbox Deliverability & IP Warming",
+          "desc": "Domain authentication (DKIM, SPF, DMARC), spam trap removal, and list cleaning to ensure your emails hit primary inboxes.",
+          "link": "deliverability.html"
+        },
+        {
+          "title": "High-Converting Campaign Newsletters",
+          "desc": "Weekly and seasonal promotional newsletters with compelling subject lines, clean layouts, and irresistible promotional offers.",
+          "link": "newsletters.html"
+        },
+        {
+          "title": "List Building & Interactive Popups",
+          "desc": "Mobile-optimized exit-intent popups, spin-to-win gamified offers, and lead magnets that rapidly grow your subscriber database.",
+          "link": "list-building.html"
+        },
+        {
+          "title": "Behavioral Triggers & RFM Segmentation",
+          "desc": "Segmenting VIP buyers, churn-risk subscribers, and bargain hunters to deliver personalized messages that maximize conversion rates.",
+          "link": "behavioral-triggers.html"
+        }
+      ]
+    },
+    "tools": {
+      "badge": "Tools & Tech",
+      "title": "Our Retention & Email Stack",
+      "desc": "We integrate with the most powerful marketing automation and analytics platforms.",
+      "row1": [
+        { "name": "Klaviyo", "icon": "mail", "bg": "bg-green-500/20", "color": "text-green-400" },
+        { "name": "Mailchimp", "icon": "send", "bg": "bg-yellow-500/20", "color": "text-yellow-400" },
+        { "name": "ActiveCampaign", "icon": "bolt", "bg": "bg-blue-500/20", "color": "text-blue-400" },
+        { "name": "Omnisend", "icon": "forward_to_inbox", "bg": "bg-purple-500/20", "color": "text-purple-400" },
+        { "name": "Brevo (Sendinblue)", "icon": "outgoing_mail", "bg": "bg-cyan-500/20", "color": "text-cyan-400" },
+        { "name": "HubSpot", "icon": "hub", "bg": "bg-orange-500/20", "color": "text-orange-400" }
+      ],
+      "row2": [
+        { "name": "Litmus", "icon": "visibility", "bg": "bg-pink-500/20", "color": "text-pink-400" },
+        { "name": "Mail-Tester", "icon": "mark_email_read", "bg": "bg-emerald-500/20", "color": "text-emerald-400" },
+        { "name": "Figma for Email", "icon": "draw", "bg": "bg-indigo-500/20", "color": "text-indigo-400" },
+        { "name": "ZeroBounce", "icon": "verified_user", "bg": "bg-amber-500/20", "color": "text-amber-400" },
+        { "name": "Zapier", "icon": "sync_alt", "bg": "bg-red-500/20", "color": "text-red-400" },
+        { "name": "Google Postmaster", "icon": "domain", "bg": "bg-blue-600/20", "color": "text-blue-300" }
+      ]
+    },
+    "process": {
+      "badge": "Our Process",
+      "title": "Email Lifecycle Architecture",
+      "desc": "How we turn your subscriber list into an automated, predictable revenue channel.",
+      "steps": [
+        {
+          "num": "01",
+          "name": "Audit & List Health Check",
+          "objective": "Diagnose deliverability, spam complaints, and missing automation flows.",
+          "activities": "Domain DNS verification (SPF/DKIM/DMARC), list scrub, revenue gap analysis.",
+          "outcome": "Email Revenue Opportunity Audit"
+        },
+        {
+          "num": "02",
+          "name": "Flow Architecture & Design",
+          "objective": "Build and design the essential automated flows with dynamic product feeds.",
+          "activities": "Copywriting, responsive email design, discount logic setup.",
+          "outcome": "Core Revenue Flows Live"
+        },
+        {
+          "num": "03",
+          "name": "Segmentation & Campaigns",
+          "objective": "Launch weekly engaging newsletters and promotions to engaged segments.",
+          "activities": "Subject line A/B testing, send-time optimization, content calendar.",
+          "outcome": "Consistent Weekly Conversions"
+        },
+        {
+          "num": "04",
+          "name": "Optimization & LTV Scaling",
+          "objective": "Maximize customer lifetime value and cross-sell repeat orders.",
+          "activities": "Predictive churn triggers, VIP reward tiers, post-purchase surveys.",
+          "outcome": "High-LTV Retention Engine"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Which email platforms do you support?",
+        "a": "We specialize in Klaviyo (especially for e-commerce), along with ActiveCampaign, Mailchimp, Omnisend, Brevo, and HubSpot."
+      },
+      {
+        "q": "How much revenue can email marketing realistically generate?",
+        "a": "For e-commerce brands, a well-optimized email system generates between 25% to 40% of total store revenue through automated flows and campaigns."
+      },
+      {
+        "q": "How do you protect email deliverability from spam folders?",
+        "a": "We enforce strict domain authentication, dedicated sending domains, automated list hygiene, and engaged subscriber segment targeting."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Unlock Your",
+      "gradientTitle": "Email Revenue?",
+      "desc": "Get a complimentary email marketing audit and automated flow blueprint.",
+      "btn1": "Claim Email Audit",
+      "btn2": "Speak With Specialist"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+ ----------------------------------------------------------------------
+# 1. Enforce HTTPS (Force SSL)
+# ----------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ "new home page.html" [L]
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 2. Prevent Clickjacking (X-Frame-Options)
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Prevents your site from being framed by a malicious site.
+    Header always append X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 3. Prevent MIME-Sniffing (X-Content-Type-Options)
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Stops browsers from guessing the file type and forces them to use the declared content type.
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 4. Strict Transport Security (HSTS)
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Forces the browser to load your site only over HTTPS for 1 year (31536000 seconds).
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 5. Referrer Policy
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Controls how much referrer information (the URL the user came from) is included with requests.
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 6. Basic XSS Protection
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Enables the Cross-Site Scripting (XSS) filter built into most modern web browsers.
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 7. Disable Directory Listing
+# ----------------------------------------------------------------------
+<IfModule mod_autoindex.c>
+    # If a folder lacks an index.html, this ensures the server doesn't list all the files inside it.
+    Options -Indexes
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 8. Custom 404 Error Page
+# ----------------------------------------------------------------------
+ErrorDocument 404 /404.html

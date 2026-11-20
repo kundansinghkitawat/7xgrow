@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>7xGrow - Author Profile Page</title>
+<script defer="" src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<style>
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-btn {
+            background: rgba(99, 102, 241, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.15), inset 0 0 10px rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .glass-btn:hover {
+            background: rgba(99, 102, 241, 0.25);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===== NAVIGATION STYLES (Site-wide Consistent) ===== */
+        .glass-nav {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-nav.at-top {
+            background: transparent !important;
+            backdrop-filter: none !important;
+            border-bottom-color: transparent !important;
+        }
+
+        /* Scrolled State */
+        .glass-nav.scrolled, .glass-nav:not(.at-top) {
+            background: rgba(13, 22, 29, 0.9) !important;
+            backdrop-filter: blur(20px) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+        }
+
+        /* Full Screen Mobile Menu Overlay */
+        #mobile-menu {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #mobile-menu.open {
+            display: flex;
+            opacity: 1;
+        }
+
+        #mobile-services-dropdown {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        #mobile-services-dropdown.open {
+            max-height: 400px;
+        }
+
+        #services-chevron {
+            transition: transform 0.3s ease;
+        }
+
+        #services-chevron.open {
+            transform: rotate(180deg);
+        }
+
+        .no-scroll {
+            overflow: hidden !important;
+            height: 100vh !important;
+        }
+
+        /* Bottom Navigation Bar */
+        #mobileBottomNav {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-tab-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            color: #94a3b8;
+            transition: all 0.2s ease;
+        }
+
+        .mobile-tab-btn.active {
+            color: #6366f1;
+        }
+
+        .mobile-tab-btn .material-symbols-outlined {
+            font-size: 24px;
+        }
+
+        .mobile-tab-btn span {
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        /* Floating Social - Hide on Mobile to prevent overlap with bottom nav */
+        @media (max-width: 1023px) {
+            #floatingSocial {
+                display: none !important;
+            }
+        }
+
+        .gradient-bg {
+            background: radial-gradient(circle at top left, #1e1b4b 0%, #020617 100%);
+        }
+    </style>
+<title>Alex Chen - Senior SEO Strategist | 7xGrow</title>
+<meta content="Meet Alex Chen, Senior SEO Strategist at 7xGrow. 10+ years of experience scaling high-growth startups through AI-driven content strategies." name="description"/>
+<meta content="Alex Chen, SEO Strategist, 7xGrow team, digital marketing expert, AI content strategy" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://7xgrow.in/author/alex-chen.html" rel="canonical"/>
+<!-- Open Graph / Facebook -->
+<meta content="profile" property="og:type"/>
+<meta content="https://7xgrow.in/author/alex-chen.html" property="og:url"/>
+<meta content="Alex Chen | Senior SEO Strategist at 7xGrow" property="og:title"/>
+<meta content="Helping forward-thinking brands scale through data and AI-driven insights." property="og:description"/>
+<meta content="https://7xgrow.in/assets/team/alex-chen.jpg" property="og:image"/>
+<meta content="7xGrow" property="og:site_name"/>
+<meta content="Alex" property="profile:first_name"/>
+<meta content="Chen" property="profile:last_name"/>
+<meta content="alexchenseo" property="profile:username"/>
+<!-- Twitter -->
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="Alex Chen - Senior SEO Strategist" property="twitter:title"/>
+<meta content="10+ years of experience in SEO and AI marketing." property="twitter:description"/>
+<meta content="https://7xgrow.in/assets/team/alex-chen.jpg" property="twitter:image"/>
+<!-- Favicon -->
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Alex Chen",
+        "jobTitle": "Senior SEO Strategist",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "7xGrow"
+        },
+        "description": "Digital marketing expert with 10+ years of experience in scaling high-growth startups through SEO and AI-driven content strategies.",
+        "image": "https://7xgrow.in/assets/team/alex-chen.jpg",
+        "url": "https://7xgrow.in/author/alex-chen.html",
+        "sameAs": [
+          "https://www.linkedin.com/in/alexchen",
+          "https://twitter.com/alexchen"
+        ]
+      }
+    }
+    </script>
+<style>
+        /* ===== PILL NAVBAR ON SCROLL ===== */
+        #navbar {
+            transition: padding 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                        background 0.5s ease,
+                        backdrop-filter 0.5s ease;
+            padding: 0;
+        }
+        #navbar header {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 0;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+        /* Scrolled: Pill shape via inner header */
+        #navbar.scrolled {
+            padding: 10px 20px;
+            background: transparent !important;
+            backdrop-filter: none !important;
+            border-bottom: none !important;
+            box-shadow: none !important;
+        }
+        #navbar.scrolled header {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            padding-left: 20px !important;
+            padding-right: 24px !important;
+            border-radius: 9999px !important;
+            background: rgba(8, 12, 20, 0.92) !important;
+            backdrop-filter: blur(24px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+            border: 1px solid rgba(255,255,255,0.12) !important;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(99,102,241,0.1) !important;
+            max-width: 1100px !important;
+            margin: 0 auto !important;
+        }
+        /* Logo shrink */
+        #navbar.scrolled .nav-logo-icon {
+            width: 28px !important;
+            height: 28px !important;
+        }
+        #navbar.scrolled .nav-logo-text {
+            font-size: 0.95rem !important;
+        }
+        #navbar .nav-logo-icon,
+        #navbar .nav-logo-text {
+            transition: all 0.5s ease;
+        }
+</style>    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display overflow-x-hidden">
+<!-- ========== NAVBAR ========== -->
+<div class="fixed top-0 left-0 right-0 z-[160] glass-nav at-top font-sans" id="navbar">
+<header class="flex items-center justify-between whitespace-nowrap px-6 py-4 max-w-7xl mx-auto">
+<a class="flex items-center gap-3 text-white transition-opacity hover:opacity-80" href="/">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white nav-logo-icon">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] nav-logo-text">7xGrow</h2>
+</a>
+<nav aria-label="Main navigation" class="hidden lg:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-8">
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="https://7xgrow.crazywheel.in/blog/">Services</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="about us.html">About</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="case studey.html">Case Studies</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="https://7xgrow.crazywheel.in/blog/">Blog</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="contact us.html">Contact</a>
+</div>
+<a class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 glass-btn text-white text-sm font-bold" href="https://wa.me/917427851948?text=Hello" rel="noopener noreferrer" target="_blank">
+<span class="truncate">+91 7427851948</span>
+</a>
+</nav>
+<button aria-label="Open menu" class="lg:hidden text-white cursor-pointer relative z-[170]" id="mobileMenuBtn">
+<span class="material-symbols-outlined transition-transform duration-300">menu</span>
+</button>
+</header>
+<!-- Mobile Menu (Full Screen) -->
+<div class="fixed inset-0 z-[150] bg-[#040608]/95 backdrop-blur-xl flex-col pt-24 px-6 pb-6 overflow-y-auto" id="mobile-menu">
+<!-- Services with Dropdown -->
+<div class="border-b border-white/10">
+<button class="w-full flex items-center justify-between py-4 text-white hover:text-primary transition-colors" id="mobileServicesBtn">
+<span class="text-lg font-bold">Services</span>
+<span class="material-symbols-outlined" id="services-chevron">expand_more</span>
+</button>
+<div class="flex flex-col gap-2 pl-4 pb-4" id="mobile-services-dropdown">
+<a class="text-white/70 hover:text-white py-2 text-sm transition-colors border-l border-white/10 pl-4" href="seo.html">Advanced
+                        SEO</a>
+<a class="text-white/70 hover:text-white py-2 text-sm transition-colors border-l border-white/10 pl-4" href="#">Content
+                        Marketing</a>
+<a class="text-white/70 hover:text-white py-2 text-sm transition-colors border-l border-white/10 pl-4" href="#">PPC
+                        Management</a>
+<a class="text-white/70 hover:text-white py-2 text-sm transition-colors border-l border-white/10 pl-4" href="#">Social
+                        Media Ads</a>
+<a class="text-white/70 hover:text-white py-2 text-sm transition-colors border-l border-white/10 pl-4" href="#">Growth
+                        Consulting</a>
+</div>
+</div>
+<!-- Other Links -->
+<a class="flex items-center py-4 text-white text-lg font-bold border-b border-white/10 hover:text-primary transition-colors" href="about us.html">About</a>
+<a class="flex items-center py-4 text-white text-lg font-bold border-b border-white/10 hover:text-primary transition-colors" href="case studey.html">Case
+                Studies</a>
+<a class="flex items-center py-4 text-white text-lg font-bold border-b border-white/10 hover:text-primary transition-colors" href="https://7xgrow.crazywheel.in/blog/">Blog</a>
+<a class="flex items-center py-4 text-white text-lg font-bold border-b border-white/10 hover:text-primary transition-colors" href="contact us.html">Contact</a>
+<!-- CTA -->
+<div class="mt-8 flex flex-col gap-4">
+<a class="flex items-center justify-center rounded-xl h-14 bg-gradient-to-r from-primary to-accent-purple text-white font-bold text-lg shadow-lg shadow-primary/20" href="contact us.html">
+                    Get Free Consultation
+                </a>
+</div>
+</div>
+</div>
+<main class="gradient-bg min-h-screen">
+<section class="max-w-7xl mx-auto px-6 pt-16 pb-12">
+<div class="glass rounded-2xl p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center">
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+</div>
+<div class="size-48 md:size-64 rounded-2xl overflow-hidden border-2 border-white/10 relative z-10">
+<img alt="Professional portrait of Alex Chen" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD--7iUJ9UU__XmPzyoF3iHWyeVE0fo9XGi-_5ztvBINGZWGlTJ1Nh6Z_V-yLOUjUrrKREGWGYa4dDnL779dFnIT_GZnTGYR7FnVkJSYW8lQmYH4S6Sc0xhmCzNih27T0htFsM0P7bkm27U80A0cSWgrHvLa6DzKDEv1PL7wpOCgtR7plJifHIQU4-YTi6bUwuBp9zVVTlnOayOB38pn_GjB5rKdJM61qJ6t9yIYFxvsvDKDiqTxGqvAxXprQW_LTug2STKTlsiBuA"/>
+</div>
+</div>
+<div class="flex-1 text-center md:text-left">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+<div>
+<h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-2">Alex Chen
+                            </h1>
+<p class="text-primary text-lg font-semibold uppercase tracking-widest text-sm">Senior SEO
+                                Strategist</p>
+</div>
+<div class="flex justify-center md:justify-start gap-3">
+<a class="size-10 rounded-full glass flex items-center justify-center text-white hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="size-10 rounded-full glass flex items-center justify-center text-white hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+<a class="size-10 rounded-full glass flex items-center justify-center text-white hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">link</span>
+</a>
+</div>
+</div>
+<p class="text-slate-400 text-lg leading-relaxed max-w-2xl mb-8">
+                        Digital marketing expert with 10+ years of experience in scaling high-growth startups through
+                        SEO and AI-driven content strategies. Alex specializes in turning complex technical data into
+                        actionable growth maps for Fortune 500 companies.
+                    </p>
+<div class="flex flex-wrap justify-center md:justify-start gap-3">
+<span class="bg-primary/10 text-primary border border-primary/20 px-4 py-1.5 rounded-full text-sm font-medium">SEO
+                            Strategy</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-4 py-1.5 rounded-full text-sm font-medium">AI
+                            Marketing</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-4 py-1.5 rounded-full text-sm font-medium">Content
+                            Architecture</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-4 py-1.5 rounded-full text-sm font-medium">Growth
+                            Hacking</span>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-6 py-12">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="glass p-8 rounded-2xl border-white/5 text-center group hover:border-primary/50 transition-colors">
+<p class="text-slate-400 text-sm font-medium mb-2 uppercase tracking-tighter">Articles Written</p>
+<p class="text-white text-5xl font-extrabold tracking-tight group-hover:text-primary transition-colors">
+                        500+</p>
+</div>
+<div class="glass p-8 rounded-2xl border-white/5 text-center group hover:border-primary/50 transition-colors">
+<p class="text-slate-400 text-sm font-medium mb-2 uppercase tracking-tighter">Organic Views</p>
+<p class="text-white text-5xl font-extrabold tracking-tight group-hover:text-primary transition-colors">
+                        10M+</p>
+</div>
+<div class="glass p-8 rounded-2xl border-white/5 text-center group hover:border-primary/50 transition-colors">
+<p class="text-slate-400 text-sm font-medium mb-2 uppercase tracking-tighter">Projects Led</p>
+<p class="text-white text-5xl font-extrabold tracking-tight group-hover:text-primary transition-colors">
+                        120+</p>
+</div>
+<div class="glass p-8 rounded-2xl border-white/5 text-center group hover:border-primary/50 transition-colors">
+<p class="text-slate-400 text-sm font-medium mb-2 uppercase tracking-tighter">Client Growth</p>
+<p class="text-white text-5xl font-extrabold tracking-tight group-hover:text-primary transition-colors">
+                        340%</p>
+</div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-6 py-16">
+<div class="flex items-center justify-between mb-10">
+<h2 class="text-3xl font-bold text-white tracking-tight">Published Insights</h2>
+<div class="h-px flex-1 bg-white/10 mx-8"></div>
+<a class="text-primary font-semibold flex items-center gap-2 hover:underline" href="#">
+                    View Hub <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<a class="group block rounded-2xl overflow-hidden glass hover:border-primary/40 transition-all flex flex-col h-full relative" href="#">
+<div class="aspect-video relative overflow-hidden">
+<img alt="AI in Marketing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIprCzOzowh0iFR6ov5paSuxCbvU9SMWmVRhxMg9E8oeS1pZl9rLHWGyhMBc-xnGIJl291GPGBX3xCYE6RjuIr9tr54cgmZxvoqQcLjAjnuu2y17cil1sSunN24yRY-7dDl6ukAh_nbG4XSss5-NTsA5Qz1J4fdzgbRebc0VPgUQNc88YbdCAQW2-CSJ3HUAl_YDkgwM2sL0SJflDg2U_IjB1yDfwYaGw3IV8mvZn6HzOHC6b3b2kInDt2SjfyeZ7ZKjE3tbFWhqc"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">AI
+                            Marketing</span>
+</div>
+<div class="p-6 flex flex-col grow">
+<h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                            How generative AI is redefining the SEO landscape in 2024</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">The intersection of large
+                            language models and search engines is creating a new paradigm for content creators and
+                            marketers alike.</p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span> Oct 12, 2024
+                            </span>
+<div class="text-white text-sm font-bold flex items-center gap-1">
+                                Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</a>
+<a class="group block rounded-2xl overflow-hidden glass hover:border-primary/40 transition-all flex flex-col h-full relative" href="#">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Data Analytics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlM8KW0dvvkQ5VL3d5IfWN5up4zsMfRKVWdF-8CCnoP9eCC_Ebyr8-thJLiyEimpBZbmJVMrfA3GNWeGnuaNlI7GFKG49SYjlH2OZ7nFq1djXBlVRi4MFKlOxie2m2WmVHHp8BGQTH0BEpB5J2mL1-ODbXqs4tAy3aHidQgrSkvlk55OR2WhJpobkOSbTC-L9B7s2HwxMCcZx5qMTC7M7xWZl1wYzd5hii7bDGTNKkfPAZSnENRFBnZjDvhfAvYOxqsBWIGQvRcwE"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Data
+                            Strategy</span>
+</div>
+<div class="p-6 flex flex-col grow">
+<h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                            The blueprint for scaling organic traffic from 0 to 1M</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">A step-by-step guide based
+                            on our most successful case studies from the past two years of growth marketing.</p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span> Sep 28, 2024
+                            </span>
+<div class="text-white text-sm font-bold flex items-center gap-1">
+                                Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</a>
+<a class="group block rounded-2xl overflow-hidden glass hover:border-primary/40 transition-all flex flex-col h-full relative" href="#">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Business Growth" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZpFhkU7Yxe1XJl2Zg77bw6OpaHGrOoEkrjjO03RiiCbYAW2s25XzY6Z8nZy39gcCFf9ZmFJLQBf2LLPi7y5l0f5mj5XQyXI8znV7pZL7WQUmnS-K3sShKP7Jo9_aneH7o8Va4yEpucyQ9lnVpLPXUR1jP1AopBI05jbIkHOGn3XtKoGK84Ez1g6flPIQjXIEXyvIM90ObQcZIeNUnaiDVc-2s7sA7cLLebMxmxWYQ400HsguesOjaMOVIwtZ7dNIJXX6vXN4JiaA"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Enterprise
+                            SEO</span>
+</div>
+<div class="p-6 flex flex-col grow">
+<h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                            Technical SEO for Enterprise: Solving indexation issues</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">Mastering the crawl budget
+                            and internal linking structures for websites with over 100,000 pages.</p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span> Aug 15, 2024
+                            </span>
+<div class="text-white text-sm font-bold flex items-center gap-1">
+                                Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</a>
+<a class="group block rounded-2xl overflow-hidden glass hover:border-primary/40 transition-all flex flex-col h-full relative" href="#">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Content Marketing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIprCzOzowh0iFR6ov5paSuxCbvU9SMWmVRhxMg9E8oeS1pZl9rLHWGyhMBc-xnGIJl291GPGBX3xCYE6RjuIr9tr54cgmZxvoqQcLjAjnuu2y17cil1sSunN24yRY-7dDl6ukAh_nbG4XSss5-NTsA5Qz1J4fdzgbRebc0VPgUQNc88YbdCAQW2-CSJ3HUAl_YDkgwM2sL0SJflDg2U_IjB1yDfwYaGw3IV8mvZn6HzOHC6b3b2kInDt2SjfyeZ7ZKjE3tbFWhqc"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Content
+                            Strategy</span>
+</div>
+<div class="p-6 flex flex-col grow">
+<h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                            Advanced Content Clustering: The 2024 Guide</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">Why topic clusters are more
+                            important than ever in an era dominated by AI-generated search results.</p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span> Aug 02, 2024
+                            </span>
+<div class="text-white text-sm font-bold flex items-center gap-1">
+                                Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</a>
+<a class="group block rounded-2xl overflow-hidden glass hover:border-primary/40 transition-all flex flex-col h-full relative" href="#">
+<div class="aspect-video relative overflow-hidden">
+<img alt="UX Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlM8KW0dvvkQ5VL3d5IfWN5up4zsMfRKVWdF-8CCnoP9eCC_Ebyr8-thJLiyEimpBZbmJVMrfA3GNWeGnuaNlI7GFKG49SYjlH2OZ7nFq1djXBlVRi4MFKlOxie2m2WmVHHp8BGQTH0BEpB5J2mL1-ODbXqs4tAy3aHidQgrSkvlk55OR2WhJpobkOSbTC-L9B7s2HwxMCcZx5qMTC7M7xWZl1wYzd5hii7bDGTNKkfPAZSnENRFBnZjDvhfAvYOxqsBWIGQvRcwE"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Conversion
+                            Rate</span>
+</div>
+<div class="p-6 flex flex-col grow">
+<h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                            Optimizing Landing Pages for AI Overviews</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">How to structure your copy
+                            and data to ensure your brand is cited in Google's Search Generative Experience.</p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span> Jul 20, 2024
+                            </span>
+<div class="text-white text-sm font-bold flex items-center gap-1">
+                                Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</a>
+<a class="group block rounded-2xl overflow-hidden glass hover:border-primary/40 transition-all flex flex-col h-full relative" href="#">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Social Media" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZpFhkU7Yxe1XJl2Zg77bw6OpaHGrOoEkrjjO03RiiCbYAW2s25XzY6Z8nZy39gcCFf9ZmFJLQBf2LLPi7y5l0f5mj5XQyXI8znV7pZL7WQUmnS-K3sShKP7Jo9_aneH7o8Va4yEpucyQ9lnVpLPXUR1jP1AopBI05jbIkHOGn3XtKoGK84Ez1g6flPIQjXIEXyvIM90ObQcZIeNUnaiDVc-2s7sA7cLLebMxmxWYQ400HsguesOjaMOVIwtZ7dNIJXX6vXN4JiaA"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Growth
+                            Marketing</span>
+</div>
+<div class="p-6 flex flex-col grow">
+<h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                            The Viral Loop: Architecting organic shares</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">Building inherent
+                            shareability into your product's core features to drive exponential user growth.</p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span> Jul 05, 2024
+                            </span>
+<div class="text-white text-sm font-bold flex items-center gap-1">
+                                Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</a>
+<a class="group block rounded-2xl overflow-hidden glass hover:border-primary/40 transition-all flex flex-col h-full relative" href="#">
+<div class="aspect-video relative overflow-hidden">
+<img alt="E-commerce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIprCzOzowh0iFR6ov5paSuxCbvU9SMWmVRhxMg9E8oeS1pZl9rLHWGyhMBc-xnGIJl291GPGBX3xCYE6RjuIr9tr54cgmZxvoqQcLjAjnuu2y17cil1sSunN24yRY-7dDl6ukAh_nbG4XSss5-NTsA5Qz1J4fdzgbRebc0VPgUQNc88YbdCAQW2-CSJ3HUAl_YDkgwM2sL0SJflDg2U_IjB1yDfwYaGw3IV8mvZn6HzOHC6b3b2kInDt2SjfyeZ7ZKjE3tbFWhqc"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">E-commerce</span>
+</div>
+<div class="p-6 flex flex-col grow">
+<h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                            SEO for Headless E-commerce Architectures</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">Balancing lightning-fast
+                            page speeds with complex metadata requirements for high-performance shops.</p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span> Jun 28, 2024
+                            </span>
+<div class="text-white text-sm font-bold flex items-center gap-1">
+                                Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</a>
+<a class="group block rounded-2xl overflow-hidden glass hover:border-primary/40 transition-all flex flex-col h-full relative" href="#">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Tech trends" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlM8KW0dvvkQ5VL3d5IfWN5up4zsMfRKVWdF-8CCnoP9eCC_Ebyr8-thJLiyEimpBZbmJVMrfA3GNWeGnuaNlI7GFKG49SYjlH2OZ7nFq1djXBlVRi4MFKlOxie2m2WmVHHp8BGQTH0BEpB5J2mL1-ODbXqs4tAy3aHidQgrSkvlk55OR2WhJpobkOSbTC-L9B7s2HwxMCcZx5qMTC7M7xWZl1wYzd5hii7bDGTNKkfPAZSnENRFBnZjDvhfAvYOxqsBWIGQvRcwE"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">B2B
+                            SaaS</span>
+</div>
+<div class="p-6 flex flex-col grow">
+<h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                            SaaS Content Moats: Defending your keywords</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">How to create high-value
+                            assets that competitors find impossible to replicate with simple AI prompts.</p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span> Jun 14, 2024
+                            </span>
+<div class="text-white text-sm font-bold flex items-center gap-1">
+                                Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</a>
+<a class="group block rounded-2xl overflow-hidden glass hover:border-primary/40 transition-all flex flex-col h-full relative" href="#">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Marketing automation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZpFhkU7Yxe1XJl2Zg77bw6OpaHGrOoEkrjjO03RiiCbYAW2s25XzY6Z8nZy39gcCFf9ZmFJLQBf2LLPi7y5l0f5mj5XQyXI8znV7pZL7WQUmnS-K3sShKP7Jo9_aneH7o8Va4yEpucyQ9lnVpLPXUR1jP1AopBI05jbIkHOGn3XtKoGK84Ez1g6flPIQjXIEXyvIM90ObQcZIeNUnaiDVc-2s7sA7cLLebMxmxWYQ400HsguesOjaMOVIwtZ7dNIJXX6vXN4JiaA"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Automation</span>
+</div>
+<div class="p-6 flex flex-col grow">
+<h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                            Automating SEO Reporting with Python</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">Save 20 hours a month by
+                            connecting Search Console data directly to custom visualization dashboards.</p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span> Jun 01, 2024
+                            </span>
+<div class="text-white text-sm font-bold flex items-center gap-1">
+                                Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</a>
+<a class="group block rounded-2xl overflow-hidden glass hover:border-primary/40 transition-all flex flex-col h-full relative" href="#">
+<div class="aspect-video relative overflow-hidden">
+<img alt="AI Trends" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIprCzOzowh0iFR6ov5paSuxCbvU9SMWmVRhxMg9E8oeS1pZl9rLHWGyhMBc-xnGIJl291GPGBX3xCYE6RjuIr9tr54cgmZxvoqQcLjAjnuu2y17cil1sSunN24yRY-7dDl6ukAh_nbG4XSss5-NTsA5Qz1J4fdzgbRebc0VPgUQNc88YbdCAQW2-CSJ3HUAl_YDkgwM2sL0SJflDg2U_IjB1yDfwYaGw3IV8mvZn6HzOHC6b3b2kInDt2SjfyeZ7ZKjE3tbFWhqc"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Future
+                            of Search</span>
+</div>
+<div class="p-6 flex flex-col grow">
+<h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                            Beyond Search: Preparing for Voice and Chat AI</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">Optimizing your digital
+                            footprint for the next generation of conversational AI interfaces and agents.</p>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span> May 18, 2024
+                            </span>
+<div class="text-white text-sm font-bold flex items-center gap-1">
+                                Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</a>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-6 py-24">
+<div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/20 via-accent-dark to-background-dark p-12 md:p-24 text-center border border-white/10">
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Ready to grow your
+                        brand with Alex?</h2>
+<p class="text-slate-400 text-lg mb-10 leading-relaxed">Book a direct strategy session to audit your
+                        current digital presence and discover untapped growth opportunities.</p>
+<button class="glass px-10 py-5 rounded-full text-white font-bold text-lg hover:bg-white/10 transition-all border-white/20 flex items-center gap-3 mx-auto">
+<span class="material-symbols-outlined">event</span>
+                        Book a Consultation
+                    </button>
+</div>
+<div class="absolute -bottom-1/2 -right-1/4 size-[600px] bg-primary/20 blur-[120px] rounded-full pointer-events-none">
+</div>
+<div class="absolute -top-1/2 -left-1/4 size-[600px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none">
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#040608] border-t border-border-dark pt-24 pb-12 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
+<div class="col-span-1 md:col-span-4">
+<div class="flex items-center gap-3 text-white mb-8">
+<div class="size-10 flex items-center justify-center bg-primary rounded-xl text-white">
+<span class="material-symbols-outlined text-[24px]">rocket_launch</span>
+</div>
+<h3 class="text-2xl font-black">7xGrow</h3>
+</div>
+<p class="text-text-dim text-lg mb-10 leading-relaxed max-w-sm">7xGrow is a premier digital
+                    marketing agency in Udaipur specializing in SEO, PPC, social media marketing, and data-driven growth
+                    strategies for all businesses.</p>
+</div>
+</div>
+<div class="col-span-1 md:col-span-2">
+<h4 class="text-white font-bold mb-6 text-lg font-display">Services</h4>
+<ul class="flex flex-col gap-4 text-sm text-text-dim">
+<li><a class="hover:text-primary transition-colors" href="seo.html">Search Engine Optimization</a></li>
+<li><a class="hover:text-primary transition-colors" href="social-media-marketing.html">Social Media Marketing</a></li>
+<li><a class="hover:text-primary transition-colors" href="google-ads.html">Google Ads / PPC</a></li>
+<li><a class="hover:text-primary transition-colors" href="website-design.html">Website Design &amp; Dev</a></li>
+<li><a class="hover:text-primary transition-colors" href="content-marketing.html">Content Marketing</a></li>
+<li><a class="hover:text-primary transition-colors" href="branding.html">Branding &amp; Creative</a></li>
+<li><a class="hover:text-primary transition-colors" href="email-marketing.html">Email Marketing</a></li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-2">
+<h4 class="text-white font-bold mb-8 text-lg">Company</h4>
+<ul class="flex flex-col gap-4 text-base text-text-dim">
+<li><a class="hover:text-primary transition-colors" href="about us.html">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="case studey.html">Our Work</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="https://7xgrow.crazywheel.in/blog/">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="contact us.html">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-4">
+<h4 class="text-white font-bold mb-8 text-lg">Visit Us</h4>
+<div class="rounded-xl overflow-hidden h-48 border border-border-dark shadow-lg shadow-black/20 mb-10">
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116109.5293214736!2d73.6192131236814!3d24.577287317781075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e56550a14411%3A0xdbd8c28455b868b0!2sUdaipur%2C%20Rajasthan%2C%20India!5e0!3m2!1sen!2sus!4v1716388421000!5m2!1sen!2sus" style="border:0;" width="100%"></iframe>
+</div>
+<h4 class="text-white font-bold mb-8 text-lg">Join Our Newsletter</h4>
+<p class="text-text-dim mb-6">Get weekly growth insights delivered to your inbox.</p>
+<form class="flex flex-col sm:flex-row gap-3">
+<input class="bg-card-dark border border-border-dark rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors flex-1" placeholder="Enter your email" required="" type="email"/>
+<button class="glass-btn px-6 py-3 text-white font-bold rounded-xl whitespace-nowrap" type="submit">Subscribe</button>
+</form>
+</div>
+<div class="max-w-7xl mx-auto border-t border-border-dark pt-10 pb-28 md:pb-10 flex flex-col md:flex-row justify-between items-center text-sm text-text-dim gap-6">
+<p>© 2024 7xGrow. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="poliucy.html">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="teram&amp;condi.html">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+<!-- Popup Form Overlay -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 invisible transition-all duration-300" id="popupOverlay">
+<div class="relative bg-gradient-to-br from-[#0d161d] to-[#111722] border border-white/10 rounded-3xl p-8 md:p-10 max-w-md w-full mx-4 shadow-2xl transform scale-95 transition-all duration-300" id="popupForm">
+<button class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-all group" id="closePopup">
+<span class="material-symbols-outlined text-white/70 group-hover:text-white">close</span>
+</button>
+<div class="text-center mb-8">
+<div class="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+</div>
+<h2 class="text-3xl font-black text-white mb-2">Get Started Today!</h2>
+<p class="text-text-dim">Let's grow your business together</p>
+</div>
+<form class="space-y-5" id="contactForm">
+<div>
+<label class="block text-white font-bold mb-2 text-sm" for="name">Full Name *</label>
+<input class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-text-dim focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" id="name" name="name" placeholder="Enter your name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-white font-bold mb-2 text-sm" for="email">Email Address *</label>
+<input class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-text-dim focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" id="email" name="email" placeholder="your@email.com" required="" type="email"/>
+</div>
+<div>
+<label class="block text-white font-bold mb-2 text-sm" for="phone">Phone Number</label>
+<input class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-text-dim focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" type="tel"/>
+</div>
+<div>
+<label class="block text-white font-bold mb-2 text-sm" for="message">Message</label>
+<textarea class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-text-dim focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" id="message" name="message" placeholder="Tell us about your project..." rows="3"></textarea>
+</div>
+<button class="w-full py-4 bg-gradient-to-r from-primary to-accent-purple rounded-xl text-white font-bold text-lg hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] transition-all transform hover:scale-[1.02] active:scale-[0.98]" type="submit">Send
+                    Message</button>
+</form>
+</div>
+</div>
+<!-- Thank You Popup -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 invisible transition-all duration-300" id="thankYouPopup">
+<div class="relative bg-gradient-to-br from-[#0d161d] to-[#111722] border border-white/10 rounded-3xl p-10 max-w-md w-full mx-4 shadow-2xl text-center transform scale-95 transition-all duration-300">
+<div class="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-green-400 text-5xl">check_circle</span>
+</div>
+<h2 class="text-3xl font-black text-white mb-3">Thank You!</h2>
+<p class="text-text-dim text-lg mb-8">We've received your message and will get back to you within 24 hours.
+            </p>
+<button class="px-8 py-3 bg-primary rounded-xl text-white font-bold hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all" id="closeThankYou">Close</button>
+</div>
+</div>
+<!-- Floating Rocket Button (Right Side) -->
+<button class="fixed right-4 bottom-24 md:right-6 md:bottom-8 w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-primary to-accent-purple rounded-full shadow-[0_0_30px_rgba(99,102,241,0.4)] flex items-center justify-center z-[120] hover:scale-110 transition-all duration-300 animate-pulse hover:animate-none opacity-0 invisible translate-x-20" id="floatingButton">
+<span class="material-symbols-outlined text-white text-2xl">rocket_launch</span>
+</button>
+<!-- Floating Social Icons (Left Side) -->
+<div class="fixed left-6 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-3 opacity-0 invisible -translate-x-20" id="floatingSocial">
+<!-- Instagram -->
+<a class="w-10 h-10 rounded-lg glass-btn flex items-center justify-center text-text-dim hover:text-white transition-all duration-300" href="#" rel="noopener noreferrer" target="_blank" title="Instagram">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204 0.013-3.583 0.07-4.849 0.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z">
+</path>
+</svg>
+</a>
+<!-- LinkedIn -->
+<a class="w-10 h-10 rounded-lg glass-btn flex items-center justify-center text-text-dim hover:text-white transition-all duration-300" href="#" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+</path>
+</svg>
+</a>
+<!-- Facebook -->
+<a class="w-10 h-10 rounded-lg glass-btn flex items-center justify-center text-text-dim hover:text-white transition-all duration-300" href="#" rel="noopener noreferrer" target="_blank" title="Facebook">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.495v-9.294H9.691V11.08h3.129V8.41c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.626h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z">
+</path>
+</svg>
+</a>
+<!-- YouTube -->
+<a class="w-10 h-10 rounded-lg glass-btn flex items-center justify-center text-text-dim hover:text-white transition-all duration-300" href="#" rel="noopener noreferrer" target="_blank" title="YouTube">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
+</path>
+</svg>
+</a>
+<!-- Twitter -->
+<a class="w-10 h-10 rounded-lg glass-btn flex items-center justify-center text-text-dim hover:text-white transition-all duration-300" href="#" rel="noopener noreferrer" target="_blank" title="Twitter">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z">
+</path>
+</svg>
+</a>
+</div>
+<style>
+        #popupOverlay.show,
+        #thankYouPopup.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #popupOverlay.show #popupForm,
+        #thankYouPopup.show>div {
+            transform: scale(1);
+        }
+
+        /* Floating Buttons - Hidden by default */
+        #floatingButton,
+        #floatingSocial {
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        /* Show state for floating buttons */
+        #floatingButton.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        #floatingSocial.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        #floatingButton.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #popupForm {
+            max-height: 90vh;
+            overflow-y: auto;
+            overscroll-behavior: contain;
+        }
+
+        #popupForm::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        #popupForm::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        #popupForm::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.5);
+            border-radius: 10px;
+        }
+
+        #popupForm::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.7);
+        }
+    </style>
+<!-- Mobile Bottom Navigation (Site-wide Consistent) -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 z-[130] bg-[#0d161d]/90 backdrop-blur-xl border-t border-white/10 px-6 py-3 flex items-center justify-between shadow-[0_-5px_20px_rgba(0,0,0,0.5)]" id="mobileBottomNav">
+<a class="mobile-tab-btn" href="/">
+<span class="material-symbols-outlined">home</span>
+<span>Home</span>
+</a>
+<button class="mobile-tab-btn" id="mobile-services-sheet-btn">
+<span class="material-symbols-outlined">category</span>
+<span>Services</span>
+</button>
+<a class="mobile-tab-btn" href="case studey.html">
+<span class="material-symbols-outlined">work</span>
+<span>Work</span>
+</a>
+<a class="mobile-tab-btn" href="#" onclick="openCompanySheet(event)">
+<span class="material-symbols-outlined">corporate_fare</span>
+<span>Company</span>
+</a>
+</div>
+<!-- Mobile Services Bottom Sheet (Site-wide Consistent) -->
+<div class="lg:hidden fixed inset-0 z-[200] invisible opacity-0 transition-opacity duration-300" id="servicesSheet">
+<div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+<div class="absolute bottom-0 left-0 right-0 bg-[#0d161d] rounded-t-[32px] border-t border-white/10 p-8 transform translate-y-full transition-transform duration-300 ease-out max-h-[80vh] overflow-y-auto">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-2xl font-black text-white">Our Services</h3>
+<button class="size-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10" id="closeServicesSheet">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<a class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-primary transition-all group" href="seo.html">
+<div class="size-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">search</span>
+</div>
+<div>
+<h4 class="text-white font-bold group-hover:text-primary transition-colors">Advanced SEO</h4>
+<p class="text-text-dim text-xs">Dominate search results</p>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-accent-purple transition-all group" href="#">
+<div class="size-12 rounded-xl bg-accent-purple/20 flex items-center justify-center text-accent-purple">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<div>
+<h4 class="text-white font-bold group-hover:text-accent-purple transition-colors">Digital Ads
+                        </h4>
+<p class="text-text-dim text-xs">PPC &amp; Social Media</p>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-pink-500 transition-all group" href="#">
+<div class="size-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-500">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<div>
+<h4 class="text-white font-bold group-hover:text-pink-500 transition-colors">Creative Strategy
+                        </h4>
+<p class="text-text-dim text-xs">Branding &amp; Content</p>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-green-500 transition-all group" href="#">
+<div class="size-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-500">
+<span class="material-symbols-outlined">code</span>
+</div>
+<div>
+<h4 class="text-white font-bold group-hover:text-green-500 transition-colors">Web Development
+                        </h4>
+<p class="text-text-dim text-xs">High-performance apps</p>
+</div>
+</a>
+</div>
+<div class="mt-8 pt-8 border-t border-white/10">
+<a class="flex items-center justify-center h-14 rounded-xl bg-primary text-white font-bold text-lg shadow-lg shadow-primary/20" href="contact us.html">
+                    Get a Free Audit
+                </a>
+</div>
+</div>
+</div>
+<!-- MOBILE BOTTOM APP NAV -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 z-[130] bg-[#0d161d]/95 backdrop-blur-xl border-t border-white/10 px-4 py-1.5 pb-safe shadow-[0_-10px_40px_rgba(0,0,0,0.5)] transition-all duration-300" id="mobileBottomNav">
+<ul class="flex justify-around items-center">
+<li class="flex-1"><a class="flex flex-col items-center gap-[3px] py-1 relative group" href="/" onclick="if(typeof closeServicesSheet === 'function') closeServicesSheet(); if(typeof closeCompanySheet === 'function') closeCompanySheet();"><div class="w-[34px] h-[34px] rounded-xl bg-white/5 flex items-center justify-center mb-0.5 border border-white/10 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all"><span class="material-symbols-outlined text-[18px] text-white/50 group-hover:text-primary transition-colors" style="font-variation-settings:'FILL' 0">home</span></div><span class="text-[9px] font-medium text-white/40 tracking-wide group-hover:text-white/70 transition-colors">Home</span></a></li>
+<li class="flex-1"><a class="flex flex-col items-center gap-[3px] py-1 relative group" href="#" onclick="openServicesSheet(event)"><div class="w-[34px] h-[34px] rounded-xl bg-white/5 flex items-center justify-center mb-0.5 border border-white/10 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all"><span class="material-symbols-outlined text-[18px] text-white/50 group-hover:text-primary transition-colors" style="font-variation-settings:'FILL' 0">category</span></div><span class="text-[9px] font-medium text-white/40 tracking-wide group-hover:text-white/70 transition-colors">Services</span></a></li>
+<li class="flex-1"><a class="flex flex-col items-center gap-[3px] py-1 relative group" href="https://7xgrow.crazywheel.in/blog/" onclick="if(typeof closeServicesSheet === 'function') closeServicesSheet(); if(typeof closeCompanySheet === 'function') closeCompanySheet();"><div class="w-[34px] h-[34px] rounded-xl bg-white/5 flex items-center justify-center mb-0.5 border border-white/10 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all"><span class="material-symbols-outlined text-[18px] text-white/50 group-hover:text-primary transition-colors" style="font-variation-settings:'FILL' 0">menu_book</span></div><span class="text-[9px] font-medium text-white/40 tracking-wide group-hover:text-white/70 transition-colors">Blog</span></a></li>
+<li class="flex-1"><a class="flex flex-col items-center gap-[3px] py-1 relative group" href="case studey.html" onclick="if(typeof closeServicesSheet === 'function') closeServicesSheet(); if(typeof closeCompanySheet === 'function') closeCompanySheet();"><div class="w-[34px] h-[34px] rounded-xl bg-white/5 flex items-center justify-center mb-0.5 border border-white/10 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all"><span class="material-symbols-outlined text-[18px] text-white/50 group-hover:text-primary transition-colors" style="font-variation-settings:'FILL' 0">work</span></div><span class="text-[9px] font-medium text-white/40 tracking-wide group-hover:text-white/70 transition-colors">Projects</span></a></li>
+<!-- Company (Active) Fixed color -->
+<li class="flex-1"><a onclick="openCompanySheet(event)" class="flex flex-col items-center gap-[3px] py-1 relative group" href="#"><div class="w-[34px] h-[34px] rounded-xl bg-[#6366f1]/15 flex items-center justify-center mb-0.5 border border-[#6366f1]/30"><span class="material-symbols-outlined text-[18px] text-[#6366f1]" style="font-variation-settings:'FILL' 1">corporate_fare</span></div><span class="text-[9px] font-semibold text-[#6366f1] tracking-wide">Company</span></a></li>
+</ul>
+</nav>
+<!-- SERVICES BOTTOM SHEET -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] opacity-0 invisible transition-all duration-300 md:hidden" id="servicesBottomSheetOverlay" onclick="closeServicesSheet()"></div>
+<div class="fixed bottom-0 left-0 right-0 bg-card-dark rounded-t-[32px] z-[120] transform translate-y-full transition-transform duration-300 md:hidden shadow-[0_-20px_40px_rgba(0,0,0,0.5)] border-t border-border-dark pt-3 pb-28 px-6" id="servicesBottomSheet">
+<div class="w-12 h-1.5 bg-white/20 rounded-full mx-auto mb-8"></div>
+<div class="grid grid-cols-3 gap-y-7 gap-x-2">
+<a class="flex flex-col items-center text-center gap-2 group" href="main service page.html"><div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-105 transition-all shadow-lg border border-white/10"><span class="material-symbols-outlined text-[24px]">search</span></div><span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">SEO</span></a>
+<a class="flex flex-col items-center text-center gap-2 group" href="social-media-marketing.html"><div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-pink-500 group-hover:scale-105 transition-all shadow-lg border border-white/10"><span class="material-symbols-outlined text-[24px]">campaign</span></div><span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Social Media</span></a>
+<a class="flex flex-col items-center text-center gap-2 group" href="main service page.html"><div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-[#8b5cf6] group-hover:scale-105 transition-all shadow-lg border border-white/10"><span class="material-symbols-outlined text-[24px]">ads_click</span></div><span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Google Ads</span></a>
+<a class="flex flex-col items-center text-center gap-2 group" href="website-design.html"><div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-[#10b981] group-hover:scale-105 transition-all shadow-lg border border-white/10"><span class="material-symbols-outlined text-[24px]">web</span></div><span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Web Design</span></a>
+<a class="flex flex-col items-center text-center gap-2 group" href="main service page.html"><div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-[#f59e0b] group-hover:scale-105 transition-all shadow-lg border border-white/10"><span class="material-symbols-outlined text-[24px]">edit_document</span></div><span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Content</span></a>
+<a class="flex flex-col items-center text-center gap-2 group" href="branding.html"><div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-[#06b6d4] group-hover:scale-105 transition-all shadow-lg border border-white/10"><span class="material-symbols-outlined text-[24px]">brush</span></div><span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Branding</span></a>
+<a class="flex flex-col items-center text-center gap-2 group" href="#" onclick="var m = document.getElementById('mobileMenuBtn'); if (m) { m.click(); } var p = document.getElementById('popupOverlay'); if(p) { p.classList.add('show'); } event.preventDefault(); return false;" target=""><div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-[#ef4444] group-hover:scale-105 transition-all shadow-lg border border-white/10"><span class="material-symbols-outlined text-[24px]">mail</span></div><span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Email Mktg</span></a>
+<a class="flex flex-col items-center text-center gap-2 group" href="main service page.html"><div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black group-hover:scale-105 transition-all shadow-lg border border-white/20"><span class="material-symbols-outlined text-[24px]">arrow_forward</span></div><span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">View All</span></a>
+</div>
+</div>
+<script>
+        function openServicesSheet(e) {
+                    if (e) e.preventDefault();
+                    // Force-close Company sheet via DOM (guaranteed on all pages)
+                    const cmpOverlay = document.getElementById('companyBottomSheetOverlay');
+                    const cmpSheet = document.getElementById('companyBottomSheet');
+                    if (cmpOverlay) cmpOverlay.classList.add('opacity-0', 'invisible');
+                    if (cmpSheet) cmpSheet.classList.add('translate-y-full');
+                    document.body.classList.remove('sheet-company-open');
+                    // Open Services sheet
+                    document.getElementById('servicesBottomSheetOverlay').classList.remove('opacity-0', 'invisible');
+                    document.getElementById('servicesBottomSheet').classList.remove('translate-y-full');
+                    document.body.classList.add('no-scroll', 'sheet-services-open');
+                }
+                
+        function closeServicesSheet() { document.getElementById('servicesBottomSheet').classList.add('translate-y-full');
+                    document.body.classList.remove('no-scroll', 'sheet-services-open'); document.getElementById('servicesBottomSheetOverlay').classList.add('opacity-0', 'invisible'); setTimeout(() => { document.body.style.overflow = ''; }, 300); }
+    </script>
+<!-- Unified Integrated Script -->
+<script>
+        const navbar = document.getElementById('navbar');
+        // Mobile menu
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileBottomNav = document.getElementById('mobileBottomNav');
+
+                if (mobileMenuBtn && mobileMenu) {
+                    mobileMenuBtn.addEventListener('click', () => {
+                        const isOpen = mobileMenu.classList.toggle('open');
+                        const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+                        
+                        // Add rotation effect for icon
+                        icon.style.transform = isOpen ? 'rotate(90deg)' : 'rotate(0deg)';
+
+                        setTimeout(() => {
+                            icon.textContent = isOpen ? 'close' : 'menu';
+                            if (isOpen) icon.style.transform = 'rotate(0deg)';
+                        }, 150);
+
+                        // Prevent scrolling on body & html
+                        if (isOpen) {
+                            document.body.classList.add('no-scroll');
+                            document.documentElement.classList.add('no-scroll');
+                            if (mobileBottomNav) mobileBottomNav.style.transform = 'translateY(100%)';
+                        } else {
+                            document.body.classList.remove('no-scroll');
+                            document.documentElement.classList.remove('no-scroll');
+                            if (mobileBottomNav) mobileBottomNav.style.transform = 'translateY(0)';
+                        }
+                    });
+                }
+
+        // 3. Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                navbar.classList.remove('at-top');
+            } else if (!isMenuOpen) {
+                navbar.classList.remove('scrolled');
+                navbar.classList.add('at-top');
+            }
+            checkScroll();
+        });
+
+        // 4. Floating Buttons & Scroll Check
+        function checkScroll() {
+            const scrollPosition = window.scrollY;
+            const heroHeight = window.innerHeight * 0.8;
+
+            const isAnyPopupOpen = (popupOverlay && popupOverlay.classList.contains('show')) ||
+                (thankYouPopup && thankYouPopup.classList.contains('show')) ||
+                (servicesSheet && !servicesSheet.classList.contains('invisible'));
+
+            if (floatingButton) {
+                if (!isAnyPopupOpen && scrollPosition > heroHeight) {
+                    floatingButton.classList.remove('opacity-0', 'invisible', 'translate-x-20', 'hide');
+                    floatingButton.classList.add('show');
+                } else {
+                    floatingButton.classList.remove('show');
+                    floatingButton.classList.add('hide');
+                }
+            }
+
+            if (floatingSocial) {
+                if (!isAnyPopupOpen && scrollPosition > heroHeight) {
+                    floatingSocial.classList.remove('opacity-0', 'invisible', '-translate-x-20');
+                    floatingSocial.classList.add('show');
+                } else {
+                    floatingSocial.classList.remove('show');
+                }
+            }
+        }
+
+        // 5. Popup Handlers
+        if (floatingButton) floatingButton.addEventListener('click', () => {
+            popupOverlay.classList.add('show');
+            checkScroll();
+        });
+        if (closePopup) closePopup.addEventListener('click', () => {
+            popupOverlay.classList.remove('show');
+            setTimeout(checkScroll, 300);
+        });
+        if (popupOverlay) popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                popupOverlay.classList.remove('show');
+                setTimeout(checkScroll, 300);
+            }
+        });
+
+        // 6. Form Submission
+        if (contactForm) contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            popupOverlay.classList.remove('show');
+            setTimeout(() => thankYouPopup.classList.add('show'), 300);
+            contactForm.reset();
+            setTimeout(() => {
+                thankYouPopup.classList.remove('show');
+                setTimeout(checkScroll, 300);
+            }, 4000);
+        });
+
+        // 7. Services Bottom Sheet
+        if (mobileServicesSheetBtn) mobileServicesSheetBtn.addEventListener('click', () => {
+            servicesSheet.classList.remove('invisible');
+            servicesSheet.classList.add('opacity-100');
+            setTimeout(() => servicesSheetContent.classList.remove('translate-y-full'), 10);
+            document.body.classList.add('no-scroll');
+        });
+
+        const closeBottomSheet = () => {
+            servicesSheetContent.classList.add('translate-y-full');
+            setTimeout(() => {
+                servicesSheet.classList.remove('opacity-100');
+                servicesSheet.classList.add('opacity-0');
+                setTimeout(() => {
+                    servicesSheet.classList.add('invisible');
+                    document.body.classList.remove('no-scroll');
+                    checkScroll();
+                }, 300);
+            }, 300);
+        };
+
+        if (closeServicesSheetBtn) closeServicesSheetBtn.addEventListener('click', closeBottomSheet);
+        if (servicesSheet) servicesSheet.addEventListener('click', (e) => {
+            if (e.target === servicesSheet) closeBottomSheet();
+        });
+
+        // Initialize state
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+<!-- COMPANY BOTTOM SHEET -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] opacity-0 invisible transition-all duration-300 md:hidden" id="companyBottomSheetOverlay" onclick="closeCompanySheet()"></div>
+<div class="fixed bottom-0 left-0 right-0 bg-card-dark rounded-t-[32px] z-[120] transform translate-y-full transition-transform duration-300 md:hidden shadow-[0_-20px_40px_rgba(0,0,0,0.5)] border-t border-border-dark pt-3 pb-28 px-6" id="companyBottomSheet">
+<div class="w-12 h-1.5 bg-white/20 rounded-full mx-auto mb-8"></div>
+<div class="grid grid-cols-4 gap-y-7 gap-x-2">
+<a class="flex flex-col items-center text-center gap-2 group" href="about us.html">
+<div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-105 transition-all shadow-lg border border-white/10">
+<span class="material-symbols-outlined text-[24px]">corporate_fare</span>
+</div>
+<span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">About Us</span>
+</a>
+<a class="flex flex-col items-center text-center gap-2 group" href="contact us.html">
+<div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-pink-500 group-hover:scale-105 transition-all shadow-lg border border-white/10">
+<span class="material-symbols-outlined text-[24px]">mail</span>
+</div>
+<span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Contact Us</span>
+</a>
+<a class="flex flex-col items-center text-center gap-2 group" href="poliucy.html">
+<div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-[#8b5cf6] group-hover:scale-105 transition-all shadow-lg border border-white/10">
+<span class="material-symbols-outlined text-[24px]">policy</span>
+</div>
+<span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Privacy</span>
+</a>
+<a class="flex flex-col items-center text-center gap-2 group" href="teram&amp;condi.html">
+<div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-[#10b981] group-hover:scale-105 transition-all shadow-lg border border-white/10">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Terms</span>
+</a>
+</div>
+</div>
+<script>
+        function openCompanySheet(e) {
+            if (e) e.preventDefault();
+            // Close services sheet - both via function and direct DOM fallback
+            if (typeof closeServicesSheet === 'function') closeServicesSheet();
+            const svcOverlay = document.getElementById('servicesBottomSheetOverlay');
+            const svcSheet = document.getElementById('servicesBottomSheet');
+            if (svcOverlay) svcOverlay.classList.add('opacity-0', 'invisible');
+            if (svcSheet) svcSheet.classList.add('translate-y-full');
+            document.body.classList.remove('sheet-services-open');
+            // Now open company sheet
+            const overlay = document.getElementById('companyBottomSheetOverlay');
+            const sheet = document.getElementById('companyBottomSheet');
+            if (overlay && sheet) {
+                overlay.classList.remove('opacity-0', 'invisible');
+                sheet.classList.remove('translate-y-full');
+                document.body.classList.add('no-scroll', 'sheet-company-open');
+            }
+        }
+        function closeCompanySheet() {
+            const overlay = document.getElementById('companyBottomSheetOverlay');
+            const sheet = document.getElementById('companyBottomSheet');
+            if (overlay && sheet) {
+                overlay.classList.add('opacity-0', 'invisible');
+                sheet.classList.add('translate-y-full');
+                document.body.classList.remove('no-scroll', 'sheet-company-open');
+            }
+        }
+    </script>
+
+    <!-- Global AJAX FormSubmit Hook (Secured) -->
+    <script>
+        document.querySelectorAll('form').forEach(f => {
+            // 1. Inject Honeypot Field (Bot Trap)
+            if (!f.querySelector('input[name="_honey"]')) {
+                const honey = document.createElement('input');
+                honey.type = 'text';
+                honey.name = '_honey';
+                honey.style.display = 'none';
+                f.appendChild(honey);
+            }
+
+            f.addEventListener('submit', function(e) {
+                // 2. Spam protection: 15-minute cooldown per form type
+                const formId = f.id || 'generalForm';
+                const lastSubmit = localStorage.getItem('lastSubmit_' + formId);
+                const now = Date.now();
+                
+                if (lastSubmit && (now - lastSubmit < 15 * 60 * 1000)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    alert("Aapne haal hi mein form submit kiya hai. Kripya spamming se bachein aur 15 minutes baad dobara try karein.");
+                    return;
+                }
+
+                // Ignore if it's already submitting
+                if (f.dataset.submitting === "true") return;
+                f.dataset.submitting = "true";
+                
+                const btn = e.target.querySelector('button[type="submit"]') || e.target.querySelector('button');
+                const origText = btn ? btn.innerHTML : '';
+                if(btn) {
+                    btn.innerHTML = '<span>Sending...</span>';
+                    btn.style.opacity = '0.7';
+                }
+                
+                // Collect form data before any other scripts call e.target.reset()
+                const formData = new FormData(e.target);
+                const data = Object.fromEntries(formData.entries());
+                
+                // Collect untagged checkboxes
+                const checkboxes = e.target.querySelectorAll('input[type="checkbox"]:checked');
+                if(checkboxes.length > 0) {
+                    const services = Array.from(checkboxes).map(cb => {
+                        return (cb.value && cb.value !== "on") ? cb.value : (cb.nextElementSibling ? cb.nextElementSibling.textContent.trim() : 'Service');
+                    });
+                    data.services_selected = services.join(', ');
+                }
+                
+                data._captcha = "false"; // Kept false because AJAX FormSubmit requires it. Honeypot protects us.
+                data._subject = "New Lead Submission | 7xGrow";
+                if (data.email) data._replyto = data.email;
+                if (!data.name && data.full_name) data.name = data.full_name;
+                
+                // 3. Tokenized Email to prevent scraping and spam
+                const targetUrl = "https://formsubmit.co/ajax/aa5c679a1f13aa196a3ac0305b91d366";
+                
+                fetch(targetUrl, {
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(data)
+                })
+                .then(res => res.json())
+                .then(resData => {
+                    delete f.dataset.submitting;
+                    if(btn) btn.innerHTML = origText;
+                    if(btn) btn.style.opacity = '1';
+                    
+                    // Set cooldown on success
+                    localStorage.setItem('lastSubmit_' + formId, Date.now());
+                    
+                    console.log("Successfully sent via FormSubmit:", resData);
+                })
+                .catch(err => {
+                    delete f.dataset.submitting;
+                    if(btn) btn.innerHTML = origText;
+                    console.error("FormSubmit Error:", err);
+                });
+            }, true); // useCapture flag ensures this runs first!
+        });
+    </script>
+
+<script>
+        // Pill Navbar on Scroll
+        (function() {
+            var navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            function handleNavbarScroll() {
+                if (window.scrollY > 60) {
+                    navbar.classList.add('scrolled');
+                    navbar.classList.remove('at-top');
+                } else {
+                    navbar.classList.remove('scrolled');
+                    navbar.classList.add('at-top');
+                }
+            }
+            window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+            handleNavbarScroll();
+        })();
+</script></body>
+</html>
