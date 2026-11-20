@@ -1,0 +1,55 @@
+<header class="flex items-center justify-between whitespace-nowrap px-6 py-4 max-w-7xl mx-auto">
+<a class="flex items-center gap-3 text-white transition-opacity hover:opacity-80" href="/">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white nav-logo-icon">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] nav-logo-text">7xGrow</h2>
+</a>
+<nav aria-label="Main navigation" class="hidden lg:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-8">
+<a class="hover:text-white text-sm transition-colors text-primary font-bold" href="main service page.html">Services</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="about us.html">About</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="case studey.html">Case Studies</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="https://7xgrow.crazywheel.in/blog/">Blog</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="contact us.html">Contact</a>
+</div>
+<a class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 glass-btn text-white text-sm font-bold" href="https://wa.me/917427851948?text=Hello" rel="noopener noreferrer" target="_blank">
+<span class="truncate">+91 7427851948</span>
+</a>
+</nav>
+<button aria-label="Open menu" class="lg:hidden text-white cursor-pointer relative z-[170]" id="mobileMenuBtn">
+<span class="material-symbols-outlined transition-transform duration-300">menu</span>
+</button>
+</header>
+<!-- Mobile Menu (Full Screen) -->
+<div class="fixed inset-0 z-[150] bg-[#040608]/95 backdrop-blur-xl flex-col pt-24 px-6 pb-6 overflow-y-auto" id="mobile-menu">
+<!-- Services with Dropdown -->
+<div class="border-b border-white/10">
+<button class="w-full flex items-center justify-between hover:text-white text-xl font-display font-bold transition-colors py-4 text-primary" id="mobileServicesBtn">
+                    Services
+                    <span class="material-symbols-outlined transition-transform duration-300" id="services-chevron">expand_more</span>
+</button>
+<div class="flex flex-col gap-3 pl-4 mb-2" id="mobile-services-dropdown">
+<a class="text-text-dim hover:text-primary text-base transition-colors py-1 flex items-center gap-2" href="seo.html"><span class="w-1.5 h-1.5 rounded-full bg-primary/50"></span> Search Engine Optimization</a>
+<a class="text-text-dim hover:text-pink-500 text-base transition-colors py-1 flex items-center gap-2" href="social-media-marketing.html"><span class="w-1.5 h-1.5 rounded-full bg-pink-500/50"></span> Social Media Marketing</a>
+<a class="text-text-dim hover:text-[#8b5cf6] text-base transition-colors py-1 flex items-center gap-2" href="google-ads.html"><span class="w-1.5 h-1.5 rounded-full bg-[#8b5cf6]/50"></span> Google Ads / PPC</a>
+<a class="text-text-dim hover:text-[#10b981] text-base transition-colors py-1 flex items-center gap-2" href="website-design.html"><span class="w-1.5 h-1.5 rounded-full bg-[#10b981]/50"></span> Website Design &amp; Dev</a>
+<a class="text-text-dim hover:text-[#f59e0b] text-base transition-colors py-1 flex items-center gap-2" href="content-marketing.html"><span class="w-1.5 h-1.5 rounded-full bg-[#f59e0b]/50"></span> Content Marketing</a>
+<a class="text-text-dim hover:text-[#06b6d4] text-base transition-colors py-1 flex items-center gap-2" href="branding.html"><span class="w-1.5 h-1.5 rounded-full bg-[#06b6d4]/50"></span> Branding &amp; Creative</a>
+<a class="text-text-dim hover:text-[#ef4444] text-base transition-colors py-1 flex items-center gap-2" href="email-marketing.html"><span class="w-1.5 h-1.5 rounded-full bg-[#ef4444]/50"></span> Email Marketing</a>
+</div>
+</div>
+<a class="text-white/80 hover:text-white text-xl font-display font-bold transition-colors py-4 border-b border-white/10" href="about us.html">About</a>
+<a class="text-white/80 hover:text-white text-xl font-display font-bold transition-colors py-4 border-b border-white/10" href="case studey.html">Case Studies</a>
+<a class="text-white/80 hover:text-white text-xl font-display font-bold transition-colors py-4 border-b border-white/10" href="https://7xgrow.crazywheel.in/blog/">Blog</a>
+<a class="text-white/80 hover:text-white text-xl font-display font-bold transition-colors py-4" href="contact us.html">Contact</a>
+<a class="mt-6 flex items-center justify-center rounded-xl h-14 px-5 glass-btn text-white text-base font-bold shadow-[0_0_20px_rgba(99,102,241,0.2)]" href="contact us.html">Get
+                a Free Consultation</a>
+<!-- Support social icons inside menu -->
+<div class="mt-auto pt-10 pb-10 flex items-center justify-center gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-text-dim hover:text-white transition-colors border border-white/10" href="tel:+917427851948" onclick="var m = document.getElementById('mobileMenuBtn'); if (m) { m.click(); }" target="_self"><i class="material-symbols-outlined text-[20px]">call</i></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-text-dim hover:text-white transition-colors border border-white/10" href="#" onclick="var m = document.getElementById('mobileMenuBtn'); if (m) { m.click(); } var p = document.getElementById('popupOverlay'); if(p) { p.classList.add('show'); } event.preventDefault(); return false;" target=""><i class="material-symbols-outlined text-[20px]">mail</i></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-text-dim hover:text-white transition-colors border border-white/10" href="https://wa.me/917427851948?text=Hello" onclick="var m = document.getElementById('mobileMenuBtn'); if (m) { m.click(); }" rel="noopener noreferrer" target="_blank"><i class="material-symbols-outlined text-[20px]">forum</i></a>
+</div>
+</div>
+</div>

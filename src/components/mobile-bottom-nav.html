@@ -1,0 +1,103 @@
+<!-- MOBILE BOTTOM APP NAV -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 z-[130] bg-[#0d161d]/95 backdrop-blur-xl border-t border-white/10 px-4 py-1.5 pb-safe shadow-[0_-10px_40px_rgba(0,0,0,0.5)] transition-all duration-300" id="mobileBottomNav">
+<ul class="flex justify-between items-center text-[9px] sm:text-[10px]">
+<!-- Home (Active) -->
+<li>
+<a class="flex flex-col items-center gap-0.5 relative text-text-dim hover:text-white" href="/">
+<div class="absolute -top-1 w-8 h-8 bg-primary/20 rounded-full blur-md -z-10"></div>
+<span class="material-symbols-outlined text-[20px] sm:text-[22px]">home</span>
+<span class="font-bold">Home</span>
+</a>
+</li>
+<!-- Services -->
+<li>
+<a class="flex flex-col items-center gap-0.5 transition-all hover:-translate-y-1 text-primary" href="#" onclick="openServicesSheet(event)">
+<span class="material-symbols-outlined text-[20px] sm:text-[22px]">category</span>
+<span class="font-medium">Services</span>
+<span class="absolute -bottom-2 w-1 h-1 bg-primary rounded-full"></span></a>
+</li>
+<!-- Projects -->
+<li>
+<a class="flex flex-col items-center gap-0.5 text-text-dim hover:text-white transition-all hover:-translate-y-1" href="case studey.html">
+<span class="material-symbols-outlined text-[20px] sm:text-[22px]">cases</span>
+<span class="font-medium">Projects</span>
+</a>
+</li>
+<!-- Industry -->
+<li>
+<a class="flex flex-col items-center gap-0.5 text-text-dim hover:text-white transition-all hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined text-[20px] sm:text-[22px]">domain</span>
+<span class="font-medium">Industry</span>
+</a>
+</li>
+<!-- Company -->
+<li>
+<a onclick="openCompanySheet(event)" class="flex flex-col items-center gap-0.5 text-text-dim hover:text-white transition-all hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined text-[20px] sm:text-[22px]">corporate_fare</span>
+<span class="font-medium">Company</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- SERVICES BOTTOM SHEET -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] opacity-0 invisible transition-all duration-300 md:hidden" id="servicesBottomSheetOverlay" onclick="closeServicesSheet()"></div>
+<div class="fixed bottom-0 left-0 right-0 bg-card-dark rounded-t-[32px] z-[120] transform translate-y-full transition-transform duration-300 md:hidden shadow-[0_-20px_40px_rgba(0,0,0,0.5)] border-t border-border-dark pt-3 pb-28 px-6" id="servicesBottomSheet">
+<!-- Drag Handle -->
+<div class="w-12 h-1.5 bg-white/20 rounded-full mx-auto mb-8"></div>
+<!-- Grid of Services -->
+<div class="grid grid-cols-3 gap-y-7 gap-x-2">
+<a class="flex flex-col items-center text-center gap-2 group" href="seo.html">
+<div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-105 transition-all shadow-lg border border-white/10">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Crawlability</span>
+</a>
+<a class="flex flex-col items-center text-center gap-2 group" href="main service page.html">
+<div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-pink-500 group-hover:scale-105 transition-all shadow-lg border border-white/10">
+<span class="material-symbols-outlined text-[24px]">campaign</span>
+</div>
+<span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Social
+                            Media</span>
+</a>
+<a class="flex flex-col items-center text-center gap-2 group" href="main service page.html">
+<div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-[#8b5cf6] group-hover:scale-105 transition-all shadow-lg border border-white/10">
+<span class="material-symbols-outlined text-[24px]">ads_click</span>
+</div>
+<span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Google Ads /
+                            PPC</span>
+</a>
+<a class="flex flex-col items-center text-center gap-2 group" href="main service page.html">
+<div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-[#10b981] group-hover:scale-105 transition-all shadow-lg border border-white/10">
+<span class="material-symbols-outlined text-[24px]">web</span>
+</div>
+<span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Web
+                            Design</span>
+</a>
+<a class="flex flex-col items-center text-center gap-2 group" href="main service page.html">
+<div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-[#f59e0b] group-hover:scale-105 transition-all shadow-lg border border-white/10">
+<span class="material-symbols-outlined text-[24px]">edit_document</span>
+</div>
+<span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Content
+                            Mktg</span>
+</a>
+<a class="flex flex-col items-center text-center gap-2 group" href="branding.html">
+<div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-[#06b6d4] group-hover:scale-105 transition-all shadow-lg border border-white/10">
+<span class="material-symbols-outlined text-[24px]">brush</span>
+</div>
+<span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Branding</span>
+</a>
+<a class="flex flex-col items-center text-center gap-2 group" href="main service page.html">
+<div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-[#ef4444] group-hover:scale-105 transition-all shadow-lg border border-white/10">
+<span class="material-symbols-outlined text-[24px]">mail</span>
+</div>
+<span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">Email
+                            Mktg</span>
+</a>
+<a class="flex flex-col items-center text-center gap-2 group" href="main service page.html">
+<div class="w-[54px] h-[54px] rounded-[16px] bg-white/5 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black group-hover:scale-105 transition-all shadow-lg border border-white/20">
+<span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+</div>
+<span class="text-[10px] leading-tight text-white/80 font-medium tracking-wide">View All</span>
+</a>
+</div>
+</div>
