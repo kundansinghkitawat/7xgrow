@@ -37,6 +37,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-brand-violet: #651ccf;
+  --color-sec-bg: #121212;
+  --color-banner-bg: #171717;
   --font-sans: var(--font-outfit);
 }
 
