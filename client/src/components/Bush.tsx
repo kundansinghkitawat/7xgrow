@@ -77,7 +77,7 @@ export function Bush() {
     : undefined;
 
   return (
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full sm:w-[90%] h-auto md:h-[65%] md:w-auto isolate select-none">
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full sm:w-[90%] h-auto xl:h-[65%] xl:w-auto isolate select-none">
       {show && (
         <Image
           ref={imgRef}
