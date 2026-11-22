@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { LenisProvider } from "@/components/LenisProvider";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -18,7 +19,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${outfit.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Header />
-        <main>{children}</main>
+        <LenisProvider>
+          <main>{children}</main>
+        </LenisProvider>
       </body>
     </html>
   );
