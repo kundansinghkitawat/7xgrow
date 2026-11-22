@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { SubHeadings } from "./SubHeadings";
 import { Bush } from "./Bush";
+import { Companies } from "./Companies";
 
 export function Hero() {
   const heroSubheadings =
@@ -11,10 +11,10 @@ export function Hero() {
       
       {/* hero headings */}
       <h1 className="relative flex flex-col select-none w-full md:w-fit">
-        <span className="relative z-20 text-xs lg:text-base leading-snug lg:leading-0 self-center text-white font-bold tracking-tight">
+        <span className="relative z-20 text-sm lg:text-base leading-snug lg:leading-0 self-center text-white font-medium tracking-tight">
           Built for Sustainable Growth
         </span>
-        <div className="relative z-0 text-7xl lg:text-8xl leading-[1.15] tracking-tight font-semibold">
+        <div className="relative z-0 text-7xl lg:text-8xl leading-[1.15] tracking-tight font-semibold sm:text-center">
           <span className="inline-block text-transparent brand-gradient bg-clip-text mr-[1vw]">
             Digital{" "}
           </span>
@@ -41,7 +41,9 @@ export function Hero() {
       <Bush/>
 
       {/* hero subheadings */}
-      <SubHeadings className="z-30">{heroSubheadings}</SubHeadings>
+      <SubHeadings className="z-30 sm:text-center sm:w-2/3">{heroSubheadings}</SubHeadings>
+
+      <Companies />
     </section>
   );
 }
