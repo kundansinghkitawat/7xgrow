@@ -1,27 +1,19 @@
 import type { CSSProperties } from "react";
 import { Teko } from "next/font/google";
+import { type BannerItem } from "@/lib/bannerItems";
+
+type Props = {
+  items: BannerItem[];
+};
 
 const numberFont = Teko({
   subsets: ["latin"],
   weight: ["500"],
 });
 
-type Stat = {
-  value: string;
-  suffix: string;
-  label: string;
-};
-
 type ChevronProps = {
   className?: string;
 };
-
-const stats: Stat[] = [
-  { value: "100", suffix: "+", label: "Projects Completed" },
-  { value: "98", suffix: "%", label: "Client Satisfaction" },
-  { value: "5", suffix: "+", label: "Years Experience" },
-  { value: "15", suffix: "+", label: "Team Members" },
-];
 
 function Chevron({ className }: ChevronProps) {
   return (
@@ -36,12 +28,12 @@ function Chevron({ className }: ChevronProps) {
   );
 }
 
-export function Banner() {
+export function Banner({items}: Props) {
   return (
     <div className="w-full h-40 sm:h-30 py-2.5">
       <div className="section-style h-full">
         <ul className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-(--gap) [--gap:6px] md:[--gap:10px] px-7.5 h-full">
-          {stats.map(({ value, suffix, label }, index) => (
+          {items.map(({ value, suffix, label }, index) => (
             <li
               key={label}
               style={
@@ -86,7 +78,7 @@ export function Banner() {
                     {suffix}
                   </span>
                 </div>
-                <span className="text-white/25 font-medium text-xs md:text-sm tracking-tight leading-none">
+                <span className="text-white/50 font-medium text-xs md:text-sm tracking-tight leading-none">
                   {label}
                 </span>
               </div>
