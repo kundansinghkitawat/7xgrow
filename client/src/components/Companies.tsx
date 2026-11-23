@@ -92,7 +92,7 @@ export function Companies() {
         {companies.map(({ name, Logo }) => (
           <Logo
             key={name}
-            className="h-3 sm:h-3.5 md:h-4 w-auto overflow-visible text-[#353535] hover:text-white transition-colors duration-300"
+            className="h-3 sm:h-3.5 md:h-4 w-auto overflow-visible text-[#555555] hover:text-white transition-colors duration-300"
           />
         ))}
       </div>

@@ -25,18 +25,6 @@ export function Hero() {
         </div>
       </h1>
 
-      {/* hero transparent bush image -- comment out if you want colorless hero img */}
-      {/* <Image
-        src="/bush.png"
-        alt=""
-        width={0}
-        height={0}
-        sizes="100vw"
-        priority
-        unoptimized
-        className="w-auto h-[65%] absolute object-contain object-center top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-10"
-      /> */}
-
       {/* colorful bush transparent hero */}
       <Bush/>
 

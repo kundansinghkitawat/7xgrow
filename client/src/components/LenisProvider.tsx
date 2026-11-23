@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import { ReactLenis, type LenisRef } from 'lenis/react';
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { LenisOptions } from 'lenis';
+import { ReactLenis, type LenisRef } from "lenis/react";
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { LenisOptions } from "lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,6 +22,7 @@ const lenisOptions: LenisOptions = {
 
 export function LenisProvider({ children }: Props) {
   const lenisRef = useRef<LenisRef>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     function raf(time: number) {
@@ -33,6 +35,17 @@ export function LenisProvider({ children }: Props) {
 
     return () => gsap.ticker.remove(raf);
   }, []);
+
+  useEffect(() => {
+    lenisRef.current?.lenis?.scrollTo(0, { immediate: true });
+
+    const frame = requestAnimationFrame(() => {
+      lenisRef.current?.lenis?.resize();
+      ScrollTrigger.refresh();
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [pathname]);
 
   return (
     <ReactLenis root options={lenisOptions} ref={lenisRef}>

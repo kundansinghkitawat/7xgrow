@@ -1,4 +1,4 @@
-type Props = {
+export type Props = {
   size?: number;
   strokeWidth?: number;
   fill?: string;
@@ -41,7 +41,7 @@ export function CloseIcon({ size = 24, strokeWidth = 2.5, fill = "none", classNa
   );
 }
 
-export function FacebookIcon({ size = 24, strokeWidth = 2.5, fill = "none", className }: Props) {
+export function FacebookIcon({ size = 24, strokeWidth = 2, fill = "none", className }: Props) {
   return (
     <svg
       width={size}
@@ -54,12 +54,12 @@ export function FacebookIcon({ size = 24, strokeWidth = 2.5, fill = "none", clas
       strokeLinejoin="round"
       className={className}
     >
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      <path d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2H7z" />
     </svg>
   );
 }
 
-export function InstagramIcon({ size = 24, strokeWidth = 2.5, fill = "none", className }: Props) {
+export function InstagramIcon({ size = 24, strokeWidth = 2, fill = "none", className }: Props) {
   return (
     <svg
       width={size}
@@ -72,14 +72,14 @@ export function InstagramIcon({ size = 24, strokeWidth = 2.5, fill = "none", cla
       strokeLinejoin="round"
       className={className}
     >
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <path d="M17.5 6.5v.01" />
     </svg>
   );
 }
 
-export function LinkedinIcon({ size = 24, strokeWidth = 2.5, fill = "none", className }: Props) {
+export function LinkedinIcon({ size = 24, strokeWidth = 2, fill = "none", className }: Props) {
   return (
     <svg
       width={size}
@@ -92,14 +92,16 @@ export function LinkedinIcon({ size = 24, strokeWidth = 2.5, fill = "none", clas
       strokeLinejoin="round"
       className={className}
     >
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect x="2" y="9" width="4" height="12" />
-      <circle cx="4" cy="4" r="2" />
+      <rect x="3" y="3" width="18" height="18" rx="4" />
+      <path d="M8 11v5" />
+      <path d="M8 8v.01" />
+      <path d="M12 16v-5" />
+      <path d="M16 16v-3a2 2 0 0 0-4 0" />
     </svg>
   );
 }
 
-export function TwitterIcon({ size = 24, strokeWidth = 2.5, fill = "none", className }: Props) {
+export function TwitterIcon({ size = 24, strokeWidth = 2, fill = "none", className }: Props) {
   return (
     <svg
       width={size}
@@ -112,12 +114,13 @@ export function TwitterIcon({ size = 24, strokeWidth = 2.5, fill = "none", class
       strokeLinejoin="round"
       className={className}
     >
-      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+      <path d="M4 4l11.733 16H20L8.267 4z" />
+      <path d="M4 20l6.768-6.768m2.46-2.46L20 4" />
     </svg>
   );
 }
 
-export function GithubIcon({ size = 24, strokeWidth = 2.5, fill = "none", className }: Props) {
+export function GithubIcon({ size = 24, strokeWidth = 2, fill = "none", className }: Props) {
   return (
     <svg
       width={size}
@@ -136,7 +139,7 @@ export function GithubIcon({ size = 24, strokeWidth = 2.5, fill = "none", classN
   );
 }
 
-export function YoutubeIcon({ size = 24, strokeWidth = 2.5, fill = "none", className }: Props) {
+export function YoutubeIcon({ size = 24, strokeWidth = 2, fill = "none", className }: Props) {
   return (
     <svg
       width={size}
@@ -149,8 +152,8 @@ export function YoutubeIcon({ size = 24, strokeWidth = 2.5, fill = "none", class
       strokeLinejoin="round"
       className={className}
     >
-      <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-      <path d="m10 15 5-3-5-3z" />
+      <rect x="3" y="5" width="18" height="14" rx="4" />
+      <path d="M10 9l5 3-5 3z" />
     </svg>
   );
 }
@@ -173,7 +176,7 @@ export function ChevronIcon({ size = 24, strokeWidth = 2.5, fill = "none", class
   );
 }
 
-export function WhatsappIcon({ size = 24, strokeWidth = 2.5, fill = "none", className }: Props) {
+export function WhatsappIcon({ size = 24, strokeWidth = 2, fill = "none", className }: Props) {
   return (
     <svg
       width={size}
@@ -191,7 +194,6 @@ export function WhatsappIcon({ size = 24, strokeWidth = 2.5, fill = "none", clas
     </svg>
   );
 }
-
 
 export function BoxPointIcon({ size = 24, fill, className }: Props) {
   return (
