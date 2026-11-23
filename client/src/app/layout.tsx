@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { LenisProvider } from "@/components/LenisProvider";
+import { Footer } from "@/components/Footer";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <LenisProvider>
           <main>{children}</main>
         </LenisProvider>
+        <Footer />
       </body>
     </html>
   );
