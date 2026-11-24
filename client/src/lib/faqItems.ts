@@ -4,7 +4,7 @@ export type FaqItem = {
   answer: string;
 };
 
-export const heroFaqs: FaqItem[] = [
+export const heroFaqsItems: FaqItem[] = [
   {
     id: 1,
     question: "How long until I see results from SEO?",
