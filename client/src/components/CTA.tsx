@@ -8,7 +8,8 @@ export function CTA() {
           src="/cta.webp"
           alt=""
           fill
-          sizes="100vw"
+          loading="eager"
+          sizes="(min-width: 1280px) 1152px, (min-width: 1024px) calc(100vw - 128px), (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)"
           className="absolute inset-0 object-cover object-top opacity-40"
         />
 

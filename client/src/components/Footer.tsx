@@ -69,7 +69,7 @@ export function Footer({
   }
 
   return (
-    <footer className="flex flex-col justify-end vertical-margin-style mb-0 overflow-hidden w-full section-style horizontal-padding-style">
+    <footer className="flex flex-col justify-end overflow-hidden w-full section-style horizontal-padding-style">
       <div className="">
         <div className="flex flex-wrap justify-between gap-y-12 gap-x-8">
           {/* Brand, description and follow us */}

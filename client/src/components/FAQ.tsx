@@ -24,7 +24,7 @@ export function FAQ({ items }: Props) {
   const visibleItems = items.slice(0, 4);
 
   return (
-    <section className="section-style horizontal-padding-style vertical-padding-style max-w-3xl text-center">
+    <section className="section-style horizontal-padding-style vertical-margin-style max-w-3xl text-center">
       <h2 className="mb-6 text-3xl font-semibold tracking-tighter leading-none">
         FAQs
       </h2>
