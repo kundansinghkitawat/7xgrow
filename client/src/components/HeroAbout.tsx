@@ -1,20 +1,21 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import { BoxPointIcon } from "./Icons";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export function HeroAbout() {
   const boxRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
+  useGSAP(
+    () => {
       gsap.fromTo(
         imageRef.current,
         { yPercent: 0 },
@@ -29,10 +30,9 @@ export function HeroAbout() {
           },
         },
       );
-    });
-
-    return () => ctx.revert();
-  }, []);
+    },
+    { scope: boxRef },
+  );
 
   const features = [
     "Data-driven strategies",
@@ -61,11 +61,11 @@ export function HeroAbout() {
       <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 gap-2.5 sm:min-h-200">
         <div
           ref={boxRef}
-          className="h-96 order-1 sm:order-0 sm:h-auto sm:row-span-2 relative overflow-hidden rounded-[2.5rem]"
+          className="h-96 order-1 sm:order-0 sm:h-auto sm:row-span-2 relative overflow-hidden rounded-[2.5rem] isolate"
         >
           <div
             ref={imageRef}
-            className="absolute top-0 left-0 w-full h-[150%] select-none transition-transform duration-700 ease-out"
+            className="absolute top-0 left-0 w-full h-[150%] select-none"
           >
             <Image
               src="/floating_window.webp"
@@ -73,12 +73,12 @@ export function HeroAbout() {
               fill
               loading="eager"
               className="object-cover object-top select-none"
-              sizes="50vw"
+              sizes="(min-width: 640px) 50vw, 100vw"
             />
           </div>
 
           <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end gap-2.5">
-            <h2 className="relative text-left text-2xl sm:text-3xl text-[#d3d3d3] mix-blend-difference font-semibold tracking-tighter leading-none">
+            <h2 className="relative text-left text-2xl sm:text-3xl text-white md:text-[#d3d3d3] md:mix-blend-difference font-semibold tracking-tighter leading-none">
               Your Strategic Partner in <br /> Digital Growth
             </h2>
 
@@ -86,9 +86,8 @@ export function HeroAbout() {
               href="/about"
               className="relative rounded-full px-4 py-1.5 sm:px-5 sm:py-2 cursor-pointer"
             >
-              <span className="absolute inset-0 rounded-full bg-white mix-blend-difference" />
-
-              <span className="relative text-white font-medium tracking-tight leading-0 text-nowrap text-sm sm:text-base">
+              <span className="absolute inset-0 rounded-full bg-white md:bg-[#d3d3d3] md:mix-blend-difference" />
+              <span className="relative text-black md:text-white font-medium tracking-tight leading-0 text-nowrap text-sm sm:text-base">
                 Learn More
               </span>
             </Link>
