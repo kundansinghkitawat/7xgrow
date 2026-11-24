@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <Banner items={heroBannerItems}/>
       <HeroAbout />
-      <HeroService />
+      {/* <HeroService /> */}
       <FAQ items={heroFaqs} />
       <CTA />
     </>
