@@ -5,7 +5,7 @@ import { Hero } from "@/components/Hero";
 import { HeroAbout } from "@/components/HeroAbout";
 import { HeroService } from "@/components/HeroService";
 import { heroBannerItems } from "@/lib/bannerItems";
-import { heroFaqs } from "@/lib/faqItems";
+import { heroFaqsItems } from "@/lib/faqItems";
 
 export default function Home() {
   return (
@@ -13,8 +13,8 @@ export default function Home() {
       <Hero />
       <Banner items={heroBannerItems}/>
       <HeroAbout />
-      {/* <HeroService /> */}
-      <FAQ items={heroFaqs} />
+      <HeroService />
+      <FAQ items={heroFaqsItems} />
       <CTA />
     </>
   );
