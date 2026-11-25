@@ -28,6 +28,14 @@
     @apply my-12 md:my-20 lg:my-28;
   }
 
+  .hero-txt-top-margin-style {
+    @apply mt-[15vh] xl:mt-[20vh];
+  }
+  
+  .hero-h1-single-word-style{
+    @apply text-[25vw] text-white w-full text-center tracking-tighter leading-[0.55];
+  }
+
   .italic-skew {
     @apply inline-block -skew-x-12;
   }
