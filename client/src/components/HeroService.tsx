@@ -69,7 +69,7 @@ export function HeroService({ services = heroServiceItems }: Props) {
   return (
     <div
       ref={sectionRef}
-      className="flex w-full items-center justify-center overflow-hidden horizontal-padding-style vertical-padding-style"
+      className="flex w-full items-center justify-center overflow-hidden horizontal-padding-style vertical-margin-style !mb-0"
     >
       <div className="relative h-[65svh] aspect-2/3">
         {services.map((service, i) => (

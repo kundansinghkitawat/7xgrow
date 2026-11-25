@@ -1,15 +1,9 @@
 import type { CSSProperties } from "react";
-import { Teko } from "next/font/google";
 import { type BannerItem } from "@/lib/bannerItems";
 
 type Props = {
   items: BannerItem[];
 };
-
-const numberFont = Teko({
-  subsets: ["latin"],
-  weight: ["500"],
-});
 
 type ChevronProps = {
   className?: string;
@@ -28,7 +22,7 @@ function Chevron({ className }: ChevronProps) {
   );
 }
 
-export function Banner({items}: Props) {
+export function Banner({ items }: Props) {
   return (
     <div className="w-full h-40 sm:h-30 py-2.5">
       <div className="section-style h-full">
@@ -67,14 +61,10 @@ export function Banner({items}: Props) {
 
               <div className="relative flex flex-col gap-0 skew-x-12 -ml-1 md:-ml-2">
                 <div className="flex items-baseline gap-0.5">
-                  <span
-                    className={`${numberFont.className} inline-block -skew-x-12 text-white text-3xl md:text-5xl font-medium tracking-normal leading-none ml-1.5`}
-                  >
+                  <span className="font-number italic-skew text-white text-3xl md:text-5xl font-medium tracking-normal leading-none ml-1.5">
                     {value}
                   </span>
-                  <span
-                    className={`${numberFont.className} inline-block -skew-x-12 text-white/35 text-xl md:text-2xl leading-none font-semibold`}
-                  >
+                  <span className="font-number italic-skew text-white/35 text-xl md:text-2xl leading-none font-semibold">
                     {suffix}
                   </span>
                 </div>
