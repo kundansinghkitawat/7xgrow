@@ -75,6 +75,7 @@ export function Header() {
         >
           <Link
             href="/"
+            onClick={() => setIsOpen(false)}
             className={`${isOpen ? "text-black" : "text-white"} font-semibold tracking-tight leading-none transition-colors duration-700 ease-out text-xl`}
           >
             7xGrow
@@ -123,8 +124,10 @@ export function Header() {
           </button>
         </header>
       </div>
-
-      <MenuOpen isOpen={isOpen} />
+      
+      <div onClick={() => setIsOpen(false)}>
+        <MenuOpen isOpen={isOpen} />
+      </div>
     </>
   );
 }

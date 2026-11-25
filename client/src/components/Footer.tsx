@@ -1,24 +1,14 @@
 "use client";
 
+import { Fragment } from "react";
 import Link from "next/link";
 import {
-  InstagramIcon,
-  GithubIcon,
-  TwitterIcon,
-  FacebookIcon,
-  YoutubeIcon,
-  WhatsappIcon,
-  type Props as IconProps,
-} from "./Icons";
-
-type FooterLink = {
-  label: string;
-  href: string;
-};
-
-type SocialLink = FooterLink & {
-  Icon: React.ComponentType<IconProps>;
-};
+  footerContent,
+  footerServices,
+  footerCompany,
+  footerLegalLinks,
+  footerSocialLinks,
+} from "@/lib/footerItems";
 
 type Props = {
   brand?: string;
@@ -29,40 +19,13 @@ type Props = {
 
 const year = new Date().getFullYear();
 
-const services: FooterLink[] = [
-  { label: "Search Engine Optimization", href: "/services/seo" },
-  { label: "Social Media Marketing", href: "/services/social-media-marketing" },
-  { label: "Google Ads / PPC", href: "/services/google-ads" },
-  { label: "Website Design & Dev", href: "/services/website-design" },
-  { label: "Content Marketing", href: "/services/content-marketing" },
-  { label: "Branding & Creative", href: "/services/branding" },
-  { label: "Email Marketing", href: "/services/email-marketing" },
-];
-
-const company: FooterLink[] = [
-  { label: "About Us", href: "/about" },
-  { label: "Our Work", href: "/work" },
-  { label: "Careers", href: "/careers" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
-];
-
-const socialLinks: SocialLink[] = [
-  { label: "Instagram", href: "#", Icon: InstagramIcon },
-  { label: "GitHub", href: "#", Icon: GithubIcon },
-  { label: "X", href: "#", Icon: TwitterIcon },
-  { label: "Facebook", href: "#", Icon: FacebookIcon },
-  { label: "Youtube", href: "#", Icon: YoutubeIcon },
-  { label: "Whatsapp", href: "#", Icon: WhatsappIcon },
-];
-
 const linkClass = "text-sm text-white/60 hover:text-white transition-colors";
 
 export function Footer({
-  brand = "7xGrow",
-  description = "7xGrow is a premier digital marketing agency in Udaipur specializing in SEO, PPC, social media marketing, and data-driven growth strategies.",
-  address = "Udaipur, Rajasthan, India",
-  wordmark = "7xGrow",
+  brand = footerContent.brand,
+  description = footerContent.description,
+  address = footerContent.address,
+  wordmark = footerContent.wordmark,
 }: Props) {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -85,10 +48,12 @@ export function Footer({
               {description}
             </p>
 
-            <h3 className="text-sm text-white font-medium mt-8">Follow Us</h3>
+            <h3 className="text-sm text-white font-medium mt-8">
+              {footerContent.followTitle}
+            </h3>
 
             <div className="flex flex-wrap items-center gap-2.5 mt-4">
-              {socialLinks.map(({ label, href, Icon }) => (
+              {footerSocialLinks.map(({ label, href, Icon }) => (
                 <a
                   key={label}
                   href={href}
@@ -105,9 +70,11 @@ export function Footer({
 
           {/* Services */}
           <div className="w-[calc(50%-1rem)] lg:w-auto lg:flex-1 flex flex-col items-start text-left">
-            <h3 className="text-sm text-white font-medium">Services</h3>
+            <h3 className="text-sm text-white font-medium">
+              {footerContent.servicesTitle}
+            </h3>
             <div className="flex flex-col gap-2 mt-6">
-              {services.map((link) => (
+              {footerServices.map((link) => (
                 <Link key={link.label} href={link.href} className={linkClass}>
                   {link.label}
                 </Link>
@@ -117,9 +84,11 @@ export function Footer({
 
           {/* Company */}
           <div className="w-[calc(50%-1rem)] lg:w-auto lg:flex-1 flex flex-col items-start text-left">
-            <h3 className="text-sm text-white font-medium">Company</h3>
+            <h3 className="text-sm text-white font-medium">
+              {footerContent.companyTitle}
+            </h3>
             <div className="flex flex-col gap-2 mt-6">
-              {company.map((link) => (
+              {footerCompany.map((link) => (
                 <Link key={link.label} href={link.href} className={linkClass}>
                   {link.label}
                 </Link>
@@ -129,30 +98,34 @@ export function Footer({
 
           {/* Visit us and newsletter */}
           <div className="w-full md:w-[calc(50%-1rem)] lg:w-auto lg:flex-1 flex flex-col items-start text-left mt-4 md:mt-0">
-            <h3 className="text-sm text-white font-medium">Visit Us</h3>
+            <h3 className="text-sm text-white font-medium">
+              {footerContent.visitTitle}
+            </h3>
             <p className="text-sm text-white/60 mt-4 leading-relaxed">
               {address}
             </p>
 
-            <h3 className="text-sm text-white font-medium mt-8">Newsletter</h3>
+            <h3 className="text-sm text-white font-medium mt-8">
+              {footerContent.newsletter.title}
+            </h3>
             <p className="text-sm text-white/60 mt-2 leading-relaxed">
-              Get weekly growth insights delivered to your inbox.
+              {footerContent.newsletter.description}
             </p>
             <form
               onSubmit={handleSubmit}
-              className="flex items-center border-2 gap-2 border-white/20 h-13 max-w-80 w-full rounded-full overflow-hidden mt-4"
+              className="flex items-center border-2 gap-2 border-white/20 h-13 w-full rounded-full overflow-hidden mt-4"
             >
               <input
                 type="email"
-                placeholder="Enter your email.."
+                placeholder={footerContent.newsletter.placeholder}
                 required
                 className="w-full h-full pl-6 outline-none text-sm bg-transparent text-white placeholder-white/60 placeholder:text-xs"
               />
               <button
                 type="submit"
-                className="bg-[#f97ba9] hover:opacity-90 active:scale-95 transition w-56 h-10 rounded-full text-sm text-white cursor-pointer mr-1 focus:outline-none font-semibold"
+                className="bg-brand-pink hover:opacity-90 active:scale-95 transition w-56 h-10 rounded-full text-sm text-black cursor-pointer mr-1 focus:outline-none font-semibold"
               >
-                Subscribe
+                {footerContent.newsletter.button}
               </button>
             </form>
           </div>
@@ -163,22 +136,20 @@ export function Footer({
         {/* Bottom bar */}
         <div className="flex flex-wrap sm:flex-row items-center justify-between gap-y-4 gap-x-2 relative z-10">
           <p className="text-xs text-white/60">
-            © {year} {brand}. All rights reserved.
+            © {year} {brand}. {footerContent.rights}
           </p>
           <div className="flex items-center gap-6 text-right">
-            <Link
-              href="/privacy"
-              className="text-xs text-white/60 hover:text-white transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <div className="w-px h-4 bg-white/20" />
-            <Link
-              href="/terms"
-              className="text-xs text-white/60 hover:text-white transition-colors"
-            >
-              Terms of Service
-            </Link>
+            {footerLegalLinks.map((link, i) => (
+              <Fragment key={link.href}>
+                {i > 0 && <div className="w-px h-4 bg-white/20" />}
+                <Link
+                  href={link.href}
+                  className="text-xs text-white/60 hover:text-white transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </Fragment>
+            ))}
           </div>
         </div>
 
