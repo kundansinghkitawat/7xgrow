@@ -219,3 +219,106 @@ export function BoxPointIcon({ size = 24, fill, className }: Props) {
     </svg>
   );
 }
+
+
+export function LocateIcon({ size = 24, strokeWidth = 2, fill = "none", className }: Props) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill={fill}
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <circle cx="12" cy="12" r="7" />
+      <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" />
+      <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+    </svg>
+  );
+}
+
+
+
+export function SmartphoneIcon({ size = 24, strokeWidth = 2, fill = "none", className }: Props) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill={fill}
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      {/* body (wider than before) */}
+      <rect x="4.5" y="2" width="15" height="20" rx="3.5" />
+      {/* speaker */}
+      <path d="M10 5.5h4" />
+      {/* home indicator */}
+      <path d="M10.5 18.5h3" />
+    </svg>
+  );
+}
+
+export function AtIcon({ size = 24, strokeWidth = 2, fill = "none", className }: Props) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill={fill}
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0V12a9 9 0 1 0-3.5 7.1" />
+    </svg>
+  );
+}
+
+export function MapPinIcon({ size = 24, strokeWidth = 2, fill = "none", className }: Props) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill={fill}
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" />
+      <circle cx="12" cy="9.5" r="2.5" />
+    </svg>
+  );
+}
+
+
+export function CursorIcon({ size = 24, strokeWidth = 2, fill = "none", className }: Props) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill={fill}
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M4.5 3.5 20 10.2l-7.2 2.6-2.6 7.2z" />
+    </svg>
+  );
+}
