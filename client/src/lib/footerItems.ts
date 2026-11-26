@@ -50,7 +50,7 @@ export const footerServices: FooterLink[] = [
 export const footerCompany: FooterLink[] = [
   { label: "About Us", href: "/about" },
   { label: "Cases", href: "/cases" },
-  { label: "Career", href: "/career" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 
