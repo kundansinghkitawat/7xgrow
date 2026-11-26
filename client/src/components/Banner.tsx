@@ -22,19 +22,44 @@ function Chevron({ className }: ChevronProps) {
   );
 }
 
+const MOBILE_MAX_COLS = 2;
+const DESKTOP_MAX_COLS = 4;
+
 export function Banner({ items }: Props) {
+  const count = items.length;
+  if (count === 0) return null;
+
+  // mobile layout
+  const colsMobile = Math.min(count, MOBILE_MAX_COLS);
+  const rowsMobile = Math.ceil(count / colsMobile);
+
+  // desktop layout
+  const colsDesktop = Math.min(count, DESKTOP_MAX_COLS);
+  const rowsDesktop = Math.ceil(count / colsDesktop);
+
   return (
-    <div className="w-full h-40 sm:h-30 py-2.5">
+    <div
+      style={
+        {
+          "--cols-m": colsMobile,
+          "--rows-m": rowsMobile,
+          "--cols-d": colsDesktop,
+          "--rows-d": rowsDesktop,
+        } as CSSProperties
+      }
+      className="w-full h-[calc(var(--rows-m)*5rem)] sm:h-[calc(var(--rows-d)*7.5rem)] py-2.5"
+    >
       <div className="section-style h-full">
-        <ul className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-(--gap) [--gap:6px] md:[--gap:10px] px-7.5 h-full">
+        <ul className="grid grid-cols-[repeat(var(--cols-m),minmax(0,1fr))] grid-rows-[repeat(var(--rows-m),minmax(0,1fr))] sm:grid-cols-[repeat(var(--cols-d),minmax(0,1fr))] sm:grid-rows-[repeat(var(--rows-d),minmax(0,1fr))] gap-(--gap) [--gap:6px] md:[--gap:10px] px-7.5 h-full">
           {items.map(({ value, suffix, label }, index) => (
             <li
               key={label}
               style={
                 {
-                  "--col-mobile": index % 2,
-                  "--row-mobile": Math.floor(index / 2),
-                  "--col-desktop": index,
+                  "--col-mobile": index % colsMobile,
+                  "--row-mobile": Math.floor(index / colsMobile),
+                  "--col-desktop": index % colsDesktop,
+                  "--row-desktop": Math.floor(index / colsDesktop),
                 } as CSSProperties
               }
               className="group relative flex flex-col justify-end items-start text-left bg-sec-bg min-h-0 rounded-xl md:rounded-2xl p-1.5 md:p-3 overflow-hidden -skew-x-12"
@@ -52,7 +77,7 @@ export function Banner({ items }: Props) {
                   transformOrigin:
                     "calc((var(--col) + 0.5) / var(--cols) * (100% - (var(--cols) - 1) * var(--gap)) + var(--col) * var(--gap)) calc((var(--row) + 0.5) / var(--rows) * (100% - (var(--rows) - 1) * var(--gap)) + var(--row) * var(--gap))",
                 }}
-                className="pointer-events-none absolute flex items-center justify-end -space-x-10 md:-space-x-16 pr-3 md:pr-6 [--col:var(--col-mobile)] [--cols:2] [--row:var(--row-mobile)] [--rows:2] sm:[--col:var(--col-desktop)] sm:[--cols:4] sm:[--row:0] sm:[--rows:1]"
+                className="pointer-events-none absolute flex items-center justify-end -space-x-10 md:-space-x-16 pr-3 md:pr-6 [--col:var(--col-mobile)] [--cols:var(--cols-m)] [--row:var(--row-mobile)] [--rows:var(--rows-m)] sm:[--col:var(--col-desktop)] sm:[--cols:var(--cols-d)] sm:[--row:var(--row-desktop)] sm:[--rows:var(--rows-d)]"
               >
                 <Chevron className="h-[60%] sm:h-[110%] shrink-0 text-white/4" />
                 <Chevron className="h-[90%] sm:h-[160%] shrink-0 text-white/5" />
