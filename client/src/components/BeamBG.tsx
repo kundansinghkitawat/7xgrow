@@ -25,6 +25,8 @@ export type BeamPosition =
   | "bottom-right";
 
 export interface BeamBGProps {
+  /** Show or hide the beams and the glow. Default: true */
+  beams?: boolean;
   /** Where the light source sits. Default: "top-center" */
   beamPosition?: BeamPosition;
   /** Beam strength multiplier, 0 – 1.5. Default: 1 */
@@ -73,6 +75,7 @@ const clamp = (n: number, min: number, max: number) =>
   Math.min(max, Math.max(min, n));
 
 export function BeamBG({
+  beams = true,
   beamPosition = "top-center",
   beamOpacity = 1,
   beamColor = "255,255,255",
@@ -200,38 +203,42 @@ export function BeamBG({
         @media (prefers-reduced-motion: reduce) { .beam-layer { animation: none !important } }
       `}</style>
 
-      {/* glow at the light source */}
-      <div
-        className="absolute h-[30rem] w-[56.25rem] -translate-x-1/2 -translate-y-1/2 blur-[2.5rem]"
-        style={{
-          left: `${mx}%`,
-          top: `${my}%`,
-          opacity: clamp(beamOpacity, 0, 1.5),
-          background: `radial-gradient(closest-side, ${rgba(0.28)}, ${rgba(0.06)} 55%, transparent 80%)`,
-        }}
-      />
+      {beams && (
+        <>
+          {/* glow at the light source */}
+          <div
+            className="absolute h-[30rem] w-[56.25rem] -translate-x-1/2 -translate-y-1/2 blur-[2.5rem]"
+            style={{
+              left: `${mx}%`,
+              top: `${my}%`,
+              opacity: clamp(beamOpacity, 0, 1.5),
+              background: `radial-gradient(closest-side, ${rgba(0.28)}, ${rgba(0.06)} 55%, transparent 80%)`,
+            }}
+          />
 
-      {/* beams */}
-      <div
-        className="beam-layer absolute inset-0 blur-[0.375rem]"
-        style={{
-          background: beamsA,
-          WebkitMaskImage: beamMask,
-          maskImage: beamMask,
-          opacity: 0.55 * beamOpacity,
-          animation: "beam-pulse 9s ease-in-out infinite alternate",
-        }}
-      />
-      <div
-        className="beam-layer absolute inset-0 blur-[1.125rem]"
-        style={{
-          background: beamsB,
-          WebkitMaskImage: beamMask,
-          maskImage: beamMask,
-          opacity: 0.4 * beamOpacity,
-          animation: "beam-pulse 13s ease-in-out infinite alternate",
-        }}
-      />
+          {/* beams */}
+          <div
+            className="beam-layer absolute inset-0 blur-[0.375rem]"
+            style={{
+              background: beamsA,
+              WebkitMaskImage: beamMask,
+              maskImage: beamMask,
+              opacity: 0.55 * beamOpacity,
+              animation: "beam-pulse 9s ease-in-out infinite alternate",
+            }}
+          />
+          <div
+            className="beam-layer absolute inset-0 blur-[1.125rem]"
+            style={{
+              background: beamsB,
+              WebkitMaskImage: beamMask,
+              maskImage: beamMask,
+              opacity: 0.4 * beamOpacity,
+              animation: "beam-pulse 13s ease-in-out infinite alternate",
+            }}
+          />
+        </>
+      )}
 
       {/* particles */}
       {particles && (

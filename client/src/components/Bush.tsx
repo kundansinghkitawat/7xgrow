@@ -63,7 +63,7 @@ export function Bush() {
   }, [show]);
 
   return (
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full sm:w-[90%] h-auto xl:h-[65%] xl:w-auto isolate select-none">
+    <div className="absolute top-0 left-0 z-10 w-full h-svh pointer-events-none select-none isolate">
       {/* tint filter: multiply the color with the image, keep only the image shape */}
       <svg width="0" height="0" className="absolute" aria-hidden="true">
         <filter id="bush-tint" colorInterpolationFilters="sRGB">
@@ -73,24 +73,26 @@ export function Bush() {
         </filter>
       </svg>
 
-      {show && (
-        <picture>
-          <source media="(min-width: 1280px)" srcSet={BUSH_LG} />
-          <img
-            ref={imgRef}
-            src={BUSH_SM}
-            alt=""
-            width={1896}
-            height={1722}
-            loading="eager"
-            fetchPriority="low"
-            style={{ filter: "url(#bush-tint)" }}
-            className={`w-auto h-full object-contain object-center transition-opacity duration-500 ease-in-out ${
-              loaded ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        </picture>
-      )}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full sm:w-[90%] h-auto xl:h-[65%] xl:w-auto">
+        {show && (
+          <picture>
+            <source media="(min-width: 1280px)" srcSet={BUSH_LG} />
+            <img
+              ref={imgRef}
+              src={BUSH_SM}
+              alt=""
+              width={1896}
+              height={1722}
+              loading="eager"
+              fetchPriority="low"
+              style={{ filter: "url(#bush-tint)" }}
+              className={`w-auto h-full object-contain object-center transition-opacity duration-500 ease-in-out ${
+                loaded ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          </picture>
+        )}
+      </div>
     </div>
   );
 }

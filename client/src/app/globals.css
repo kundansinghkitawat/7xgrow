@@ -43,6 +43,14 @@
   .brand-gradient {
     @apply bg-[linear-gradient(0deg_in_oklch,oklch(31.91%_0.1933_279.83)_0%,oklch(38.98%_0.2122_290.41)_14.3%,oklch(51.97%_0.2604_293.58)_28.6%,oklch(61.81%_0.2577_304.15)_42.9%,oklch(68.5%_0.2301_320)_57.1%,oklch(73.23%_0.1667_353.82)_71.4%,oklch(77.16%_0.1349_19.18)_85.7%,oklch(81.5%_0.1033_8.61)_100%)];
   }
+
+  .eyebrow {
+    @apply text-xs md:text-sm lg:text-base font-semibold tracking-tight text-white/50;
+  }
+
+  .headline {
+    @apply mt-2 text-3xl lg:text-4xl font-semibold tracking-tighter leading-none text-white;
+  }
 }
 
 @theme inline {
