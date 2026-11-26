@@ -62,7 +62,7 @@ export default function Contact() {
         Contacts
       </h1>
       <section className="section-style horizontal-padding-style vertical-margin-style !mt-0 flex flex-col justify-center items-center">
-        <div className="p-5 lg:p-10 border-4 border-[#0f0f0f] rounded-4xl overflow-hidden relative flex w-fit items-center justify-center bg-[#0a0a0a] text-white mx-auto">
+        <div className="p-5 lg:p-10 border-4 border-[#212121] rounded-4xl overflow-hidden relative flex w-fit items-center justify-center bg-[#111111] text-white mx-auto">
           {/* background effect */}
           <div className="absolute inset-0 overflow-hidden">
             <BeamBG beamPosition="top-center" />
